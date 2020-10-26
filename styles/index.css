@@ -19,7 +19,9 @@ body {
 
 
 h1 {
-    color: white;
+    color: rgb(0, 0, 0);
+    text-shadow: rgb(131, 123, 180);
+    background-color: rgb(131, 123, 180);
     width: 30%;
     text-align: center;
     margin-top: 25%;
@@ -91,6 +93,13 @@ nav {
 
 header {
     height: 65vh;
+}
+
+.welcome {
+    border: 2px solid rgb(88, 23, 173);
+    width: 85%;
+    background-color: rgba(255, 235, 205, 0.582);
+
 }
 
 .bg-img {
@@ -174,7 +183,7 @@ footer {
     display: flex;
     flex-direction: column;
     background-color: rgb(131, 123, 180);
-    height: 2~5vh;
+    height: 25vh;
 }
 
 h4 {
@@ -194,10 +203,9 @@ nav.buttons {
 
 }
 
-.dropdown-content .link {
-    background-color: black;
+.dropdown-content.link {
     border: 1 px solid rgba(255, 255, 255, 0.253);
-    color: rgba(255, 255, 255, 0.637);
+    color: rgba(0, 0, 0, 0.637);
     padding: 2%;
 }
 
@@ -258,54 +266,89 @@ nav.buttons {
     nav {
         width: 50%;
         margin: auto;
+        margin-bottom: 5%;
         display: flex;
         flex-direction: column;
-        border: 2px solid white;
+        justify-content: center;
+
+    }
+
+    .title {
+        margin: auto;
     }
 
     .links {
         display: none;
-        border: 2px solid red;
     }
 
     .dropdown-content .link {
-        background-color: black;
-        border: 1 px solid rgba(255, 255, 255, 0.253);
-        color: rgba(255, 255, 255, 0.637);
-        padding: 2%;
+        width: 60%;
+        border: 5px solid rgba(255, 255, 255, 0.349);
+        border-radius: 0 50% 0 50%;
+        color: rgb(3, 3, 3);
+        background-color: rgba(255, 235, 205, 0.363);
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        text-align: center;
+    }
+
+    .dropdown-content .link:hover {
+        background-color: rgb(255, 235, 205);
+        text-decoration: black;
     }
 
     .dropdown {
-        width: 10%;
+        width: 30%;
         margin: auto;
         position: relative;
         display: inline-block;
+        height: 10vh;
+    }
+
+    .dropdown:hover {
+        border-radius: 0 50% 0 50%;
+        background-color: rgba(205, 237, 255, 0.041);
+        border: 2px solid rgba(255, 255, 255, 0.096);
+
     }
 
     .dropdown-content {
         display: none;
         position: fixed;
-        background-color: rgba(255, 255, 255, 0.308);
+        background-color: rgba(0, 0, 0, 0.308);
         min-width: 160px;
         box-shadow: 0 8px 16px opx rgba(255, 255, 255, 0.637);
         padding: 1%;
         z-index: 1;
         border: 1px solid white;
+        border-radius: 0 50% 0 50%;
     }
 
     .dropdown:hover .dropdown-content {
-        display: block;
+        display: inline-block;
+    }
+
+    .dropdown-text {
+        margin-bottom: 10%;
     }
 
     .arrow {
-        border: solid white;
+
+        border: 1px solid rgba(255, 255, 255, 0.267);
         border-width: 0 3px 3px 0;
         display: inline-block;
-        padding: 3px;
+        padding: 4px;
     }
 
-    .down {
-        transform: rotate(90deg);
-        -webkit-transform: rotate(90deg);
+
+    .arrow:hover {
+        -webkit-transform: rotate(4deg);
+    }
+
+    footer nav {
+        display: flex;
+        flex-direction: row;
     }
 }
