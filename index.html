@@ -15,17 +15,24 @@
   <body>
     <header class="top-nav">
       <div class="brand">
-  <img class="brand-logo" src="assets/logo.png" alt="JCF Athletics Logo">
-  <span class="brand-name">J<span style="color: crimson;">C</span>F</span>
+  <img class="brand-logo" data-view="featured-products" src="assets/logo.png" alt="JCF Athletics Logo">
+  <div class="title">Jus<span style="color: black;">Casual</span>Fits</div>
 </div>
+
       <nav>
         <button class="ghost" data-view="landing">Home</button>
-        <button class="ghost" data-view="products">Shop</button>
-        <button class="ghost" data-view="cart">Cart <span id="cart-count">0</span></button>
+        <button class="ghost" data-view="featured-products">Featured</button>
+        <button class="ghost" data-view="men-products">Men</button>
+        <button class="ghost" data-view="women-products">Women</button>
+        <button class="ghost" data-view="unisex-products">Unisex</button>
+        <button class="ghost cart-nav-btn" data-view="cart" aria-label="Open cart">
+          <img src="assets/cart-icon.png" alt="Cart" class="cart-icon" />Cart
+          <span id="cart-count" class="cart-badge hidden" aria-live="polite">0</span>
+        </button>
       </nav>
       <div class="actions">
         <button id="login-toggle" class="secondary">Customer Login</button>
-        <button id="admin-toggle" class="primary">Admin Login</button>
+        <button id="admin-toggle" class="primary sr-only-control" aria-hidden="true" tabindex="-1">Admin Login</button>
       </div>
     </header>
 
@@ -38,18 +45,70 @@
   Built for the grind. JCFits delivers premium streetwear and
   performance apparel designed for movement, confidence, and everyday hustle.
 </p>
-          <button class="primary" data-view="products">Shop The Drop</button>
+          <button class="primary" data-view="featured-products">Shop The Drop</button>
         </div>
       </section>
 
-      <section id="products" class="view">
+      <section id="featured-products" class="view">
         <div class="section-head">
           <h2>Featured Products</h2>
+          <p class="eyebrow"></p>
+        </div>
+        <div id="featured-grid" class="product-grid"></div>
+      </section>
+
+      <section id="men-products" class="view">
+        <div class="section-head">
+          <h2>Men's Products</h2>
           <div class="filters">
-            <input type="text" id="search" placeholder="Search products..." />
+            <input type="text" id="search-men" placeholder="Search men's products..." />
           </div>
         </div>
-        <div id="product-grid" class="product-grid"></div>
+        <div id="men-product-grid" class="product-grid"></div>
+      </section>
+
+      <section id="women-products" class="view">
+        <div class="section-head">
+          <h2>Women's Products</h2>
+          <div class="filters">
+            <input type="text" id="search-women" placeholder="Search women's products..." />
+          </div>
+        </div>
+        <div id="women-product-grid" class="product-grid"></div>
+      </section>
+
+      <section id="unisex-products" class="view">
+        <div class="section-head">
+          <h2>Unisex Products</h2>
+          <div class="filters">
+            <input type="text" id="search-unisex" placeholder="Search unisex products..." />
+          </div>
+        </div>
+        <div id="unisex-product-grid" class="product-grid"></div>
+      </section>
+
+      <section id="product-detail" class="view">
+        <div class="section-head">
+          <h2>Product Details</h2>
+          <button id="detail-back" class="ghost">Back to Collection</button>
+        </div>
+
+        <article class="product-detail">
+          <div class="magnifier-frame detail-image-wrap">
+            <img id="detail-image" class="magnify-image" data-zoom="2.8" src="" alt="" />
+          </div>
+          <div class="product-detail-content">
+            <h3 id="detail-name"></h3>
+            <p class="detail-price" id="detail-price"></p>
+            <p id="detail-description"></p>
+            <label for="detail-color">Color</label>
+            <select id="detail-color"></select>
+            <div class="row">
+              <button id="detail-add-to-cart" class="primary">Add to Cart</button>
+              <button class="secondary" data-view="cart">Go to Cart</button>
+            </div>
+          </div>
+        </article>
       </section>
 
       <section id="cart" class="view">

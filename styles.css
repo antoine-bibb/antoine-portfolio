@@ -45,17 +45,19 @@ body::before {
   padding: 1rem 2rem;
   background: var(--white);
   border-bottom: 1px solid var(--line);
+  
 }
 
 .brand {
   display: flex;
-  flex-direction: column;   /* STACKS logo and text */
+  flex-direction: row;   /* STACKS logo and text */
   align-items: center;      /* centers them */
   line-height: 1.1;
+  gap: 0.5rem;             /* space between logo and text */  
 }
 
 .brand-logo {
-  width: 60px;
+  width: 75px;
   height: auto;
 }
 
@@ -71,9 +73,21 @@ body::before {
 }
 
 .brand-name {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+}
+
+.title {
+  font-family: 'Montserrat', 'Segoe UI', sans-serif; /* sleek, modern font */
+  font-weight: 800;           /* bold for a strong presence */
+  font-size: 2rem;          /* big enough to stand out */
+  color: #a00000;             /* JCF brand red */
+  letter-spacing: 1px;        /* spacing between letters for style */
+  text-transform: uppercase;  /* all caps for impact */
+  margin-left: 0px;          /* push it closer to left edge */
+  margin-top: 0;  
+             /* remove any top margin if needed */
 }
 
 nav,
@@ -82,6 +96,53 @@ nav,
   display: flex;
   gap: 0.5rem;
   align-items: center;
+}
+
+.cart-nav-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 46px;
+  min-height: 42px;
+  padding: 0.45rem 0.7rem;
+}
+
+.cart-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -4px;
+  right: -3px;
+  min-width: 19px;
+  height: 19px;
+  padding: 0 5px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent);
+  color: var(--white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1;
+  box-shadow: 0 0 0 2px var(--white);
+}
+
+.sr-only-control {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
 }
 
 button {
@@ -199,6 +260,30 @@ input {
   transition: transform 0.35s ease;
 }
 
+.magnifier-frame {
+  position: relative;
+  overflow: hidden;
+}
+
+.magnifier-frame.magnifier-active {
+  cursor: none;
+}
+
+.img-magnifier-lens {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130px;
+  height: 130px;
+  display: none;
+  pointer-events: none;
+  border-radius: 50%;
+  border: 2px solid var(--jcf-red);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22), 0 0 0 8px rgba(179, 0, 0, 0.08);
+  background-color: rgba(255, 255, 255, 0.2);
+  background-repeat: no-repeat;
+}
+
 .card:hover img {
   transform: scale(1.15);
 }
@@ -220,6 +305,62 @@ input {
 
 .card-content h3 {
   margin: 0;
+}
+
+.link-button {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
+}
+
+.link-button:hover {
+  background: transparent;
+  color: var(--jcf-red);
+  transform: none;
+}
+
+.product-detail {
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr) minmax(280px, 1fr);
+  gap: 1.25rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.product-detail img {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+}
+
+.detail-image-wrap {
+  min-height: 320px;
+}
+
+.product-detail-content {
+  padding: 1.25rem;
+  display: grid;
+  align-content: start;
+  gap: 0.85rem;
+}
+
+.product-detail-content h3 {
+  margin: 0;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+}
+
+.detail-price {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
 }
 
 #cart-items,
@@ -304,6 +445,14 @@ dialog {
 
   .hero {
     padding: 2rem;
+  }
+
+  .product-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .product-detail img {
+    min-height: 240px;
   }
 }
 
