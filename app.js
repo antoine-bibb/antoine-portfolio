@@ -1,24 +1,24 @@
 const initialProducts = [
   {
     id: crypto.randomUUID(),
-    name: 'JCF Air Motion Runner',
-    price: 129.99,
+    name: 'JCF Heartbreak Tee and Joggers Set',
+    price: 125,
     image:
-      'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80',
+      'assets/jogger_set.png',
   },
   {
     id: crypto.randomUUID(),
-    name: 'JCF Street Pro Hoodie',
-    price: 89.0,
+    name: 'JCF Legging and Crop Set',
+    price: 95.0,
     image:
-      'https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=800&q=80',
+      'assets/leggings_set.png',
   },
   {
     id: crypto.randomUUID(),
-    name: 'JCF Court Legacy Tee',
-    price: 45.5,
+    name: 'JCF Evol Hoodie',
+    price: 65,
     image:
-      'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80',
+      'assets/jcf-evol-hoodie.png',
   },
 ];
 
