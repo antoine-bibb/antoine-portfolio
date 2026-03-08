@@ -10,6 +10,11 @@ const legacyDataFile = path.join(dataDir, 'db.json');
 const productsFile = path.join(dataDir, 'products.json');
 const usersFile = path.join(dataDir, 'users.json');
 const systemFile = path.join(dataDir, 'system.json');
+const adminHashIterations = Number(process.env.ADMIN_HASH_ITERATIONS || 210000);
+const adminHashKeylen = 64;
+const adminHashDigest = 'sha512';
+const defaultAdminEmail = String(process.env.ADMIN_EMAIL || 'admin@jcf.com').trim().toLowerCase();
+const bootstrapAdminPassword = String(process.env.ADMIN_PASSWORD || 'change-me-now');
 
 const initialProducts = [
   // ========================
@@ -201,12 +206,67 @@ const initialSystemData = {
   supportMessages: [],
   promoCodes: {
     'jcf-fall': { code: 'jcf-fall', discountRate: 0.2, active: true }
-  },
-  admin: {
-    email: 'admin@jcf.com',
-    password: 'admin123'
   }
 };
+
+function hashAdminPassword(password, salt = crypto.randomBytes(16).toString('hex')) {
+  const normalizedPassword = String(password || '');
+  const passwordHash = crypto
+    .pbkdf2Sync(normalizedPassword, salt, adminHashIterations, adminHashKeylen, adminHashDigest)
+    .toString('hex');
+  return {
+    passwordHash,
+    passwordSalt: salt,
+    passwordIterations: adminHashIterations,
+    passwordDigest: adminHashDigest
+  };
+}
+
+function verifyAdminPassword(password, admin = {}) {
+  const salt = String(admin.passwordSalt || '');
+  const expectedHash = String(admin.passwordHash || '');
+  const iterations = Number(admin.passwordIterations || adminHashIterations);
+  const digest = String(admin.passwordDigest || adminHashDigest);
+  if (!salt || !expectedHash || !Number.isFinite(iterations) || iterations <= 0) return false;
+
+  const actualHash = crypto
+    .pbkdf2Sync(String(password || ''), salt, iterations, adminHashKeylen, digest)
+    .toString('hex');
+  if (actualHash.length !== expectedHash.length) return false;
+  return crypto.timingSafeEqual(Buffer.from(actualHash, 'hex'), Buffer.from(expectedHash, 'hex'));
+}
+
+function normalizeAdminRecord(input = {}) {
+  const admin = input && typeof input === 'object' ? input : {};
+  const email = String(admin.email || defaultAdminEmail).trim().toLowerCase() || defaultAdminEmail;
+  const envPassword = String(process.env.ADMIN_PASSWORD || '').trim();
+  const envEmail = String(process.env.ADMIN_EMAIL || '').trim().toLowerCase();
+
+  if (envPassword) {
+    const stableSalt = String(admin.passwordSalt || '').trim() || crypto.randomBytes(16).toString('hex');
+    return {
+      email: envEmail || email,
+      ...hashAdminPassword(envPassword, stableSalt)
+    };
+  }
+
+  if (admin.passwordHash && admin.passwordSalt) {
+    return {
+      email: envEmail || email,
+      passwordHash: String(admin.passwordHash),
+      passwordSalt: String(admin.passwordSalt),
+      passwordIterations: Number(admin.passwordIterations || adminHashIterations),
+      passwordDigest: String(admin.passwordDigest || adminHashDigest)
+    };
+  }
+
+  const legacyPassword = String(admin.password || '').trim();
+  const seedPassword = legacyPassword || bootstrapAdminPassword;
+  return {
+    email,
+    ...hashAdminPassword(seedPassword)
+  };
+}
 
 async function ensureStore() {
   await fs.mkdir(dataDir, { recursive: true });
@@ -249,12 +309,33 @@ async function ensureStore() {
         legacy?.promoCodes && typeof legacy.promoCodes === 'object' && !Array.isArray(legacy.promoCodes)
           ? legacy.promoCodes
           : initialSystemData.promoCodes,
-      admin:
-        legacy?.admin && typeof legacy.admin === 'object'
-          ? { ...initialSystemData.admin, ...legacy.admin }
-          : initialSystemData.admin
+      admin: normalizeAdminRecord(legacy?.admin)
     }
   );
+
+  try {
+    const raw = await fs.readFile(systemFile, 'utf8');
+    const parsed = JSON.parse(raw);
+    const normalizedAdmin = normalizeAdminRecord(parsed?.admin);
+    const hasPlainPassword = Boolean(parsed?.admin && typeof parsed.admin === 'object' && parsed.admin.password);
+    const sameHash = String(parsed?.admin?.passwordHash || '') === normalizedAdmin.passwordHash;
+    const sameSalt = String(parsed?.admin?.passwordSalt || '') === normalizedAdmin.passwordSalt;
+    if (hasPlainPassword || !sameHash || !sameSalt) {
+      const next = {
+        ...parsed,
+        emailSignups: Array.isArray(parsed?.emailSignups) ? parsed.emailSignups : [],
+        supportMessages: Array.isArray(parsed?.supportMessages) ? parsed.supportMessages : [],
+        promoCodes:
+          parsed?.promoCodes && typeof parsed.promoCodes === 'object' && !Array.isArray(parsed.promoCodes)
+            ? parsed.promoCodes
+            : initialSystemData.promoCodes,
+        admin: normalizedAdmin
+      };
+      await fs.writeFile(systemFile, JSON.stringify(next, null, 2), 'utf8');
+    }
+  } catch {
+    // If migration fails, readStore will still rebuild from safe defaults.
+  }
 }
 
 async function readStore() {
@@ -284,10 +365,7 @@ async function readStore() {
       systemParsed?.promoCodes && typeof systemParsed.promoCodes === 'object' && !Array.isArray(systemParsed.promoCodes)
         ? systemParsed.promoCodes
         : initialSystemData.promoCodes,
-    admin:
-      systemParsed?.admin && typeof systemParsed.admin === 'object'
-        ? { ...initialSystemData.admin, ...systemParsed.admin }
-        : initialSystemData.admin
+    admin: normalizeAdminRecord(systemParsed?.admin)
   };
 }
 
@@ -322,10 +400,7 @@ async function writeStore(next) {
             next.promoCodes && typeof next.promoCodes === 'object' && !Array.isArray(next.promoCodes)
               ? next.promoCodes
               : initialSystemData.promoCodes,
-          admin:
-            next.admin && typeof next.admin === 'object'
-              ? { ...initialSystemData.admin, ...next.admin }
-              : initialSystemData.admin
+          admin: normalizeAdminRecord(next?.admin)
         },
         null,
         2
@@ -463,10 +538,8 @@ export async function addEmailSignup(email) {
 
 export async function validateAdmin(email, password) {
   const db = await readStore();
-  return (
-    String(email).trim().toLowerCase() === db.admin.email &&
-    String(password).trim() === db.admin.password
-  );
+  if (String(email).trim().toLowerCase() !== String(db?.admin?.email || '').toLowerCase()) return false;
+  return verifyAdminPassword(String(password).trim(), db.admin);
 }
 
 export async function getCheckoutQuote(cart = [], promoCode = '') {

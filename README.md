@@ -19,7 +19,19 @@ python3 -m http.server 4173
 
 Then open `http://localhost:4173`.
 
-## Demo admin credentials
+For mobile/LAN testing, open `http://<your-computer-ip>:4173` on the phone and ensure the backend is reachable at `http://<your-computer-ip>:4000`.
 
-- Email: `admin@jcf.com`
-- Password: `admin123`
+## API base configuration
+
+Frontend API base defaults to `http(s)://<current-hostname>:4000/api`.
+You can override it by setting one of:
+
+- `window.APP_CONFIG = { apiBase: 'https://api.example.com/api' }` before `app.js` loads, or
+- `<meta name="api-base" content="https://api.example.com/api">` in `index.html`.
+
+## Admin credentials
+
+Configure admin credentials with backend env vars:
+
+- `ADMIN_EMAIL`
+- `ADMIN_PASSWORD`

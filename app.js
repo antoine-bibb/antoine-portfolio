@@ -4,63 +4,187 @@ const initialProducts = [
   // ========================
   {
     id: crypto.randomUUID(),
-    name: "JCF Jogger Set",
+    name: "JCF OG Hoodie",
     price: 125.0,
-    colors: ['Black', 'Gray', 'White', 'Navy'],
+    colors: ['Black','white','red','gray'],
     gender: 'men',
-    image: 'assets/jogger_set.png',
-    description: 'Athletic jogger and tee set designed for comfort and street style.',
-    category: 'sets',
-    style: 'jogger set',
+    image: 'assets/black-slim-fit-hoodie-jcf.png',
+    description: `JCF Premium Slim-Fit Hoodie
+Elevate your streetwear game with the JCF Premium Slim-Fit Hoodie, a cornerstone of the "jus' casual fits" collection. This piece bridges the gap between high-end luxury and athletic utility, designed for the individual who demands style without sacrificing security.
+
+Design & Fit
+Tailored Silhouette: A modern, slim-fit cut that provides a sleek look while offering the comfort of premium French terry.
+
+Signature Colorway: Features a matte Main-Black body contrasted by a Deep Red inner hood lining and ribbed accents.
+
+Elevated Details: High-contrast White drawstrings finished with Deep Red metal aglets.
+
+Key Features
+Secure Utility Pockets: Innovative kangaroo pocket design featuring Deep Red vertical zippers to ensure your essentials stay put, whether you're sitting or on the move.
+
+Signature Branding: * JCF Script Logo: High-density white embroidery on the left chest.
+
+Wristband Signature: The left cuff features the iconic Lion/Owl split logo above the vertically stacked "just casual days" manifesto—a JCF exclusive design detail.
+
+Comfort Ribbing: Reinforced Deep Red ribbed waistband and cuffs for shape retention and a snug, premium feel.
+
+Materials & Care
+Fabric: Heavyweight, luxury-grade cotton blend.
+
+Care: Machine wash cold, tumble dry low to maintain the vibrancy of the Deep Red accents.`,
+    category: 'hoodies',
+    style: 'hoodie',
+    featured: true,
+  },
+
+  {
+    id: crypto.randomUUID(),
+    name: "JCF Varsity Oversized Hoodie",
+    price: 150.0,
+    colors: ['Black', 'Cream', 'Red'],
+    gender: 'men',
+    image: 'assets/varsity-hoodie-jcf.png',
+    description: "The JCF Varsity Oversized Hoodie redefines the classic letterman aesthetic with a modern, streetwear silhouette. Designed with a generous, relaxed fit and premium contrasting textures, this piece is the ultimate statement of luxury and comfort.\n\nDesign & Fit\nOversized Silhouette: A broad-shouldered, relaxed cut for maximum comfort and a bold street-ready profile.\n\nVarsity Aesthetic: Main-Black body paired with luxury Cream-colored sleeves and a Deep Red hood for a high-end collegiate look.\n\nKey Features\nSignature Branding: Features a large '26' patch in Cream with Deep Red trim on the left sleeve and a high-density 'JCF' script logo on the chest.\n\nSecure Utility: Deep Red zippered kangaroo pockets designed to keep your valuables safe in any environment.\n\nWristband Manifesto: The left cuff features the iconic Lion/Owl split logo above the vertically stacked 'jus' casual fits' signature—the JCF hallmark of authenticity.\n\nMaterials & Care\nFabric: Ultra-heavyweight French terry body with soft-touch synthetic leather sleeves.\n\nCare: Professional dry clean recommended to preserve sleeve texture and patch integrity.",
+    category: 'hoodies',
+    style: 'hoodie',
     featured: true,
   },
   {
     id: crypto.randomUUID(),
-    name: "JCF Slim Jogger",
+    name: "JCF Women's Signature Crop",
     price: 95.0,
-    colors: ['Black', 'Gray', 'White', 'Olive'],
-    gender: 'men',
-    image: 'assets/slim-jogger.jpg',
-    description: 'Slim fit joggers built for movement and everyday wear.',
-    category: 'bottoms',
-    style: 'slim jogger',
-    featured: false,
-  },
-  {
-    id: crypto.randomUUID(),
-    name: "JCF Crew Neck Long Sleeve",
-    price: 35.0,
-    colors: ['Black', 'Gray', 'White', 'Navy'],
-    gender: 'men',
-    image: 'assets/crew-neck-long-sleeve.jpg',
-    description: 'Comfortable long sleeve tee designed for layering.',
-    category: 'tops',
-    style: 'long sleeve',
-    featured: false,
-  },
-  {
-    id: crypto.randomUUID(),
-    name: "JCF Tech Hoodie",
-    price: 85.0,
-    colors: ['Black', 'Gray', 'White'],
-    gender: 'men',
-    image: 'assets/tech-hoodie.jpg',
-    description: 'Tech hoodie with hidden pockets and athletic structure.',
-    category: 'tops',
+    colors: ['Black', 'Red', 'White'],
+    gender: 'women',
+    image: 'assets/cropped-varsity-hoodie-jcf.png',
+    description: "The JCF Women's Signature Crop combines a sleek, sexy aesthetic with the brand's core focus on utility. Tailored to hit perfectly above the waist, this hoodie offers a high-fashion edge to athletic performance gear.\n\nDesign & Fit\nCropped Cut: A flattering, form-fitting cropped silhouette designed to pair seamlessly with high-waisted leggings.\n\nLuxury Accents: Features a Deep Red inner hood lining and matching ribbed cuffs for a sophisticated pop of color.\n\nKey Features\nInvisible Security: Sleek, hidden side-seam zipper pockets provide secure storage without interrupting the streamlined fit.\n\nSignature Branding: 'JCF' script logo on the chest and a bold '26' varsity patch centered on the back.\n\nCuff Signature: The wearer’s left wristband carries the vertical 'jus' casual fits' manifesto and Lion/Owl split-face logo in Deep Red thread.\n\nMaterials & Care\nFabric: Premium mid-weight French terry for a soft, breathable feel.\n\nCare: Machine wash cold; lay flat to dry to maintain the cropped shape.",
+    category: 'hoodies',
     style: 'hoodie',
-    featured: false,
+    featured: true,
+  },
+{
+    id: crypto.randomUUID(),
+    name: "JCF Utility Cargo Jogger",
+    price: 110.0,
+    colors: ['Black', 'Red', 'White'],
+    gender: 'men',
+    image: 'assets/tapered-cargo-joggers-jcf.png',
+    description: `The JCF Utility Cargo Jogger is the ultimate fusion of tactical function and luxury comfort. Engineered for the modern mover, these joggers ensure your essentials are always secure without compromising a high-end silhouette.
+
+Design & Fit
+Tailored Utility: A fitted, tapered cut inspired by high-end heritage brands, providing a sharp look that stays comfortable all day.
+Fabric: Premium high-gauge matte black French terry with reinforced deep red bar-tack stitching for maximum durability.
+
+Key Features
+Maximum Security: Featuring zippered hand pockets and dual thigh cargo pockets with hidden Deep Red zippers to prevent items from falling out.
+Signature Branding: White 'JCF' script logo on the left thigh and a tonal Deep Red Lion/Owl split-face logo on the cargo flap.
+Premium Hardware: Matte black metal hardware and white drawstrings with deep red metal aglets.
+
+Materials & Care
+Fabric: Luxury-grade cotton/polyester blend.
+Care: Machine wash cold inside out; tumble dry low.`,
+    category: 'pants',
+    style: 'joggers',
+    featured: true,
   },
   {
     id: crypto.randomUUID(),
-    name: "JCF Crew Neck Tee",
-    price: 50.0,
-    colors: ['Black', 'Gray', 'White', 'Olive'],
+    name: "JCF High-Fashion Pintuck Jogger",
+    price: 135.0,
+    colors: ['Black', 'White', 'Gray'],
     gender: 'men',
-    image: 'assets/crew-neck-tee.jpg',
-    description: 'Classic crew neck tee made for everyday casual wear.',
-    category: 'tops',
+    image: 'assets/slim-jogger-style-3-jcf.png',
+    description: `Elevate your off-duty look with the JCF High-Fashion Pintuck Jogger. This piece bridges the gap between tailored trousers and luxury athletic wear, featuring a sophisticated design that transitions effortlessly from day to night.
+
+Design & Fit
+Tailored Aesthetic: Features a permanent crisp pintuck seam down the center of each leg for a sharp, structured appearance.
+Luxury Details: High-contrast white stripes running down the inner and outer leg seams for a bold, designer profile.
+
+Key Features
+Invisible Security: Integrated side-seam zippers provide secure storage while maintaining a clean, streamlined silhouette.
+Minimalist Branding: Minimalist white 'JCF' script logo on the thigh and a subtle, tonal deep gray Lion/Owl logo on the lower back calf.
+Refined Waistband: Flat-front waistband with an elasticated back for a customized, premium fit.
+
+Materials & Care
+Fabric: High-density performance ponte fabric.
+Care: Cool iron on reverse; machine wash cold on a gentle cycle.`,
+    category: 'pants',
+    style: 'joggers',
+    featured: true,
+  },
+  {
+    id: crypto.randomUUID(),
+    name: "JCF Lounge & Gym Jogger",
+    price: 90.0,
+    colors: ['Black', 'Gray', 'Red'],
+    gender: 'men',
+    image: 'assets/gym-jogger-jcf.png',
+    description: `Built for recovery days and high-intensity sessions alike, the JCF Lounge & Gym Jogger focuses on ultimate mobility and signature JCF security. These are the softest joggers in the collection, designed to be worn anywhere.
+
+Design & Fit
+Athletic Taper: A more relaxed fit through the seat and thigh for movement, tapering down to a secure ribbed ankle cuff.
+Color Blocking: Matte black body with athletic secondary-gray paneling for a modern, sporty aesthetic.
+
+Key Features
+Gym-Ready Security: Standard side pockets equipped with high-visibility Deep Red zippers to keep your tech safe during any activity.
+Bold Branding: White 'JCF' script logo on the left thigh and the iconic Lion/Owl split-face logo embroidered in Deep Red on the right calf.
+Comfort First: Ultra-soft performance fleece with a thick elastic waistband and premium braided drawstrings.
+
+Materials & Care
+Fabric: Ultra-soft brushed-back performance fleece.
+Care: Machine wash cold; avoid fabric softeners to maintain moisture-wicking properties.`,
+    category: 'pants',
+    style: 'joggers',
+    featured: true,
+  },
+  {
+    id: crypto.randomUUID(),
+    name: "JCF Luxe Curved-Hem Tee",
+    price: 65.0,
+    colors: ['Black', 'Gray', 'Olive'],
+    gender: 'men',
+    image: 'assets/black-curved-hem-tee-jcf.png',
+    description: `The JCF Luxe Curved-Hem Tee is a masterclass in minimalist high-end streetwear. Combining a custom tailored silhouette with performance-grade luxury materials, this isn't just a basic tee—it's an essential foundation for the modern wardrobe.
+
+Design & Fit
+Sculpted Silhouette: A slim-fit athletic cut featuring a signature longline curved hem for a sophisticated, layered look.
+Premium Texture: Crafted from a custom Pima cotton-silk blend with a subtle waffle-knit texture that offers superior breathability and a high-end hand feel.
+
+Key Features
+Hardware Detail: Adorned with a custom-molded, polished silver-tone metallic Lion/Owl split-face badge on the left chest.
+Signature Stitching: Reinforced tonal 'X' stitching at the neck and a Deep Red contrast bar-tack for a subtle designer touch.
+Refined Comfort: Features a tagless interior with a soft-ribbed crew neck that maintains its shape through every wash.
+
+Materials & Care
+Fabric: Lightweight, breathable Pima cotton and silk performance blend.
+Care: Machine wash cold with like colors; tumble dry low. Do not iron directly on the metallic badge.`,
+    category: 'shirts',
     style: 't-shirt',
-    featured: false,
+    featured: true,
+  },
+  {
+    id: crypto.randomUUID(),
+    name: "JCF Signature Utility Duffel",
+    price: 210.0,
+    colors: ['Black', 'Red'],
+    gender: 'unisex',
+    image: 'assets/signature-utility-duffel-jcf.png',
+    description: `The JCF Signature Utility Duffel is the ultimate travel and gym companion, blending massive storage capacity with high-fashion branding. This bag is engineered for those who carry their life with them and refuse to compromise on style or security.
+
+Design & Fit
+Structured Silhouette: A large, reinforced cylindrical body that maintains its sharp, premium shape whether empty or fully packed.
+Luxury Aesthetics: Matte-black ballistic nylon paired with deep red piping and high-end synthetic leather accents.
+
+Key Features
+Statement Branding: Features a massive, high-density embroidered Lion/Owl split-face logo in Deep Red, anchored by the signature JCF script logo in the same tonal thread.
+Tactical Storage: Multiple secure compartments featuring Deep Red waterproof zippers, including a dedicated shoe garage and an internal RFID-blocking pocket for sensitive items.
+Premium Hardware: Heavy-duty matte black metal clasps, reinforced carrying handles, and an embossed leather shoulder pad featuring the "jus' casual fits" manifesto.
+
+Materials & Care
+Fabric: Industrial-grade ballistic nylon with a water-resistant coating.
+Care: Spot clean with a damp cloth; do not machine wash. Use leather conditioner on the handle and strap accents to maintain the premium finish.`,
+    category: 'accessories',
+    style: 'bag',
+    featured: true,
   },
 
   // ========================
@@ -79,111 +203,217 @@ const initialProducts = [
     featured: true,
   },
   {
-    id: crypto.randomUUID(),
-    name: "JCF Relaxed Joggers",
-    price: 120.0,
-    colors: ['Black', 'Gray', 'White', 'Olive', 'Pink'],
-    gender: 'women',
-    image: 'assets/relaxed-joggers.jpg',
-    description: 'Relaxed joggers with side pockets for comfort and lounge wear.',
-    category: 'bottoms',
-    style: 'joggers',
-    featured: false,
-  },
+  id: crypto.randomUUID(),
+  name: "JCF Luxury Technical Quilted Jacket",
+  price: 150.00, // Suggested premium price point
+  colors: ['Black', 'Navy'], 
+  gender: 'men',
+  image: 'assets/jcf_tech_jacket.png',
+  description: 'High-performance slim-fit tech jacket featuring a diamond-quilted chest panel, gold-embroidered JCF monogramming, and custom lion-crest hardware.',
+  category: 'outerwear',
+  style: 'technical jacket',
+  featured: true,
+},
   {
     id: crypto.randomUUID(),
-    name: "JCF Crop Top Short Set",
-    price: 95.0,
-    colors: ['Black', 'Gray', 'White', 'Pink'],
+    name: "JCF Women's Royal Utility Legging",
+    price: 115.0,
+    colors: ['Black', 'Gold', 'White'],
     gender: 'women',
-    image: 'assets/crop-top-short-set.jpg',
-    description: 'Crop top and biker short set designed for workouts.',
-    category: 'sets',
-    style: 'short set',
-    featured: false,
-  },
-  {
-    id: crypto.randomUUID(),
-    name: "JCF Leggings Crop Set",
-    price: 100.0,
-    colors: ['Black', 'Gray', 'White', 'Pink'],
-    gender: 'women',
-    image: 'assets/leggings-crop.jpg',
-    description: 'High waist leggings paired with crop top for training.',
-    category: 'sets',
+    image: 'assets/womens-royal-utility-legging-jcf.jpg',
+    description: `The JCF Royal Utility Legging is the centerpiece of the women's collection, designed for those who demand high-fashion aesthetics without compromising on tactical functionality. 
+
+Design & Fit
+Royal Aesthetic: High-contrast White side paneling framed by luxury Gold piping for a sculpted, elite look.
+Signature Waistband: Features a high-rise, V-tapered waistband with the Gold 'JCF' Crown logo centered for maximum style and support.
+
+Key Features
+Functional Security: Dual thigh-high utility pockets equipped with Gold-tone zippers to keep your tech and essentials secure.
+Manifesto Branding: The lower left calf features the Lion/Owl split-face logo in Deep Red, paired with the 'just casual days' signature in Gold embroidery.
+Hidden Storage: Includes an invisible pocket integrated into the rear waistband for discrete storage of keys or cards.
+
+Materials & Care
+Fabric: Elite-tier matte black compression fabric with a 4-way stretch for a perfect fit.
+Care: Hand wash cold or use a delicate cycle; air dry only to maintain the vibrancy of the gold piping and specialized hardware.`,
+    category: 'pants',
     style: 'leggings',
-    featured: false,
-  },
-  {
-    id: crypto.randomUUID(),
-    name: "JCF Crop Jogger Set",
-    price: 110.0,
-    colors: ['Black', 'Gray', 'White', 'Pink'],
-    gender: 'women',
-    image: 'assets/crop-top-jogger-set.jpg',
-    description: 'Crop hoodie and jogger set for casual style.',
-    category: 'sets',
-    style: 'jogger set',
-    featured: false,
-  },
-  {
-    id: crypto.randomUUID(),
-    name: "JCF Long Sleeve Crop",
-    price: 55.0,
-    colors: ['Black', 'Gray', 'White', 'Pink'],
-    gender: 'women',
-    image: 'assets/long-sleeve-crop.jpg',
-    description: 'Long sleeve crop top built for style and comfort.',
-    category: 'tops',
-    style: 'crop top',
-    featured: false,
-  },
-  {
-    id: crypto.randomUUID(),
-    name: "JCF Crop Hoodie",
-    price: 90.0,
-    colors: ['Black', 'Gray', 'White', 'Pink'],
-    gender: 'women',
-    image: 'assets/crop-top-hoodie.jpg',
-    description: 'Trendy cropped hoodie for casual wear.',
-    category: 'tops',
-    style: 'cropped hoodie',
-    featured: false,
-  },
-  {
-    id: crypto.randomUUID(),
-    name: "JCF Back Hoodie",
-    price: 110.0,
-    colors: ['Black', 'Gray', 'White', 'Pink'],
-    gender: 'women',
-    image: 'assets/back-hoodie.jpg',
-    description: 'Oversized hoodie designed for cozy comfort.',
-    category: 'tops',
-    style: 'oversized hoodie',
-    featured: false,
-  },
-  {
-    id: crypto.randomUUID(),
-    name: "JCF Evol Hoodie",
-    price: 100.0,
-    colors: ['Black', 'Gray', 'White'],
-    gender: 'men',
-    image: 'assets/jcf-evol-hoodie.png',
-    description: 'Slim fit hoodie with a modern athletic cut.',
-    category: 'tops',
-    style: 'hoodie',
     featured: true,
   },
-   {
+  {
     id: crypto.randomUUID(),
-    name: "JCF his and her set - The Origin",
-    price: 100.0,
-    colors: ['Black', 'Gray', 'White'],
-    gender: 'unisex',
-    image: 'assets/the-origin.jpg',
-    description: 'Slim fit hoodie with a modern athletic cut.',
-    category: 'tops',
-    style: 'hoodie',
+    name: "JCF Women's Royal Quilted Bomber",
+    price: 165.0,
+    colors: ['Black', 'Gold', 'White'],
+    gender: 'women',
+    image: 'assets/womens-royal-bomber-jcf.jpg',
+    description: `The JCF Royal Quilted Bomber is the definitive outer layer for the women's 'Royal' series. Merging tactical protection with runway-ready aesthetics, this cropped bomber is designed to command attention while keeping your essentials secure.
+
+Design & Fit
+Cropped Luxury: A tailored, cropped silhouette designed to perfectly complement high-waisted leggings.
+Signature Quilting: Premium diamond-quilted matte black panels across the chest and back for a sophisticated, textured look.
+
+Key Features
+Royal Hardware: Features a heavy-duty polished Gold-tone main zipper with a custom Lion/Owl split-face puller.
+Security Storage: Two front-facing hand pockets with Gold-tone security zippers and an internal satin-lined 'vault' pocket.
+High-Contrast Branding: Gold 'JCF' Crown logo on the chest and a massive embossed Lion/Owl motif on the rear panel.
+
+Materials & Care
+Fabric: Technical water-resistant nylon shell with a Deep Red luxury satin lining.
+Care: Professional dry clean only to protect the specialized gold hardware and quilted stitching.`,
+    category: 'outerwear',
+    style: 'jacket',
+    featured: true,
+  },
+  {
+    id: crypto.randomUUID(),
+    name: "JCF Women's Royal Curve Tee",
+    price: 70.0,
+    colors: ['Black', 'Gold'],
+    gender: 'women',
+    image: 'assets/womens-royal-curve-tee-jcf.png',
+    description: `A sophisticated take on the essential performance tee. The Royal Curve Tee features a modest yet flattering neckline and an extended curved hem designed specifically for coverage and confidence during high-intensity movement.
+
+Design & Fit
+Coverage Focused: Signature longline curved hem provides elegant coverage for a seamless look with leggings.
+Premium Texture: Crafted from our custom performance waffle-knit for maximum breathability and a luxury hand-feel.
+
+Key Features
+Hardware Detail: Features the signature Gold 'X' zipper at the neck with a custom Lion/Owl split-face puller.
+Designer Branding: Gold 'JCF' Crown logo on the chest and the Lion/Owl 'just casual days' motif on the lower hip.
+Interior Luxury: Deep Red contrast inner collar for a hidden touch of brand DNA.
+
+Materials & Care
+Fabric: Breathable Pima cotton-silk performance blend.
+Care: Machine wash cold; tumble dry low. Protect the gold hardware by washing inside out.`,
+    category: 'shirts',
+    style: 't-shirt',
+    featured: true,
+  },
+  {
+    id: crypto.randomUUID(),
+    name: "JCF Women's Royal Deep-V Curve Tee",
+    price: 75.0,
+    colors: ['Black', 'Gold'],
+    gender: 'women',
+    image: 'assets/womens-royal-deep-v-tee-jcf.png',
+    description: `The bolder side of the Royal collection. The Deep-V Curve Tee combines a provocative plunging neckline with our signature utility features, creating a high-fashion silhouette that transitions perfectly from the gym to the city.
+
+Design & Fit
+Sculpted V-Neck: Features a deep-plunge neckline framed with luxury Gold piping and a functional half-zip.
+Movement Slit: Includes a central front slit at the hem for enhanced mobility and a striking visual detail.
+
+Key Features
+Adjustable Hardware: Polished Gold-tone front zipper with the custom Lion/Owl hardware puller allows for adjustable coverage.
+Elite Branding: High-contrast Gold 'JCF' Crown logo positioned on the left chest and tonal Deep Red 'just casual days' branding on the hip.
+Signature Hem: Extended rear curved hem ensures the 'Secure & Stylish' promise remains intact.
+
+Materials & Care
+Fabric: Elite performance waffle-knit with 4-way stretch.
+Care: Hand wash recommended to preserve the deep-V structure and gold hardware integrity.`,
+    category: 'shirts',
+    style: 't-shirt',
+    featured: true,
+  },
+  {
+    id: crypto.randomUUID(),
+    name: "JCF Women's Royal Secure-Support Bra",
+    price: 60.0,
+    colors: ['Black', 'Gold'],
+    gender: 'women',
+    image: 'assets/womens-royal-sports-bra-jcf.png',
+    description: `The JCF Royal Secure-Support Bra is engineered for high-intensity performance with a luxury aesthetic. By utilizing metallic compression materials instead of heavy hardware, this bra provides elite stability and a seamless, high-fashion look.
+
+Design & Fit
+High-Impact Support: Features a wide, high-tension elastic underband and metallic-reinforced straps for a secure, bounce-free fit.
+Royal Detailing: Sleek Gold-metallic piping frames the silhouette, mirroring the design language of the Royal Utility Leggings.
+
+Key Features
+Technical Body: Constructed from our signature black waffle-knit performance fabric with a breathable, moisture-wicking Deep Red inner lining.
+Designer Branding: Features a centered Gold 'JCF' Crown logo and a dual-branded Lion/Owl split-face motif on the underband for a cohesive collection look.
+Comfort Straps: Flat-lay gold-metallic straps designed to provide maximum support without digging or chafing during movement.
+
+Materials & Care
+Fabric: 78% Polyester / 22% Spandex interlock with a Pima cotton-silk blend overlay.
+Care: Machine wash cold in a mesh laundry bag; lay flat to dry to preserve the gold-foil metallic finish.`,
+    category: 'shirts',
+    style: 'sports-bra',
+    featured: true,
+  },
+  {
+    id: crypto.randomUUID(),
+    name: "JCF Royal Performance Headwrap",
+    price: 35.0,
+    colors: ['Black', 'Gold'],
+    gender: 'women',
+    image: 'assets/womens-royal-headwrap-jcf.png',
+    description: `The JCF Royal Performance Headwrap is the ultimate fusion of hair protection and high-end style. Designed to stay secure during the most rigorous movements, this headwrap completes the Royal set with a touch of elegance.
+
+Design & Fit
+Hair-First Construction: Features a friction-reducing Deep Red silky interior lining to prevent breakage and frizz during workouts.
+Secure Stay: Built with a high-tension, adjustable rear elastic that provides a personalized fit without the use of hair-snagging velcro.
+
+Key Features
+Elite Aesthetics: Accented with luxury Gold-metallic piping and a centered Gold 'JCF' Crown logo.
+Technical Breathability: Outer layer consists of our signature moisture-wicking matte black performance fabric.
+Signature Branding: Detailed with the Gold Lion/Owl split-face logo on the temple and 'just casual days' back embroidery.
+
+Materials & Care
+Fabric: Polyester-Spandex outer / Silk-Satin interior blend.
+Care: Hand wash cold; air dry to protect the metallic foil and internal silk lining.`,
+    category: 'accessories',
+    style: 'headwear',
+    featured: false,
+  },
+  // --- WOMENS COLLECTION: ICON SET ---
+
+  {
+    id: crypto.randomUUID(),
+    name: "JCF Women's Icon Cropped Bomber",
+    price: 130.0,
+    colors: ['Black', 'Deep Maroon'],
+    gender: 'women',
+    image: 'assets/womens-icon-bomber-jcf.png',
+    description: `The Icon Cropped Bomber defines the aesthetic of the JCF 'Subtle/Bold' series. This technical outerwear piece blends structured utility with sophisticated luxury branding.
+
+Design & Fit
+Subtle/Bold Aesthetic: A matte black performance shell contrasted by a precise Deep Maroon chest panel and underarm ventilation mesh.
+Structured Silhouette: Features a strong, sculpted shoulder and a defined cropped hem that perfectly complements high-waisted leggings.
+
+Key Features
+Embossed Branding: A massive Lion/Owl split-face logo is precision embossed into the back panel, creating depth without heavy graphics.
+Functional Security: Two front secure-zip hand pockets and a discrete satin internal stash pocket for high-value essentials.
+Signature Hardwear: Finished with heavy-duty matte black zippers and ribbed performance cuffs.
+
+Materials & Care
+Fabric: Technical matte nylon shell with an anti-microbial deep red mesh lining.
+Care: Machine wash cold; line dry. Protect the embossed branding and zippers.`,
+    category: 'outerwear',
+    style: 'jacket',
+    featured: true,
+  },
+  {
+    id: crypto.randomUUID(),
+    name: "JCF Women's Icon High-Waisted Leggings",
+    price: 90.0,
+    colors: ['Black', 'Deep Maroon'],
+    gender: 'women',
+    image: 'assets/womens-icon-leggings-jcf.png',
+    description: `The foundation of the JCF Women's line, the Icon Leggings are engineered to deliver compression, confidence, and covert utility.
+
+Design & Fit
+Secure Support: A 4-inch high-rise, V-tapered waistband provides elite comfort and support during complex movements.
+Sculpted Piping: Contoured Deep Maroon piping defines the natural athletic silhouette of the legs and glutes.
+
+Key Features
+Iconic Embossing: Features a subtle yet prominent Lion/Owl split-face logo embossed onto the right hip.
+Tactical Storage: An integrated side-thigh cargo pocket with a low-profile Deep Maroon zipper secures your phone or wallet.
+Contour Seams: Sculpting flatlock seams reduce chafing and provide an architectural, 'second-skin' fit.
+
+Materials & Care
+Fabric: Premium high-density matte black interlock fabric.
+Care: Machine wash cold; tumble dry low. Do not iron the embossed logo.`,
+    category: 'pants',
+    style: 'leggings',
     featured: true,
   },
 ];
@@ -243,7 +473,8 @@ const state = {
   })),
   customer: load('jcf_customer', null),
   customerHistory: [],
-  adminAuth: false,
+  adminToken: load('jcf_admin_token', ''),
+  adminAuth: Boolean(load('jcf_admin_token', '')),
   selectedProductId: null,
   selectedColor: '',
   selectedSize: '',
@@ -253,7 +484,13 @@ const state = {
 
 const PROMO_CODE = 'jcf-fall';
 const PROMO_RATE = 0.2;
-const API_BASE = 'http://localhost:4000/api';
+const runtimeApiBase =
+  (window.APP_CONFIG && window.APP_CONFIG.apiBase) ||
+  document.querySelector('meta[name="api-base"]')?.content ||
+  '';
+const API_BASE =
+  runtimeApiBase ||
+  `${window.location.protocol}//${window.location.hostname}:4000/api`;
 
 const views = [...document.querySelectorAll('.view')];
 const menProductGrid = document.getElementById('men-product-grid');
@@ -391,6 +628,7 @@ function setView(id) {
 
   views.forEach((view) => view.classList.toggle('active', view.id === id));
   if (id !== 'account-orders' && id !== 'account-details') closeAccountMenu();
+  window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
 }
 
 function load(key, fallback) {
@@ -403,6 +641,18 @@ function save() {
   localStorage.setItem('jcf_cart', JSON.stringify(state.cart));
   localStorage.setItem('jcf_customer', JSON.stringify(state.customer));
   localStorage.setItem('jcf_promo_code', JSON.stringify(state.appliedPromoCode));
+}
+
+function saveAdminSession(token) {
+  state.adminToken = token;
+  state.adminAuth = Boolean(token);
+  localStorage.setItem('jcf_admin_token', token || '');
+}
+
+function clearAdminSession() {
+  state.adminToken = '';
+  state.adminAuth = false;
+  localStorage.removeItem('jcf_admin_token');
 }
 
 function setCustomerAuthFeedback(message, ok = false) {
@@ -479,8 +729,12 @@ function parseListInput(value, fallback = []) {
 }
 
 async function apiRequest(path, options = {}) {
+  const headers = {
+    'Content-Type': 'application/json',
+    ...(options.headers || {})
+  };
   const response = await fetch(`${API_BASE}${path}`, {
-    headers: { 'Content-Type': 'application/json' },
+    headers,
     ...options
   });
 
@@ -492,6 +746,9 @@ async function apiRequest(path, options = {}) {
   }
 
   if (!response.ok) {
+    if (response.status === 401 && path.startsWith('/admin/')) {
+      clearAdminSession();
+    }
     throw new Error(data?.message || 'Request failed');
   }
 
@@ -863,7 +1120,7 @@ function renderAdminProducts() {
     .join('');
 }
 
-window.deleteProduct = (id) => {
+window.deleteProduct = async (id) => {
   const applyDelete = () => {
     state.products = state.products.filter((item) => item.id !== id);
     state.cart = state.cart.filter((item) => item.id !== id);
@@ -879,11 +1136,15 @@ window.deleteProduct = (id) => {
     renderProductDetail();
   };
 
-  apiRequest(`/admin/products/${id}`, { method: 'DELETE' })
-    .catch(() => null)
-    .finally(() => {
-      applyDelete();
+  try {
+    await apiRequest(`/admin/products/${id}`, {
+      method: 'DELETE',
+      headers: { Authorization: `Bearer ${state.adminToken}` }
     });
+    applyDelete();
+  } catch (error) {
+    alert(error?.message || 'Unable to delete product.');
+  }
 };
 
 window.saveProductEdits = async (id) => {
@@ -926,11 +1187,13 @@ window.saveProductEdits = async (id) => {
   try {
     const persisted = await apiRequest(`/admin/products/${id}`, {
       method: 'PUT',
+      headers: { Authorization: `Bearer ${state.adminToken}` },
       body: JSON.stringify(updated),
     });
     Object.assign(item, persisted);
-  } catch {
-    Object.assign(item, updated);
+  } catch (error) {
+    alert(error?.message || 'Unable to save product changes.');
+    return;
   }
 
   state.cart = state.cart.map((line) => {
@@ -986,12 +1249,13 @@ adminProductForm.addEventListener('submit', async (event) => {
   try {
     const created = await apiRequest('/admin/products', {
       method: 'POST',
+      headers: { Authorization: `Bearer ${state.adminToken}` },
       body: JSON.stringify(draftProduct)
     });
     state.products.unshift(created);
-  } catch {
-    // Keep admin add usable even if backend is unavailable.
-    state.products.unshift({ id: crypto.randomUUID(), gender: inferGender(draftProduct), ...draftProduct });
+  } catch (error) {
+    alert(error?.message || 'Unable to add product.');
+    return;
   }
 
   adminProductForm.reset();
@@ -1263,24 +1527,18 @@ document.getElementById('admin-login-form').addEventListener('submit', async (ev
       body: JSON.stringify({ email, password })
     });
 
-    if (result?.ok) {
-      state.adminAuth = true;
+    if (result?.ok && result?.token) {
+      saveAdminSession(result.token);
       closeModal(adminModal);
       setView('admin');
       return;
     }
-  } catch {
-    // Fall back to local credentials if backend fails.
+    clearAdminSession();
+    alert('Admin login failed.');
+  } catch (error) {
+    clearAdminSession();
+    alert(error?.message || 'Invalid admin credentials');
   }
-
-  if (email === 'admin@jcf.com' && password === 'admin123') {
-    state.adminAuth = true;
-    closeModal(adminModal);
-    setView('admin');
-    return;
-  }
-
-  alert('Invalid admin credentials');
 });
 
 async function beginStripeCheckout() {

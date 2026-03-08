@@ -1,6 +1,7 @@
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
+import crypto from 'node:crypto';
 import Stripe from 'stripe';
 import nodemailer from 'nodemailer';
 import twilio from 'twilio';
@@ -38,6 +39,21 @@ const mailFrom = process.env.MAIL_FROM || smtpUser || 'no-reply@jcf.local';
 const twilioSid = process.env.TWILIO_ACCOUNT_SID || '';
 const twilioToken = process.env.TWILIO_AUTH_TOKEN || '';
 const twilioFrom = process.env.TWILIO_FROM_NUMBER || '';
+const adminSessionSecret = process.env.ADMIN_SESSION_SECRET || crypto.randomBytes(32).toString('hex');
+const adminTokenTtlMs = Number(process.env.ADMIN_TOKEN_TTL_MS || 12 * 60 * 60 * 1000);
+const configuredOrigins = String(process.env.CORS_ORIGINS || '')
+  .split(',')
+  .map((origin) => origin.trim())
+  .filter(Boolean);
+const defaultOrigins = ['http://localhost:4173', 'http://127.0.0.1:4173', 'http://localhost:5500', 'http://127.0.0.1:5500'];
+const allowedOrigins = new Set(configuredOrigins.length ? configuredOrigins : defaultOrigins);
+const adminLoginWindowMs = Number(process.env.ADMIN_LOGIN_WINDOW_MS || 15 * 60 * 1000);
+const adminLoginMax = Number(process.env.ADMIN_LOGIN_MAX || 6);
+const authRequestWindowMs = Number(process.env.AUTH_REQUEST_WINDOW_MS || 10 * 60 * 1000);
+const authRequestMax = Number(process.env.AUTH_REQUEST_MAX || 10);
+const authVerifyWindowMs = Number(process.env.AUTH_VERIFY_WINDOW_MS || 10 * 60 * 1000);
+const authVerifyMax = Number(process.env.AUTH_VERIFY_MAX || 12);
+const rateLimitBuckets = new Map();
 const twilioClient = twilioSid && twilioToken ? twilio(twilioSid, twilioToken) : null;
 const mailer =
   smtpHost && smtpUser && smtpPass
@@ -49,7 +65,115 @@ const mailer =
       })
     : null;
 
-app.use(cors());
+app.use(
+  cors({
+    origin(origin, callback) {
+      if (!origin) {
+        callback(null, true);
+        return;
+      }
+      if (allowedOrigins.has(origin)) {
+        callback(null, true);
+        return;
+      }
+      callback(new Error('Origin not allowed by CORS'));
+    },
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+  })
+);
+
+function signAdminToken(payload) {
+  return crypto.createHmac('sha256', adminSessionSecret).update(payload).digest('hex');
+}
+
+function createAdminToken() {
+  const tokenId = crypto.randomBytes(24).toString('hex');
+  const expiresAt = Date.now() + adminTokenTtlMs;
+  const payload = `${tokenId}.${expiresAt}`;
+  const signature = signAdminToken(payload);
+  return { token: `${payload}.${signature}`, expiresAt };
+}
+
+function verifyAdminToken(token = '') {
+  const [tokenId = '', expiresAtRaw = '', signature = ''] = String(token).split('.');
+  const expiresAt = Number(expiresAtRaw);
+  if (!tokenId || !signature || !Number.isFinite(expiresAt) || Date.now() > expiresAt) {
+    return false;
+  }
+
+  const payload = `${tokenId}.${expiresAt}`;
+  const expected = signAdminToken(payload);
+  if (signature.length !== expected.length) return false;
+  return crypto.timingSafeEqual(Buffer.from(signature), Buffer.from(expected));
+}
+
+function requireAdmin(req, res, next) {
+  const authHeader = String(req.headers.authorization || '');
+  if (!authHeader.startsWith('Bearer ')) {
+    res.status(401).json({ ok: false, message: 'Admin authorization required.' });
+    return;
+  }
+
+  const token = authHeader.slice(7).trim();
+  if (!verifyAdminToken(token)) {
+    res.status(401).json({ ok: false, message: 'Invalid or expired admin token.' });
+    return;
+  }
+
+  next();
+}
+
+function getClientIp(req) {
+  const forwarded = req.headers['x-forwarded-for'];
+  if (typeof forwarded === 'string' && forwarded.trim()) {
+    return forwarded.split(',')[0].trim();
+  }
+  return String(req.socket?.remoteAddress || req.ip || 'unknown');
+}
+
+function createRateLimiter({ id, windowMs, max }) {
+  return (req, res, next) => {
+    const now = Date.now();
+    const key = `${id}:${getClientIp(req)}`;
+    const current = rateLimitBuckets.get(key);
+
+    if (!current || now >= current.resetAt) {
+      rateLimitBuckets.set(key, { count: 1, resetAt: now + windowMs });
+      next();
+      return;
+    }
+
+    if (current.count >= max) {
+      const retryAfterSeconds = Math.max(1, Math.ceil((current.resetAt - now) / 1000));
+      res.setHeader('Retry-After', String(retryAfterSeconds));
+      res.status(429).json({ ok: false, message: 'Too many requests. Please try again later.' });
+      return;
+    }
+
+    current.count += 1;
+    rateLimitBuckets.set(key, current);
+    next();
+  };
+}
+
+const adminLoginLimiter = createRateLimiter({
+  id: 'admin-login',
+  windowMs: adminLoginWindowMs,
+  max: adminLoginMax
+});
+
+const authRequestLimiter = createRateLimiter({
+  id: 'auth-request-code',
+  windowMs: authRequestWindowMs,
+  max: authRequestMax
+});
+
+const authVerifyLimiter = createRateLimiter({
+  id: 'auth-verify-code',
+  windowMs: authVerifyWindowMs,
+  max: authVerifyMax
+});
 
 async function sendOrderNotifications(order, customerEmail = '', customerPhone = '') {
   if (mailer && customerEmail) {
@@ -182,7 +306,7 @@ app.post('/api/email-signups', async (req, res, next) => {
   }
 });
 
-app.post('/api/admin/login', async (req, res, next) => {
+app.post('/api/admin/login', adminLoginLimiter, async (req, res, next) => {
   try {
     const { email, password } = req.body || {};
     const valid = await validateAdmin(email, password);
@@ -191,13 +315,14 @@ app.post('/api/admin/login', async (req, res, next) => {
       return;
     }
 
-    res.json({ ok: true, role: 'admin' });
+    const session = createAdminToken();
+    res.json({ ok: true, role: 'admin', token: session.token, expiresAt: session.expiresAt });
   } catch (error) {
     next(error);
   }
 });
 
-app.post('/api/auth/request-code', async (req, res, next) => {
+app.post('/api/auth/request-code', authRequestLimiter, async (req, res, next) => {
   try {
     const { email = '', name = '', phone = '' } = req.body || {};
     const verification = await requestCustomerCode(email, name, phone);
@@ -225,7 +350,7 @@ app.post('/api/auth/request-code', async (req, res, next) => {
   }
 });
 
-app.post('/api/auth/verify-code', async (req, res, next) => {
+app.post('/api/auth/verify-code', authVerifyLimiter, async (req, res, next) => {
   try {
     const { email = '', code = '', name = '', phone = '' } = req.body || {};
     const customer = await verifyCustomerCode(email, code, name, phone);
@@ -293,7 +418,7 @@ app.post('/api/support/messages', async (req, res, next) => {
   }
 });
 
-app.post('/api/admin/products', async (req, res, next) => {
+app.post('/api/admin/products', requireAdmin, async (req, res, next) => {
   try {
     const product = await addProduct(req.body || {});
     res.status(201).json(product);
@@ -306,7 +431,7 @@ app.post('/api/admin/products', async (req, res, next) => {
   }
 });
 
-app.put('/api/admin/products/:id', async (req, res, next) => {
+app.put('/api/admin/products/:id', requireAdmin, async (req, res, next) => {
   try {
     const updated = await updateProduct(req.params.id, req.body || {});
     if (!updated) {
@@ -323,7 +448,7 @@ app.put('/api/admin/products/:id', async (req, res, next) => {
   }
 });
 
-app.delete('/api/admin/products/:id', async (req, res, next) => {
+app.delete('/api/admin/products/:id', requireAdmin, async (req, res, next) => {
   try {
     const deleted = await deleteProduct(req.params.id);
     if (!deleted) {

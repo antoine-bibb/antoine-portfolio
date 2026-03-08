@@ -5,6 +5,18 @@
 2. `npm install`
 3. Create `.env` from `.env.example` and set:
    - `STRIPE_SECRET_KEY`
+   - Admin auth settings:
+     - `ADMIN_EMAIL`
+     - `ADMIN_PASSWORD`
+     - `ADMIN_HASH_ITERATIONS`
+     - `ADMIN_SESSION_SECRET` (required for stable admin tokens across restarts)
+     - `ADMIN_TOKEN_TTL_MS`
+   - CORS allowlist:
+     - `CORS_ORIGINS` (comma-separated, e.g. `https://shop.example.com,https://admin.example.com`)
+   - Optional rate-limit settings:
+     - `ADMIN_LOGIN_WINDOW_MS`, `ADMIN_LOGIN_MAX`
+     - `AUTH_REQUEST_WINDOW_MS`, `AUTH_REQUEST_MAX`
+     - `AUTH_VERIFY_WINDOW_MS`, `AUTH_VERIFY_MAX`
    - Optional email settings for verification/confirmation:
      - `SMTP_HOST`, `SMTP_PORT`, `SMTP_SECURE`, `SMTP_USER`, `SMTP_PASS`, `MAIL_FROM`
    - Optional SMS settings for text invoice:
@@ -12,6 +24,8 @@
 4. `npm run dev`
 
 Runs at `http://localhost:4000` by default.
+
+If legacy plaintext admin credentials are found in data files, they are migrated to hashed credentials on startup.
 
 ## Stripe Webhook (Local Testing)
 Use Stripe CLI to forward events:
@@ -28,7 +42,11 @@ Webhook finalizes orders server-side on `checkout.session.completed`.
 - `POST /api/email-signups`
   - body: `{ "email": "name@example.com" }`
 - `POST /api/admin/login`
-  - body: `{ "email": "admin@jcf.com", "password": "admin123" }`
+  - body: `{ "email": "<ADMIN_EMAIL>", "password": "<ADMIN_PASSWORD>" }`
+  - response: `{ "ok": true, "token": "...", "expiresAt": 1234567890 }`
+- `POST /api/admin/products` (requires `Authorization: Bearer <token>`)
+- `PUT /api/admin/products/:id` (requires `Authorization: Bearer <token>`)
+- `DELETE /api/admin/products/:id` (requires `Authorization: Bearer <token>`)
 - `POST /api/auth/request-code`
   - body: `{ "email": "name@example.com", "name": "Name", "phone": "+15555550123" }`
 - `POST /api/auth/verify-code`

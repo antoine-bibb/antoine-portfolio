@@ -12,6 +12,9 @@
   },
   "admin": {
     "email": "admin@jcf.com",
-    "password": "admin123"
+    "passwordHash": "119975c38aea9d366bb8b02f1a97af89966890093e8c18b67a42227f5276ce4f656debe1768fe1f5a6b00ca17d5056c6bc6d7e2dd85727f39877de637b7178ff",
+    "passwordSalt": "85e7377690cc6d9d236c36492cb85739",
+    "passwordIterations": 210000,
+    "passwordDigest": "sha512"
   }
 }
