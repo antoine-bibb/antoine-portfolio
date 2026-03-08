@@ -1,0 +1,17 @@
+{
+  "emailSignups": [
+    "jcfitsco@gmail.com"
+  ],
+  "supportMessages": [],
+  "promoCodes": {
+    "jcf-fall": {
+      "code": "jcf-fall",
+      "discountRate": 0.2,
+      "active": true
+    }
+  },
+  "admin": {
+    "email": "admin@jcf.com",
+    "password": "admin123"
+  }
+}

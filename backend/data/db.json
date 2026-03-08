@@ -1,0 +1,274 @@
+{
+  "products": [
+    {
+      "id": "03c8b647-436e-44f4-9e8d-3f05340c5431",
+      "name": "JCF Heartbreak Tee and Joggers Set",
+      "price": 115,
+      "colors": [
+        "Black",
+        "Gray",
+        "White",
+        "Navy"
+      ],
+      "gender": "men",
+      "image": "assets/jogger_set.png",
+      "description": "Slim fit joggers designed for comfort and athletic style.",
+      "category": "bottoms",
+      "style": "slim jogger",
+      "featured": true
+    },
+    {
+      "id": "55da4d56-469d-4327-be88-9adab6b858a1",
+      "name": "JCF Relaxed Joggers",
+      "price": 115,
+      "colors": [
+        "Black",
+        "Gray",
+        "White",
+        "Olive"
+      ],
+      "gender": "men",
+      "image": "assets/relaxed-joggers-black.jpg",
+      "description": "Relaxed fit joggers for casual wear or lounging at home.",
+      "category": "bottoms",
+      "style": "relaxed jogger",
+      "featured": false
+    },
+    {
+      "id": "ca720dcb-70ba-4a44-a12f-0bbf36cab7f0",
+      "name": "JCF V-Neck Tee",
+      "price": 55,
+      "colors": [
+        "Black",
+        "Gray",
+        "White",
+        "Navy"
+      ],
+      "gender": "men",
+      "image": "assets/vneck-tee-black.jpg",
+      "description": "Soft V-neck tee made for layering or standalone style.",
+      "category": "tops",
+      "style": "v-neck tee",
+      "featured": false
+    },
+    {
+      "id": "3c72d80b-1f66-4350-a181-80701099bf92",
+      "name": "JCF Round-Neck Tee",
+      "price": 50,
+      "colors": [
+        "Black",
+        "Gray",
+        "White",
+        "Olive"
+      ],
+      "gender": "men",
+      "image": "assets/roundneck-tee-black.jpg",
+      "description": "Classic round-neck tee crafted for everyday comfort.",
+      "category": "tops",
+      "style": "round-neck tee",
+      "featured": false
+    },
+    {
+      "id": "b623ebb9-5b06-4411-980e-d3c13c22a1a4",
+      "name": "JCF Legging and Crop Set",
+      "price": 120,
+      "colors": [
+        "Black",
+        "Gray",
+        "White",
+        "Navy",
+        "Pink"
+      ],
+      "gender": "women",
+      "image": "assets/leggings_set.png",
+      "description": "Slim fit joggers designed to flatter and move with you.",
+      "category": "bottoms",
+      "style": "slim jogger",
+      "featured": true
+    },
+    {
+      "id": "458eaab9-0c5a-4f80-bf28-e9085ab4eb8b",
+      "name": "JCF Women's Relaxed Joggers",
+      "price": 120,
+      "colors": [
+        "Black",
+        "Gray",
+        "White",
+        "Olive",
+        "Pink"
+      ],
+      "gender": "women",
+      "image": "assets/womens-relaxed-joggers-black.jpg",
+      "description": "Relaxed fit joggers with side pockets, perfect for lounging.",
+      "category": "bottoms",
+      "style": "relaxed jogger",
+      "featured": false
+    },
+    {
+      "id": "92d81c52-8a86-4705-8e6d-26afc9a63b42",
+      "name": "JCF Leggings with Side Pockets",
+      "price": 100,
+      "colors": [
+        "Black",
+        "Gray",
+        "White",
+        "Pink"
+      ],
+      "gender": "women",
+      "image": "assets/leggings-side-pockets-black.jpg",
+      "description": "High-performance leggings with convenient side pockets.",
+      "category": "bottoms",
+      "style": "leggings",
+      "featured": false
+    },
+    {
+      "id": "4b9da8fa-9474-4d5b-aaee-67087f7fb721",
+      "name": "JCF Leggings with High Waist",
+      "price": 100,
+      "colors": [
+        "Black",
+        "Gray",
+        "White",
+        "Pink"
+      ],
+      "gender": "women",
+      "image": "assets/leggings-highwaist-black.jpg",
+      "description": "High-waist leggings designed for style and comfort during workouts.",
+      "category": "bottoms",
+      "style": "leggings",
+      "featured": false
+    },
+    {
+      "id": "a8312179-bb9f-4b0d-a172-ecd0e6f7f116",
+      "name": "JCF Women's Crop Top",
+      "price": 55,
+      "colors": [
+        "Black",
+        "Gray",
+        "White",
+        "Pink"
+      ],
+      "gender": "women",
+      "image": "assets/crop-top-black.jpg",
+      "description": "Stylish crop top designed for layering or standalone wear.",
+      "category": "tops",
+      "style": "crop top",
+      "featured": false
+    },
+    {
+      "id": "4d7b0191-763e-40db-a2e8-9d36d131ce24",
+      "name": "JCF Women's Long Crop Top",
+      "price": 55,
+      "colors": [
+        "Black",
+        "Gray",
+        "White",
+        "Pink"
+      ],
+      "gender": "women",
+      "image": "assets/long-crop-top-black.jpg",
+      "description": "Longer crop top with a comfortable stretch for casual or athletic wear.",
+      "category": "tops",
+      "style": "crop top",
+      "featured": false
+    },
+    {
+      "id": "ac037d04-4616-4b6f-8584-edb5be2b3f35",
+      "name": "JCF Women's Yoga Shorts",
+      "price": 60,
+      "colors": [
+        "Black",
+        "Gray",
+        "White",
+        "Pink"
+      ],
+      "gender": "women",
+      "image": "assets/yoga-shorts-black.jpg",
+      "description": "High-waist yoga shorts with side pockets for ultimate flexibility and style.",
+      "category": "bottoms",
+      "style": "yoga shorts",
+      "featured": false
+    },
+    {
+      "id": "3402954d-1950-49c5-bec2-d212f02fd649",
+      "name": "JCF Women's Cropped Hoodie",
+      "price": 90,
+      "colors": [
+        "Black",
+        "Gray",
+        "White",
+        "Pink"
+      ],
+      "gender": "women",
+      "image": "assets/cropped-hoodie-black.jpg",
+      "description": "Cropped hoodie designed for a trendy casual look.",
+      "category": "tops",
+      "style": "cropped hoodie",
+      "featured": false
+    },
+    {
+      "id": "1f08c458-455b-42e1-bb72-0c344437aaa4",
+      "name": "JCF Women's Oversized Hoodie",
+      "price": 110,
+      "colors": [
+        "Black",
+        "Gray",
+        "White",
+        "Pink"
+      ],
+      "gender": "unisex",
+      "image": "assets/oversized-hoodie-black.jpg",
+      "description": "Oversized hoodie for a relaxed and cozy vibe.",
+      "category": "tops",
+      "style": "oversized hoodie",
+      "featured": false
+    },
+    {
+      "id": "91ac9307-44c4-4c8a-8c06-5f0789c2202a",
+      "name": "JCF Women's Slim Fit Hoodie",
+      "price": 100,
+      "colors": [
+        "Black",
+        "Gray",
+        "White",
+        "Pink"
+      ],
+      "gender": "unisex",
+      "image": "assets/jcf-evol-hoodie.png",
+      "description": "Slim fit hoodie designed to accentuate your silhouette.",
+      "category": "tops",
+      "style": "slim hoodie",
+      "featured": true
+    }
+  ],
+  "emailSignups": [],
+  "customers": [],
+  "authCodes": {
+    "abibb08@icloud.com": {
+      "code": "164748",
+      "email": "abibb08@icloud.com",
+      "name": "Antoine",
+      "phone": "2169031463",
+      "expiresAt": 1772934313901
+    },
+    "jcfitsco@gmail.com": {
+      "code": "610894",
+      "email": "jcfitsco@gmail.com",
+      "name": "antoine bibb",
+      "phone": "2169031463",
+      "expiresAt": 1772934654251
+    }
+  },
+  "orders": [],
+  "promoCodes": {
+    "jcf-fall": {
+      "code": "jcf-fall",
+      "discountRate": 0.2,
+      "active": true
+    }
+  },
+  "admin": {
+    "email": "admin@jcf.com",
+    "password": "admin123"
+  }
+}

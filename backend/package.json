@@ -1,0 +1,18 @@
+{
+  "name": "jcf-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.3.1",
+    "express": "^4.19.2",
+    "nodemailer": "^8.0.1",
+    "stripe": "^17.5.0",
+    "twilio": "^5.12.2"
+  }
+}

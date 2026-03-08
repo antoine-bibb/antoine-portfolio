@@ -98,6 +98,71 @@ nav,
   align-items: center;
 }
 
+.actions {
+  position: relative;
+}
+
+.account-menu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  width: min(420px, 92vw);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.18);
+  padding: 0.8rem;
+  z-index: 1200;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.account-nav-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.45rem;
+}
+
+.account-section {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.65rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.account-section h4 {
+  margin: 0;
+}
+
+.account-form {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.account-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.account-scroll {
+  max-height: 170px;
+  overflow: auto;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.account-order-item {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.45rem;
+  font-size: 0.92rem;
+}
+
+.account-logout {
+  justify-self: end;
+}
+
 .cart-nav-btn {
   position: relative;
   display: inline-flex;
@@ -200,6 +265,134 @@ main {
   margin: 0;
   font-size: clamp(2rem, 5vw, 4rem);
   max-width: 18ch;
+}
+
+.catalog-hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 3rem;
+
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.65),
+    rgba(0,0,0,0.2)
+  );
+
+  color: white;
+  max-width: 600px;
+}
+
+.catalog-hero {
+  position: relative;
+  min-height: 420px;
+  border-radius: 20px;
+  overflow: hidden;
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+  display: block;
+}
+
+.catalog-header {
+  margin-bottom: 0.65rem;
+}
+
+.catalog-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  margin: 0.2rem 0 0.6rem 0;
+}
+
+.hero-description {
+  font-size: 1rem;
+  color: #ddd;
+  margin-bottom: 1.2rem;
+}
+
+.catalog-hero-copy {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.catalog-hero h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 3.4vw, 2.5rem);
+}
+
+.catalog-hero p {
+  margin: 0;
+  max-width: 60ch;
+}
+
+.catalog-hero-image {
+  width: 100%;
+  max-height: 240px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.featured-hero {
+  background-image: linear-gradient(135deg, rgba(17, 17, 17, 0.788), rgba(42, 42, 42, 0.753)), url("./assets/hero-featured-placeholder.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.men-hero {
+  position: relative;
+  min-height: 420px;
+  border-radius: 20px;
+  overflow: hidden;
+
+  background-image: linear-gradient(135deg, rgba(10, 10, 10, 0.45), rgba(10, 10, 10, 0.3)), url("./assets/men-hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.women-hero {
+  background-image: linear-gradient(135deg, rgba(36, 36, 36, 0.45), rgba(106, 58, 82, 0.35)), url("./assets/women-hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.catalog-hero-image {
+  width: 100%;               /* fills the container width */
+  max-height: 500px;         /* limits height so it doesn’t dominate page */
+  object-fit: cover;         /* crops image nicely without stretching */
+  border-radius: 12px;       /* optional: soft rounded corners */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* subtle depth */
+  display: block;            /* removes inline spacing issues */
+  margin: 1rem 0;            /* spacing above & below */
+  transition: transform 0.3s ease; /* smooth hover effect */
+}
+
+.catalog-hero-image:hover {
+  transform: scale(1.03);    /* slight zoom on hover */
+}
+
+.unisex-hero {
+  background-image: linear-gradient(135deg, rgba(31, 31, 31, 0.45), rgba(63, 63, 63, 0.35)), url("./assets/unisex-hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.men-hero {
+  animation: heroZoom 12s ease-in-out infinite alternate;
+}
+
+@keyframes heroZoom {
+  from {
+    background-size: 100%;
+  }
+  to {
+    background-size: 110%;
+  }
 }
 
 .eyebrow {
@@ -381,6 +574,26 @@ input {
   gap: 1rem;
 }
 
+.admin-item {
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.admin-item-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.6rem;
+}
+
+.admin-item-form textarea {
+  grid-column: 1 / -1;
+  min-height: 64px;
+}
+
+.admin-item-actions {
+  justify-content: flex-end;
+}
+
 .cart-summary,
 .steps,
 .auth-form,
@@ -390,6 +603,19 @@ input {
   border-radius: 12px;
   padding: 1rem;
   border: 1px solid var(--line);
+}
+
+.order-history {
+  margin-top: 0.9rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.order-history .order-line {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.7rem;
 }
 
 .steps {
@@ -419,10 +645,23 @@ input {
   display: none;
 }
 
-dialog {
-  border: none;
-  padding: 0;
-  border-radius: 16px;
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1000;
+}
+
+.modal.is-open {
+  display: flex;
+}
+
+.modal .auth-form {
+  width: min(420px, 100%);
 }
 
 .auth-form {
@@ -431,10 +670,57 @@ dialog {
   min-width: 320px;
 }
 
+.modal-shell {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 1.1rem;
+}
+
+.modal-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("./assets/logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 180px;
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+.modal-shell > * {
+  position: relative;
+  z-index: 1;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.55rem;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: #efefef;
+  color: #222;
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: 0;
+}
+
 .hint {
   margin: 0;
   color: var(--muted);
   font-size: 0.85rem;
+}
+
+.promo-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 @media (max-width: 840px) {
@@ -445,6 +731,15 @@ dialog {
 
   .hero {
     padding: 2rem;
+  }
+
+  .catalog-hero {
+    padding: 1.35rem;
+    grid-template-columns: 1fr;
+  }
+
+  .catalog-hero-image {
+    max-height: 180px;
   }
 
   .product-detail {

@@ -1,0 +1,240 @@
+[
+  {
+    "id": "b5b24b44-54c6-4bb6-b55e-dd6db8d3851a",
+    "name": "JCF Jogger Set",
+    "price": 125,
+    "colors": [
+      "Black",
+      "Gray",
+      "White",
+      "Navy"
+    ],
+    "gender": "men",
+    "image": "assets/jogger_set.png",
+    "description": "Athletic jogger and tee set designed for comfort and street style.",
+    "category": "sets",
+    "style": "jogger set",
+    "featured": true
+  },
+  {
+    "id": "1938384b-e4fd-4bef-8f0d-900dbd8e8d1e",
+    "name": "JCF Slim Jogger",
+    "price": 95,
+    "colors": [
+      "Black",
+      "Gray",
+      "White",
+      "Olive"
+    ],
+    "gender": "men",
+    "image": "assets/slim-jogger.jpg",
+    "description": "Slim fit joggers built for movement and everyday wear.",
+    "category": "bottoms",
+    "style": "slim jogger",
+    "featured": false
+  },
+  {
+    "id": "0aea3022-7d6f-4246-960f-ca49ff883aee",
+    "name": "JCF Crew Neck Long Sleeve",
+    "price": 35,
+    "colors": [
+      "Black",
+      "Gray",
+      "White",
+      "Navy"
+    ],
+    "gender": "men",
+    "image": "assets/crew-neck-long-sleeve.jpg",
+    "description": "Comfortable long sleeve tee designed for layering.",
+    "category": "tops",
+    "style": "long sleeve",
+    "featured": false
+  },
+  {
+    "id": "b424544d-e3d4-404f-9092-86b2a24be8cf",
+    "name": "JCF Tech Hoodie",
+    "price": 85,
+    "colors": [
+      "Black",
+      "Gray",
+      "White"
+    ],
+    "gender": "men",
+    "image": "assets/tech-hoodie.jpg",
+    "description": "Tech hoodie with hidden pockets and athletic structure.",
+    "category": "tops",
+    "style": "hoodie",
+    "featured": false
+  },
+  {
+    "id": "e4cc751b-b470-4e92-a211-171545255dd7",
+    "name": "JCF Crew Neck Tee",
+    "price": 50,
+    "colors": [
+      "Black",
+      "Gray",
+      "White",
+      "Olive"
+    ],
+    "gender": "men",
+    "image": "assets/crew-neck-tee.jpg",
+    "description": "Classic crew neck tee made for everyday casual wear.",
+    "category": "tops",
+    "style": "t-shirt",
+    "featured": false
+  },
+  {
+    "id": "06635cf9-e919-437d-85aa-890d3eabaa93",
+    "name": "JCF Legging Crop Set",
+    "price": 120,
+    "colors": [
+      "Black",
+      "Gray",
+      "White",
+      "Navy",
+      "Pink"
+    ],
+    "gender": "women",
+    "image": "assets/leggings_set.png",
+    "description": "Leggings and crop top set built for performance and style.",
+    "category": "sets",
+    "style": "legging set",
+    "featured": true
+  },
+  {
+    "id": "6424dfd3-7f98-4fc3-a48e-dbd61a36a2af",
+    "name": "JCF Relaxed Joggers",
+    "price": 120,
+    "colors": [
+      "Black",
+      "Gray",
+      "White",
+      "Olive",
+      "Pink"
+    ],
+    "gender": "women",
+    "image": "assets/relaxed-joggers.jpg",
+    "description": "Relaxed joggers with side pockets for comfort and lounge wear.",
+    "category": "bottoms",
+    "style": "joggers",
+    "featured": false
+  },
+  {
+    "id": "58c2428c-270b-4ae4-82bb-ff30b2374909",
+    "name": "JCF Crop Top Short Set",
+    "price": 95,
+    "colors": [
+      "Black",
+      "Gray",
+      "White",
+      "Pink"
+    ],
+    "gender": "women",
+    "image": "assets/crop-top-short-set.jpg",
+    "description": "Crop top and biker short set designed for workouts.",
+    "category": "sets",
+    "style": "short set",
+    "featured": false
+  },
+  {
+    "id": "ca202ab9-dda4-4790-9bf1-2ce1a558ea59",
+    "name": "JCF Leggings Crop Set",
+    "price": 100,
+    "colors": [
+      "Black",
+      "Gray",
+      "White",
+      "Pink"
+    ],
+    "gender": "women",
+    "image": "assets/leggings-crop.jpg",
+    "description": "High waist leggings paired with crop top for training.",
+    "category": "sets",
+    "style": "leggings",
+    "featured": false
+  },
+  {
+    "id": "2b1ca541-bfba-4a5a-82ca-62d5508bb081",
+    "name": "JCF Crop Jogger Set",
+    "price": 110,
+    "colors": [
+      "Black",
+      "Gray",
+      "White",
+      "Pink"
+    ],
+    "gender": "women",
+    "image": "assets/crop-top-jogger-set.jpg",
+    "description": "Crop hoodie and jogger set for casual style.",
+    "category": "sets",
+    "style": "jogger set",
+    "featured": false
+  },
+  {
+    "id": "a76644d1-97f0-437b-a039-4146fdd5a7d9",
+    "name": "JCF Long Sleeve Crop",
+    "price": 55,
+    "colors": [
+      "Black",
+      "Gray",
+      "White",
+      "Pink"
+    ],
+    "gender": "women",
+    "image": "assets/long-sleeve-crop.jpg",
+    "description": "Long sleeve crop top built for style and comfort.",
+    "category": "tops",
+    "style": "crop top",
+    "featured": false
+  },
+  {
+    "id": "7c897a20-6459-4dc4-bfcb-df330d37a7dc",
+    "name": "JCF Crop Hoodie",
+    "price": 90,
+    "colors": [
+      "Black",
+      "Gray",
+      "White",
+      "Pink"
+    ],
+    "gender": "women",
+    "image": "assets/crop-top-hoodie.jpg",
+    "description": "Trendy cropped hoodie for casual wear.",
+    "category": "tops",
+    "style": "cropped hoodie",
+    "featured": false
+  },
+  {
+    "id": "e3f5371e-5c4c-455f-876e-2e252ccf4013",
+    "name": "JCF Back Hoodie",
+    "price": 110,
+    "colors": [
+      "Black",
+      "Gray",
+      "White",
+      "Pink"
+    ],
+    "gender": "women",
+    "image": "assets/back-hoodie.jpg",
+    "description": "Oversized hoodie designed for cozy comfort.",
+    "category": "tops",
+    "style": "oversized hoodie",
+    "featured": false
+  },
+  {
+    "id": "257a1f68-dc30-4a79-b68a-0127da2f6a9a",
+    "name": "JCF Evol Hoodie",
+    "price": 100,
+    "colors": [
+      "Black",
+      "Gray",
+      "White"
+    ],
+    "gender": "men",
+    "image": "assets/jcf-evol-hoodie.png",
+    "description": "Slim fit hoodie with a modern athletic cut.",
+    "category": "tops",
+    "style": "hoodie",
+    "featured": true
+  }
+]

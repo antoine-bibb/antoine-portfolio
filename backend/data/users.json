@@ -1,0 +1,80 @@
+{
+  "customers": [
+    {
+      "id": "8b759b4c-8224-4a37-a114-487e10354144",
+      "email": "jcfitsco@gmail.com",
+      "name": "antoine bibb",
+      "phone": "2169031463",
+      "createdAt": "2026-03-08T02:07:39.327Z",
+      "lastLoginAt": "2026-03-08T02:07:39.327Z"
+    }
+  ],
+  "authCodes": {
+    "abibb08@icloud.com": {
+      "code": "164748",
+      "email": "abibb08@icloud.com",
+      "name": "Antoine",
+      "phone": "2169031463",
+      "expiresAt": 1772934313901
+    }
+  },
+  "orders": [
+    {
+      "id": "ORD-1772935768328",
+      "customerEmail": "jcfitsco@gmail.com",
+      "items": [
+        {
+          "id": "af2de25f-1144-4ece-b41d-e9a61429bb30",
+          "name": "JCF Slim Jogger",
+          "color": "Gray",
+          "size": "M",
+          "price": 95,
+          "qty": 1
+        }
+      ],
+      "subtotal": 95,
+      "discount": 0,
+      "total": 95,
+      "promoCode": "",
+      "stripeSessionId": "cs_test_a1xlet0CKBZNbms2sqVZOfpvX660xuCDYVPkK7xwZDv2G17GRqxrbvbIh0",
+      "status": "paid",
+      "createdAt": "2026-03-08T02:09:28.328Z"
+    }
+  ],
+  "pendingCheckouts": [
+    {
+      "sessionId": "cs_test_a1D51cbkmlONYTvdrKmWVCqLzDwT2uL7WfGWMzvOQBaAD1wC3WjqyfGaK6",
+      "customerEmail": "jcfitsco@gmail.com",
+      "customerPhone": "2169031463",
+      "promoCode": "jcf-fall",
+      "cart": [
+        {
+          "id": "ad9d46e8-c012-4a81-b7c8-de19f35f8884",
+          "name": "JCF Legging Crop Set",
+          "color": "Black",
+          "size": "S",
+          "price": 120,
+          "qty": 1
+        }
+      ],
+      "createdAt": "2026-03-08T03:06:08.181Z"
+    },
+    {
+      "sessionId": "cs_test_a1R6aahTFGcra411vnnzMnD8qLzJhaqzm9b1t1d796OGvakRsKHnmmCm1c",
+      "customerEmail": "jcfitsco@gmail.com",
+      "customerPhone": "2169031463",
+      "promoCode": "",
+      "cart": [
+        {
+          "id": "6496cc34-4c68-4008-afb4-d1d1ecfa5eac",
+          "name": "JCF Slim Jogger",
+          "color": "Black",
+          "size": "L",
+          "price": 95,
+          "qty": 1
+        }
+      ],
+      "createdAt": "2026-03-08T02:32:47.318Z"
+    }
+  ]
+}

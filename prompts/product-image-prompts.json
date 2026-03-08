@@ -1,353 +1,104 @@
 {
   "globalStyle": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k.",
   "prompts": [
+
     {
       "file": "assets/jogger_set.png",
-      "product": "JCF Heartbreak Tee and Joggers Set",
+      "product": "JCF Jogger Set",
       "color": "Black",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Heartbreak Tee and Joggers Set, athletic jogger silhouette, premium fabric texture in black."
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition. JCF Jogger Set, athletic jogger and tee set in black premium fabric."
     },
+
     {
-      "file": "assets/jogger_set-gray.jpg",
-      "product": "JCF Heartbreak Tee and Joggers Set",
-      "color": "Gray",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Heartbreak Tee and Joggers Set, athletic jogger silhouette, premium fabric texture in gray."
-    },
-    {
-      "file": "assets/jogger_set-white.jpg",
-      "product": "JCF Heartbreak Tee and Joggers Set",
-      "color": "White",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Heartbreak Tee and Joggers Set, athletic jogger silhouette, premium fabric texture in white."
-    },
-    {
-      "file": "assets/jogger_set-navy.jpg",
-      "product": "JCF Heartbreak Tee and Joggers Set",
-      "color": "Navy",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Heartbreak Tee and Joggers Set, athletic jogger silhouette, premium fabric texture in navy."
-    },
-    {
-      "file": "assets/relaxed-joggers-black.jpg",
-      "product": "JCF Relaxed Joggers",
+      "file": "assets/slim-jogger.jpg",
+      "product": "JCF Slim Jogger",
       "color": "Black",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Relaxed Joggers, athletic jogger silhouette, premium fabric texture in black."
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting. JCF Slim Jogger pants, modern tapered athletic fit in black performance fabric."
     },
+
     {
-      "file": "assets/relaxed-joggers-gray.jpg",
-      "product": "JCF Relaxed Joggers",
-      "color": "Gray",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Relaxed Joggers, athletic jogger silhouette, premium fabric texture in gray."
-    },
-    {
-      "file": "assets/relaxed-joggers-white.jpg",
-      "product": "JCF Relaxed Joggers",
-      "color": "White",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Relaxed Joggers, athletic jogger silhouette, premium fabric texture in white."
-    },
-    {
-      "file": "assets/relaxed-joggers-olive.jpg",
-      "product": "JCF Relaxed Joggers",
-      "color": "Olive",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Relaxed Joggers, athletic jogger silhouette, premium fabric texture in olive."
-    },
-    {
-      "file": "assets/vneck-tee-black.jpg",
-      "product": "JCF V-Neck Tee",
+      "file": "assets/crew-neck-long-sleeve.jpg",
+      "product": "JCF Crew Neck Long Sleeve",
       "color": "Black",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF V-Neck Tee, clean t-shirt silhouette, minimal seam detail in black."
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting. JCF Crew Neck Long Sleeve shirt, minimalist athletic design in black cotton performance fabric."
     },
+
     {
-      "file": "assets/vneck-tee-gray.jpg",
-      "product": "JCF V-Neck Tee",
-      "color": "Gray",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF V-Neck Tee, clean t-shirt silhouette, minimal seam detail in gray."
-    },
-    {
-      "file": "assets/vneck-tee-white.jpg",
-      "product": "JCF V-Neck Tee",
-      "color": "White",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF V-Neck Tee, clean t-shirt silhouette, minimal seam detail in white."
-    },
-    {
-      "file": "assets/vneck-tee-navy.jpg",
-      "product": "JCF V-Neck Tee",
-      "color": "Navy",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF V-Neck Tee, clean t-shirt silhouette, minimal seam detail in navy."
-    },
-    {
-      "file": "assets/roundneck-tee-black.jpg",
-      "product": "JCF Round-Neck Tee",
+      "file": "assets/tech-hoodie.jpg",
+      "product": "JCF Tech Hoodie",
       "color": "Black",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Round-Neck Tee, clean t-shirt silhouette, minimal seam detail in black."
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting. JCF Tech Hoodie, athletic modern hoodie silhouette with structured hood and performance fabric in black."
     },
+
     {
-      "file": "assets/roundneck-tee-gray.jpg",
-      "product": "JCF Round-Neck Tee",
-      "color": "Gray",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Round-Neck Tee, clean t-shirt silhouette, minimal seam detail in gray."
+      "file": "assets/crew-neck-tee.jpg",
+      "product": "JCF Crew Neck Tee",
+      "color": "Black",
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting. JCF Crew Neck Tee, minimalist everyday athletic t-shirt in black cotton performance fabric."
     },
-    {
-      "file": "assets/roundneck-tee-white.jpg",
-      "product": "JCF Round-Neck Tee",
-      "color": "White",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Round-Neck Tee, clean t-shirt silhouette, minimal seam detail in white."
-    },
-    {
-      "file": "assets/roundneck-tee-olive.jpg",
-      "product": "JCF Round-Neck Tee",
-      "color": "Olive",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Round-Neck Tee, clean t-shirt silhouette, minimal seam detail in olive."
-    },
+
     {
       "file": "assets/leggings_set.png",
-      "product": "JCF Legging and Crop Set",
+      "product": "JCF Legging Crop Set",
       "color": "Black",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Legging and Crop Set, premium athleisure product shot in black."
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting. JCF Legging Crop Set, high-waist leggings and crop top athletic set in black premium stretch fabric."
     },
+
     {
-      "file": "assets/leggings_set-gray.jpg",
-      "product": "JCF Legging and Crop Set",
-      "color": "Gray",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Legging and Crop Set, premium athleisure product shot in gray."
-    },
-    {
-      "file": "assets/leggings_set-white.jpg",
-      "product": "JCF Legging and Crop Set",
-      "color": "White",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Legging and Crop Set, premium athleisure product shot in white."
-    },
-    {
-      "file": "assets/leggings_set-navy.jpg",
-      "product": "JCF Legging and Crop Set",
-      "color": "Navy",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Legging and Crop Set, premium athleisure product shot in navy."
-    },
-    {
-      "file": "assets/leggings_set-pink.jpg",
-      "product": "JCF Legging and Crop Set",
-      "color": "Pink",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Legging and Crop Set, premium athleisure product shot in pink."
-    },
-    {
-      "file": "assets/womens-relaxed-joggers-black.jpg",
-      "product": "JCF Women's Relaxed Joggers",
+      "file": "assets/relaxed-joggers.jpg",
+      "product": "JCF Relaxed Joggers",
       "color": "Black",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Relaxed Joggers, athletic jogger silhouette, premium fabric texture in black."
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting. JCF Relaxed Joggers for women, relaxed athletic jogger silhouette in black comfort fleece."
     },
+
     {
-      "file": "assets/womens-relaxed-joggers-gray.jpg",
-      "product": "JCF Women's Relaxed Joggers",
-      "color": "Gray",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Relaxed Joggers, athletic jogger silhouette, premium fabric texture in gray."
-    },
-    {
-      "file": "assets/womens-relaxed-joggers-white.jpg",
-      "product": "JCF Women's Relaxed Joggers",
-      "color": "White",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Relaxed Joggers, athletic jogger silhouette, premium fabric texture in white."
-    },
-    {
-      "file": "assets/womens-relaxed-joggers-olive.jpg",
-      "product": "JCF Women's Relaxed Joggers",
-      "color": "Olive",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Relaxed Joggers, athletic jogger silhouette, premium fabric texture in olive."
-    },
-    {
-      "file": "assets/womens-relaxed-joggers-pink.jpg",
-      "product": "JCF Women's Relaxed Joggers",
-      "color": "Pink",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Relaxed Joggers, athletic jogger silhouette, premium fabric texture in pink."
-    },
-    {
-      "file": "assets/leggings-side-pockets-black.jpg",
-      "product": "JCF Leggings with Side Pockets",
+      "file": "assets/crop-top-short-set.jpg",
+      "product": "JCF Crop Top Short Set",
       "color": "Black",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Leggings with Side Pockets, performance leggings silhouette, high-stretch activewear texture in black."
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting. JCF Crop Top Short Set, athletic crop top with biker shorts in black premium stretch fabric."
     },
+
     {
-      "file": "assets/leggings-side-pockets-gray.jpg",
-      "product": "JCF Leggings with Side Pockets",
-      "color": "Gray",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Leggings with Side Pockets, performance leggings silhouette, high-stretch activewear texture in gray."
-    },
-    {
-      "file": "assets/leggings-side-pockets-white.jpg",
-      "product": "JCF Leggings with Side Pockets",
-      "color": "White",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Leggings with Side Pockets, performance leggings silhouette, high-stretch activewear texture in white."
-    },
-    {
-      "file": "assets/leggings-side-pockets-pink.jpg",
-      "product": "JCF Leggings with Side Pockets",
-      "color": "Pink",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Leggings with Side Pockets, performance leggings silhouette, high-stretch activewear texture in pink."
-    },
-    {
-      "file": "assets/leggings-highwaist-black.jpg",
-      "product": "JCF Leggings with High Waist",
+      "file": "assets/leggings-crop.jpg",
+      "product": "JCF Leggings Crop Set",
       "color": "Black",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Leggings with High Waist, performance leggings silhouette, high-stretch activewear texture in black."
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting. JCF Leggings Crop Set, high waist athletic leggings paired with crop top in black performance fabric."
     },
+
     {
-      "file": "assets/leggings-highwaist-gray.jpg",
-      "product": "JCF Leggings with High Waist",
-      "color": "Gray",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Leggings with High Waist, performance leggings silhouette, high-stretch activewear texture in gray."
-    },
-    {
-      "file": "assets/leggings-highwaist-white.jpg",
-      "product": "JCF Leggings with High Waist",
-      "color": "White",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Leggings with High Waist, performance leggings silhouette, high-stretch activewear texture in white."
-    },
-    {
-      "file": "assets/leggings-highwaist-pink.jpg",
-      "product": "JCF Leggings with High Waist",
-      "color": "Pink",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Leggings with High Waist, performance leggings silhouette, high-stretch activewear texture in pink."
-    },
-    {
-      "file": "assets/crop-top-black.jpg",
-      "product": "JCF Women's Crop Top",
+      "file": "assets/crop-top-jogger-set.jpg",
+      "product": "JCF Crop Jogger Set",
       "color": "Black",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Crop Top, fitted athletic crop top silhouette in black."
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting. JCF Crop Jogger Set, cropped hoodie with joggers athletic lounge set in black."
     },
+
     {
-      "file": "assets/crop-top-gray.jpg",
-      "product": "JCF Women's Crop Top",
-      "color": "Gray",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Crop Top, fitted athletic crop top silhouette in gray."
-    },
-    {
-      "file": "assets/crop-top-white.jpg",
-      "product": "JCF Women's Crop Top",
-      "color": "White",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Crop Top, fitted athletic crop top silhouette in white."
-    },
-    {
-      "file": "assets/crop-top-pink.jpg",
-      "product": "JCF Women's Crop Top",
-      "color": "Pink",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Crop Top, fitted athletic crop top silhouette in pink."
-    },
-    {
-      "file": "assets/long-crop-top-black.jpg",
-      "product": "JCF Women's Long Crop Top",
+      "file": "assets/long-sleeve-crop.jpg",
+      "product": "JCF Long Sleeve Crop",
       "color": "Black",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Long Crop Top, fitted athletic crop top silhouette in black."
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting. JCF Long Sleeve Crop athletic top in black stretch performance fabric."
     },
+
     {
-      "file": "assets/long-crop-top-gray.jpg",
-      "product": "JCF Women's Long Crop Top",
-      "color": "Gray",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Long Crop Top, fitted athletic crop top silhouette in gray."
-    },
-    {
-      "file": "assets/long-crop-top-white.jpg",
-      "product": "JCF Women's Long Crop Top",
-      "color": "White",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Long Crop Top, fitted athletic crop top silhouette in white."
-    },
-    {
-      "file": "assets/long-crop-top-pink.jpg",
-      "product": "JCF Women's Long Crop Top",
-      "color": "Pink",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Long Crop Top, fitted athletic crop top silhouette in pink."
-    },
-    {
-      "file": "assets/yoga-shorts-black.jpg",
-      "product": "JCF Women's Yoga Shorts",
+      "file": "assets/crop-top-hoodie.jpg",
+      "product": "JCF Crop Hoodie",
       "color": "Black",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Yoga Shorts, high-waist athletic shorts silhouette in black."
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting. JCF Crop Hoodie athletic cropped hoodie silhouette in black fleece fabric."
     },
+
     {
-      "file": "assets/yoga-shorts-gray.jpg",
-      "product": "JCF Women's Yoga Shorts",
-      "color": "Gray",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Yoga Shorts, high-waist athletic shorts silhouette in gray."
-    },
-    {
-      "file": "assets/yoga-shorts-white.jpg",
-      "product": "JCF Women's Yoga Shorts",
-      "color": "White",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Yoga Shorts, high-waist athletic shorts silhouette in white."
-    },
-    {
-      "file": "assets/yoga-shorts-pink.jpg",
-      "product": "JCF Women's Yoga Shorts",
-      "color": "Pink",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Yoga Shorts, high-waist athletic shorts silhouette in pink."
-    },
-    {
-      "file": "assets/cropped-hoodie-black.jpg",
-      "product": "JCF Women's Cropped Hoodie",
+      "file": "assets/back-hoodie.jpg",
+      "product": "JCF Back Hoodie",
       "color": "Black",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Cropped Hoodie, premium hoodie silhouette, soft fleece texture in black."
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting. JCF Back Hoodie oversized hoodie silhouette in black premium fleece."
     },
+
     {
-      "file": "assets/cropped-hoodie-gray.jpg",
-      "product": "JCF Women's Cropped Hoodie",
-      "color": "Gray",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Cropped Hoodie, premium hoodie silhouette, soft fleece texture in gray."
-    },
-    {
-      "file": "assets/cropped-hoodie-white.jpg",
-      "product": "JCF Women's Cropped Hoodie",
-      "color": "White",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Cropped Hoodie, premium hoodie silhouette, soft fleece texture in white."
-    },
-    {
-      "file": "assets/cropped-hoodie-pink.jpg",
-      "product": "JCF Women's Cropped Hoodie",
-      "color": "Pink",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Cropped Hoodie, premium hoodie silhouette, soft fleece texture in pink."
-    },
-    {
-      "file": "assets/oversized-hoodie-black.jpg",
-      "product": "JCF Women's Oversized Hoodie",
+      "file": "assets/jcf-evol-hoodie.png",
+      "product": "JCF Evol Hoodie",
       "color": "Black",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Oversized Hoodie, premium hoodie silhouette, soft fleece texture in black."
-    },
-    {
-      "file": "assets/oversized-hoodie-gray.jpg",
-      "product": "JCF Women's Oversized Hoodie",
-      "color": "Gray",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Oversized Hoodie, premium hoodie silhouette, soft fleece texture in gray."
-    },
-    {
-      "file": "assets/oversized-hoodie-white.jpg",
-      "product": "JCF Women's Oversized Hoodie",
-      "color": "White",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Oversized Hoodie, premium hoodie silhouette, soft fleece texture in white."
-    },
-    {
-      "file": "assets/oversized-hoodie-pink.jpg",
-      "product": "JCF Women's Oversized Hoodie",
-      "color": "Pink",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Oversized Hoodie, premium hoodie silhouette, soft fleece texture in pink."
-    },
-    {
-      "file": "assets/slim-hoodie-black.jpg",
-      "product": "JCF Women's Slim Fit Hoodie",
-      "color": "Black",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Slim Fit Hoodie, premium hoodie silhouette, soft fleece texture in black."
-    },
-    {
-      "file": "assets/slim-hoodie-gray.jpg",
-      "product": "JCF Women's Slim Fit Hoodie",
-      "color": "Gray",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Slim Fit Hoodie, premium hoodie silhouette, soft fleece texture in gray."
-    },
-    {
-      "file": "assets/slim-hoodie-white.jpg",
-      "product": "JCF Women's Slim Fit Hoodie",
-      "color": "White",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Slim Fit Hoodie, premium hoodie silhouette, soft fleece texture in white."
-    },
-    {
-      "file": "assets/slim-hoodie-pink.jpg",
-      "product": "JCF Women's Slim Fit Hoodie",
-      "color": "Pink",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Slim Fit Hoodie, premium hoodie silhouette, soft fleece texture in pink."
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting. JCF Evol Hoodie slim fit athletic hoodie in black performance fleece."
     }
+
   ]
 }

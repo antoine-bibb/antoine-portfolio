@@ -1,88 +1,82 @@
 {
   "JCF Heartbreak Tee and Joggers Set": {
     "Black": "assets/jogger_set.png",
-    "Gray": "assets/jogger_set-gray.jpg",
-    "White": "assets/jogger_set-white.jpg",
-    "Navy": "assets/jogger_set-navy.jpg"
+    "Gray": "assets/jogger_set-gray.png",
+    "White": "assets/jogger_set-white.png",
+    "Navy": "assets/jogger_set-navy.png"
   },
   "JCF Relaxed Joggers": {
-    "Black": "assets/relaxed-joggers-black.jpg",
-    "Gray": "assets/relaxed-joggers-gray.jpg",
-    "White": "assets/relaxed-joggers-white.jpg",
-    "Olive": "assets/relaxed-joggers-olive.jpg"
+    "Black": "assets/slim-jogger.jpg",
+    "Gray": "assets/slim-jogger-gray.jpg",
+    "White": "assets/slim-jogger-white.jpg",
+    "Olive": "assets/slim-jogger-olive.jpg"
   },
   "JCF V-Neck Tee": {
-    "Black": "assets/vneck-tee-black.jpg",
-    "Gray": "assets/vneck-tee-gray.jpg",
-    "White": "assets/vneck-tee-white.jpg",
-    "Navy": "assets/vneck-tee-navy.jpg"
+    "Black": "assets/crew-neck-long-sleeve.jpg",
+    "Gray": "assets/crew-neck-long-sleeve-gray.jpg",
+    "White": "assets/crew-neck-long-sleeve-white.jpg",
+    "Navy": "assets/crew-neck-long-sleeve-navy.jpg"
+  },
+  "JCF Women's Oversized Hoodie": {
+    "Black": "assets/back-hoodie.jpg",
+    "Gray": "assets/back-hoodie-gray.jpg",
+    "White": "assets/back-hoodie-white.jpg",
+    "Pink": "assets/back-hoodie-pink.jpg"
   },
   "JCF Round-Neck Tee": {
-    "Black": "assets/roundneck-tee-black.jpg",
-    "Gray": "assets/roundneck-tee-gray.jpg",
-    "White": "assets/roundneck-tee-white.jpg",
-    "Olive": "assets/roundneck-tee-olive.jpg"
+    "Black": "assets/crew-neck-tee.jpg",
+    "Gray": "assets/crew-neck-tee-gray.jpg",
+    "White": "assets/crew-neck-tee-white.jpg",
+    "Olive": "assets/crew-neck-tee-olive.jpg"
   },
   "JCF Legging and Crop Set": {
     "Black": "assets/leggings_set.png",
-    "Gray": "assets/leggings_set-gray.jpg",
-    "White": "assets/leggings_set-white.jpg",
-    "Navy": "assets/leggings_set-navy.jpg",
-    "Pink": "assets/leggings_set-pink.jpg"
+    "Gray": "assets/leggings_set-gray.png",
+    "White": "assets/leggings_set-white.png",
+    "Navy": "assets/leggings_set-navy.png",
+    "Pink": "assets/leggings_set-pink.png"
   },
   "JCF Women's Relaxed Joggers": {
-    "Black": "assets/womens-relaxed-joggers-black.jpg",
-    "Gray": "assets/womens-relaxed-joggers-gray.jpg",
-    "White": "assets/womens-relaxed-joggers-white.jpg",
-    "Olive": "assets/womens-relaxed-joggers-olive.jpg",
-    "Pink": "assets/womens-relaxed-joggers-pink.jpg"
+    "Black": "assets/relaxed-joggers.jpg",
+    "Gray": "assets/relaxed-joggers-gray.jpg",
+    "White": "assets/relaxed-joggers-white.jpg",
+    "Olive": "assets/relaxed-joggers-olive.jpg",
+    "Pink": "assets/relaxed-joggers-pink.jpg"
   },
   "JCF Leggings with Side Pockets": {
-    "Black": "assets/leggings-side-pockets-black.jpg",
-    "Gray": "assets/leggings-side-pockets-gray.jpg",
-    "White": "assets/leggings-side-pockets-white.jpg",
-    "Pink": "assets/leggings-side-pockets-pink.jpg"
+    "Black": "assets/crop-top-short-set.jpg",
+    "Gray": "assets/crop-top-short-set-gray.jpg",
+    "White": "assets/crop-top-short-set-white.jpg",
+    "Pink": "assets/crop-top-short-set-pink.jpg"
   },
   "JCF Leggings with High Waist": {
-    "Black": "assets/leggings-highwaist-black.jpg",
-    "Gray": "assets/leggings-highwaist-gray.jpg",
-    "White": "assets/leggings-highwaist-white.jpg",
-    "Pink": "assets/leggings-highwaist-pink.jpg"
+    "Black": "assets/leggings-crop.jpg",
+    "Gray": "assets/leggings-crop-gray.jpg",
+    "White": "assets/leggings-crop-white.jpg",
+    "Pink": "assets/leggings-crop-pink.jpg"
   },
   "JCF Women's Crop Top": {
-    "Black": "assets/crop-top-black.jpg",
-    "Gray": "assets/crop-top-gray.jpg",
-    "White": "assets/crop-top-white.jpg",
-    "Pink": "assets/crop-top-pink.jpg"
+    "Black": "assets/crop-top-jogger-set.jpg",
+    "Gray": "assets/crop-top-jogger-set-gray.jpg",
+    "White": "assets/crop-top-jogger-set-white.jpg",
+    "Pink": "assets/crop-top-jogger-set-pink.jpg"
   },
   "JCF Women's Long Crop Top": {
-    "Black": "assets/long-crop-top-black.jpg",
-    "Gray": "assets/long-crop-top-gray.jpg",
-    "White": "assets/long-crop-top-white.jpg",
-    "Pink": "assets/long-crop-top-pink.jpg"
-  },
-  "JCF Women's Yoga Shorts": {
-    "Black": "assets/yoga-shorts-black.jpg",
-    "Gray": "assets/yoga-shorts-gray.jpg",
-    "White": "assets/yoga-shorts-white.jpg",
-    "Pink": "assets/yoga-shorts-pink.jpg"
+    "Black": "assets/long-sleeve-crop.jpg",
+    "Gray": "assets/long-sleeve-crop-gray.jpg",
+    "White": "assets/long-sleeve-crop-white.jpg",
+    "Pink": "assets/long-sleeve-crop-pink.jpg"
   },
   "JCF Women's Cropped Hoodie": {
-    "Black": "assets/cropped-hoodie-black.jpg",
-    "Gray": "assets/cropped-hoodie-gray.jpg",
-    "White": "assets/cropped-hoodie-white.jpg",
-    "Pink": "assets/cropped-hoodie-pink.jpg"
+    "Black": "assets/crop-top-hoodie.jpg",
+    "Gray": "assets/crop-top-hoodie-gray.jpg",
+    "White": "assets/crop-top-hoodie-white.jpg",
+    "Pink": "assets/crop-top-hoodie-pink.jpg"
   },
-  "JCF Women's Oversized Hoodie": {
-    "Black": "assets/oversized-hoodie-black.jpg",
-    "Gray": "assets/oversized-hoodie-gray.jpg",
-    "White": "assets/oversized-hoodie-white.jpg",
-    "Pink": "assets/oversized-hoodie-pink.jpg"
-  },
-  "JCF Women's Slim Fit Hoodie": {
-    "Black": "assets/slim-hoodie-black.jpg",
-    "Gray": "assets/slim-hoodie-gray.jpg",
-    "White": "assets/slim-hoodie-white.jpg",
-    "Pink": "assets/slim-hoodie-pink.jpg"
+  "JCF Slim Fit Hoodie": {
+    "Black": "assets/jcf-evol-hoodie.png",
+    "Gray": "assets/jcf-evol-hoodie-gray.png",
+    "White": "assets/jcf-evol-hoodie-white.png",
+    "Pink": "assets/jcf-evol-hoodie-pink.png"
   }
 }
