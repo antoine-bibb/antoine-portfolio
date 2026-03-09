@@ -6,6 +6,7 @@ import Stripe from 'stripe';
 import nodemailer from 'nodemailer';
 import twilio from 'twilio';
 import {
+  addProductReview,
   addSupportMessage,
   addProduct,
   consumePendingCheckout,
@@ -16,6 +17,7 @@ import {
   getCustomerHistory,
   getCheckoutQuote,
   getProducts,
+  getProductReviews,
   getPromo,
   requestCustomerCode,
   savePendingCheckout,
@@ -266,6 +268,36 @@ app.get('/api/products', async (_req, res, next) => {
     const products = await getProducts();
     res.json(products);
   } catch (error) {
+    next(error);
+  }
+});
+
+app.get('/api/products/:id/reviews', async (req, res, next) => {
+  try {
+    const reviews = await getProductReviews(req.params.id);
+    if (!reviews) {
+      res.status(404).json({ ok: false, message: 'Product not found.' });
+      return;
+    }
+    res.json({ ok: true, reviews });
+  } catch (error) {
+    next(error);
+  }
+});
+
+app.post('/api/products/:id/reviews', async (req, res, next) => {
+  try {
+    const review = await addProductReview(req.params.id, req.body || {});
+    if (!review) {
+      res.status(404).json({ ok: false, message: 'Product not found.' });
+      return;
+    }
+    res.status(201).json({ ok: true, review });
+  } catch (error) {
+    if (error instanceof Error) {
+      res.status(400).json({ ok: false, message: error.message });
+      return;
+    }
     next(error);
   }
 });

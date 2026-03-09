@@ -158,11 +158,14 @@
 
         <article class="product-detail">
           <div class="magnifier-frame detail-image-wrap">
+            <button id="detail-prev-image" class="image-nav-btn image-nav-prev" type="button" aria-label="Previous color image">&#10094;</button>
             <img id="detail-image" class="magnify-image" data-zoom="2.8" src="" alt="" />
+            <button id="detail-next-image" class="image-nav-btn image-nav-next" type="button" aria-label="Next color image">&#10095;</button>
           </div>
           <div class="product-detail-content">
             <h3 id="detail-name"></h3>
             <p class="detail-price" id="detail-price"></p>
+            <p id="detail-rating" class="detail-rating"></p>
             <p id="detail-description"></p>
             <label for="detail-color">Color</label>
             <select id="detail-color"></select>
@@ -172,6 +175,24 @@
               <button id="detail-add-to-cart" class="primary">Add to Cart</button>
               <button class="secondary" data-view="cart">Go to Cart</button>
             </div>
+            <section class="review-section" aria-label="Customer reviews">
+              <h4>Customer Reviews</h4>
+              <div id="review-summary" class="review-summary"></div>
+              <form id="review-form" class="review-form">
+                <input id="review-title" maxlength="80" placeholder="Review title" />
+                <select id="review-rating" required>
+                  <option value="">Select rating</option>
+                  <option value="5">5 stars</option>
+                  <option value="4">4 stars</option>
+                  <option value="3">3 stars</option>
+                  <option value="2">2 stars</option>
+                  <option value="1">1 star</option>
+                </select>
+                <textarea id="review-body" rows="4" maxlength="500" placeholder="Write your review"></textarea>
+                <button type="submit" class="secondary">Submit Review</button>
+              </form>
+              <div id="review-list" class="review-list"></div>
+            </section>
           </div>
         </article>
       </section>
@@ -182,6 +203,7 @@
           <button type="button" class="ghost back-shopping-btn">Back to Shopping</button>
         </div>
         <div id="cart-items"></div>
+        <section id="saved-for-later-items" class="saved-for-later"></section>
         <div class="cart-summary">
           <p>Subtotal: <strong id="cart-total">$0.00</strong></p>
           <div class="promo-row">
@@ -231,6 +253,14 @@
 
         <div id="admin-products"></div>
       </section>
+
+      <aside id="cart-side-panel" class="cart-side-panel" aria-label="Shopping cart side panel">
+        <h3>Shopping Cart</h3>
+        <p class="hint"><span id="cart-side-count">0</span> item(s)</p>
+        <div id="cart-side-items" class="cart-side-items"></div>
+        <p>Total: <strong id="cart-side-total">$0.00</strong></p>
+        <button type="button" class="primary" data-view="cart">Go to Cart</button>
+      </aside>
     </main>
 
     <div id="customer-login-modal" class="modal" aria-hidden="true">

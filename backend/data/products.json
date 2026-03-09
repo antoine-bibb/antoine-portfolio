@@ -14,7 +14,14 @@
     "description": "Athletic jogger and tee set designed for comfort and street style.",
     "category": "sets",
     "style": "jogger set",
-    "featured": true
+    "featured": true,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
   },
   {
     "id": "1938384b-e4fd-4bef-8f0d-900dbd8e8d1e",
@@ -31,7 +38,14 @@
     "description": "Slim fit joggers built for movement and everyday wear.",
     "category": "bottoms",
     "style": "slim jogger",
-    "featured": false
+    "featured": false,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
   },
   {
     "id": "0aea3022-7d6f-4246-960f-ca49ff883aee",
@@ -48,7 +62,14 @@
     "description": "Comfortable long sleeve tee designed for layering.",
     "category": "tops",
     "style": "long sleeve",
-    "featured": false
+    "featured": false,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
   },
   {
     "id": "b424544d-e3d4-404f-9092-86b2a24be8cf",
@@ -64,7 +85,14 @@
     "description": "Tech hoodie with hidden pockets and athletic structure.",
     "category": "tops",
     "style": "hoodie",
-    "featured": false
+    "featured": false,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
   },
   {
     "id": "e4cc751b-b470-4e92-a211-171545255dd7",
@@ -81,7 +109,14 @@
     "description": "Classic crew neck tee made for everyday casual wear.",
     "category": "tops",
     "style": "t-shirt",
-    "featured": false
+    "featured": false,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
   },
   {
     "id": "06635cf9-e919-437d-85aa-890d3eabaa93",
@@ -91,7 +126,6 @@
       "Black",
       "Gray",
       "White",
-      "Navy",
       "Pink"
     ],
     "gender": "women",
@@ -99,7 +133,14 @@
     "description": "Leggings and crop top set built for performance and style.",
     "category": "sets",
     "style": "legging set",
-    "featured": true
+    "featured": true,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
   },
   {
     "id": "6424dfd3-7f98-4fc3-a48e-dbd61a36a2af",
@@ -109,7 +150,6 @@
       "Black",
       "Gray",
       "White",
-      "Olive",
       "Pink"
     ],
     "gender": "women",
@@ -117,7 +157,14 @@
     "description": "Relaxed joggers with side pockets for comfort and lounge wear.",
     "category": "bottoms",
     "style": "joggers",
-    "featured": false
+    "featured": false,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
   },
   {
     "id": "58c2428c-270b-4ae4-82bb-ff30b2374909",
@@ -134,7 +181,14 @@
     "description": "Crop top and biker short set designed for workouts.",
     "category": "sets",
     "style": "short set",
-    "featured": false
+    "featured": false,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
   },
   {
     "id": "ca202ab9-dda4-4790-9bf1-2ce1a558ea59",
@@ -151,7 +205,14 @@
     "description": "High waist leggings paired with crop top for training.",
     "category": "sets",
     "style": "leggings",
-    "featured": false
+    "featured": false,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
   },
   {
     "id": "2b1ca541-bfba-4a5a-82ca-62d5508bb081",
@@ -168,7 +229,14 @@
     "description": "Crop hoodie and jogger set for casual style.",
     "category": "sets",
     "style": "jogger set",
-    "featured": false
+    "featured": false,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
   },
   {
     "id": "a76644d1-97f0-437b-a039-4146fdd5a7d9",
@@ -185,7 +253,14 @@
     "description": "Long sleeve crop top built for style and comfort.",
     "category": "tops",
     "style": "crop top",
-    "featured": false
+    "featured": false,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
   },
   {
     "id": "7c897a20-6459-4dc4-bfcb-df330d37a7dc",
@@ -202,7 +277,14 @@
     "description": "Trendy cropped hoodie for casual wear.",
     "category": "tops",
     "style": "cropped hoodie",
-    "featured": false
+    "featured": false,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
   },
   {
     "id": "e3f5371e-5c4c-455f-876e-2e252ccf4013",
@@ -219,7 +301,14 @@
     "description": "Oversized hoodie designed for cozy comfort.",
     "category": "tops",
     "style": "oversized hoodie",
-    "featured": false
+    "featured": false,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
   },
   {
     "id": "257a1f68-dc30-4a79-b68a-0127da2f6a9a",
@@ -235,6 +324,13 @@
     "description": "Slim fit hoodie with a modern athletic cut.",
     "category": "tops",
     "style": "hoodie",
-    "featured": true
+    "featured": true,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
   }
 ]

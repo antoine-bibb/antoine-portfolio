@@ -186,22 +186,201 @@ Care: Spot clean with a damp cloth; do not machine wash. Use leather conditioner
     style: 'bag',
     featured: true,
   },
+{
+  id: crypto.randomUUID(),
+  name: "JCF Curved Hem Technical Tee",
+  price: 65.0,
+  colors: ['Black/Gold', 'Navy/Gold', 'White/Gold'],
+  gender: 'men',
+  image: 'assets/jcf_curved_hem_tee.png',
+  description: `The JCF Curved Hem Technical Tee is a masterclass in modern athletic luxury, blending a high-fashion silhouette with tactical functional details. This piece is engineered for the individual who demands a relaxed, street-ready fit without sacrificing the premium aesthetic of a designer garment.
 
+Design & Fit
+Structured Silhouette: Features a specialized relaxed-fit body anchored by a distinct, deep-curved hem for a superior layered look.
+Luxury Aesthetics: High-contrast metallic gold ribbing on the collar and sleeve cuffs provides a bold, regal frame to the sleek performance fabric.
+
+Key Features
+Statement Branding: Adorned with a cascading, high-density gold JCF monogram pattern across the front panel, balanced by the iconic gold crown logo.
+Tactical Storage: A functional, horizontal zippered pocket is integrated into the right chest, featuring a custom metallic gold JCF lion-head zipper pull for secure small-item storage.
+Premium Hardware: Reinforced gold-toned zippers and specialized stitching along the ergonomic contour lines to ensure durability and shape retention.
+
+Materials & Care
+Fabric: Interlock technical cotton-poly blend with a moisture-wicking finish and a subtle luxury sheen.
+Care: Machine wash cold on a gentle cycle; hang dry to preserve the metallic embroidery and gold hardware finish. Do not iron directly on the monogram pattern.`,
+  category: 'tops',
+  style: 'curved hem tee',
+  featured: true,
+},
+{
+  id: crypto.randomUUID(),
+  name: "JCF Men's Hybrid Utility Shorts",
+  price: 75.0,
+  colors: ['Black/Gold'],
+  gender: 'men',
+  image: 'assets/jcf_mens_utility_shorts.png',
+  description: `The JCF Men's Hybrid Utility Shorts are a pinnacle of tactical sportswear, designed for the high-performance athlete who requires integrated storage and muscle support. This dual-layer system combines a rugged, aesthetic outer shell with a high-compression technical base.
+
+Design & Fit
+Dual-Layer Construction: Features a lightweight, moisture-wicking outer short paired with an integrated performance compression liner for reduced muscle fatigue and maximum coverage.
+Luxury Aesthetics: Utilizes the signature JCF split-design, featuring a solid tech-fleece right panel and a full-monogram quilted left panel, accented by topographic gold embroidery.
+
+Key Features
+Statement Branding: Anchored by a massive, high-density gold JCF crown logo on the right thigh, balanced by a cascading monogram pattern and the iconic Lion/Owl icon on the cargo pockets.
+Tactical Storage: Engineered with four secure compartments, including vertical gold-zippered hip pockets and dual cargo pockets featuring custom lion-head pulls.
+Smartphone Integration: The compression under-layer features a dedicated, high-tension media pocket on the right leg, designed to keep large smartphones secure and bounce-free during intense movement.
+
+Materials & Care
+Fabric: Outer shell composed of premium ripstop polyester; inner liner made from a high-stretch Nylon-Spandex blend with a brushed interior for second-skin comfort.
+Care: Machine wash cold on a gentle cycle; hang dry to preserve the compression elasticity and the integrity of the metallic gold hardware.`,
+  category: 'bottoms',
+  style: 'utility shorts',
+  featured: true,
+},
+{
+  id: crypto.randomUUID(),
+  name: "JCF Luxury Trucker Cap",
+  price: 35.0,
+  colors: ['Black/Gold', 'Triple Black'],
+  gender: 'unisex',
+  image: 'assets/jcf_trucker_cap.png',
+  description: `The JCF Luxury Trucker Cap elevates a streetwear staple into a high-end statement piece. Combining a structured, regal silhouette with premium ventilation, this cap is the definitive accessory for the modern urban athlete.
+
+Design & Fit
+Structured Silhouette: Features a stiffened, high-profile front panel that maintains its sharp, professional shape over time.
+Breathable Construction: Engineered with premium polyester mesh back panels for maximum airflow and cooling during high-heat activity.
+
+Key Features
+Statement Branding: Showcases a massive, 3D-embroidered gold JCF crown logo on the front panel, with high-density 'Jus Casual Fits' script on the side.
+Premium Hardware: Features a pre-curved athletic bill and a reinforced plastic snapback closure for a fully adjustable, custom fit.
+
+Materials & Care
+Fabric: 100% Cotton twill front with 100% recycled polyester mesh backing.
+Care: Hand wash only with a damp cloth; do not submerge in water to preserve the structured front panel and metallic embroidery.`,
+  category: 'accessories',
+  style: 'headwear',
+  featured: false,
+},
+{
+  id: crypto.randomUUID(),
+  name: "JCF Tech-Knit Beanie",
+  price: 32.0,
+  colors: ['Gold/Black', 'Black/Gold'],
+  gender: 'unisex',
+  image: 'assets/jcf_tech_beanie.png',
+  description: `The JCF Tech-Knit Beanie is engineered for peak performance in cold-weather environments. Blending alpine-grade warmth with a sleek, aerodynamic fit, this beanie ensures your brand presence remains strong from the gym to the street.
+
+Design & Fit
+Structured Silhouette: A classic cuffed design with a 6-dart crown construction for a snug, ergonomic fit that stays secure during movement.
+Thermal Efficiency: Utilizes a heavy-gauge ribbed knit pattern that traps heat while allowing moisture to escape.
+
+Key Features
+Statement Branding: Features a center-front custom jacquard-knit JCF logo, with a woven 'JF' hem tag for a subtle, high-end finish.
+Technical Fabric: Developed with moisture-wicking yarns and a soft-touch interior to prevent irritation during long training sessions.
+
+Materials & Care
+Fabric: Premium soft-touch acrylic and wool blend with moisture-wicking technical fibers.
+Care: Machine wash cold on a delicate cycle; lay flat to dry. Use a pilling comb as needed to maintain the premium knit texture.`,
+  category: 'accessories',
+  style: 'headwear',
+  featured: false,
+},
+// ========================
+  // MEN'S Streetwear PRODUCTS
+  // ========================
+{
+    id: crypto.randomUUID(),
+    name: "JCF Icon Luxury Bomber Jacket",
+    price: 210.0,
+    colors: ['Jet Black/Gold'],
+    gender: 'men',
+    image: 'assets/jcf_mens_icon_jacket.png',
+    description: `The JCF Icon Luxury Bomber is the crown jewel of the streetwear drop. Crafted from a high-density, matte-finish technical velvet, this jacket merges the silhouette of a classic bomber with tactical high-fashion elements.
+
+Design & Fit
+Tailored Street Fit: Features a structured shoulder and a slightly cropped waist for a modern, powerful silhouette.
+Premium Finish: The interior is lined with a custom silk-blend monogrammed fabric for ultimate comfort and temperature regulation.
+
+Key Features
+Branding: A single, oversized JCF Crown wordmark is emblazoned across the chest in 3D gold bullion embroidery.
+Tactical Hardware: Outfitted with multiple utility pockets featuring custom gold lion-head zipper pulls and a signature crown-shaped main zipper.
+
+Materials & Care
+Fabric: Triple-layered technical velvet with a water-repellent finish.
+Care: Professional dry clean only to preserve the structural integrity of the gold hardware and velvet pile.`,
+    category: 'tops',
+    style: 'jacket',
+    featured: true,
+  },
+  {
+    id: crypto.randomUUID(),
+    name: "JCF Icon Essential Street Tee",
+    price: 65.0,
+    colors: ['Jet Black/Gold'],
+    gender: 'men',
+    image: 'assets/jcf_mens_icon_tee.png',
+    description: `An elevated take on a daily essential, the Icon Street Tee is designed to provide a sleek, minimalist base for the Icon collection's heavier outerwear.
+
+Design & Fit
+Athletic Drape: Features a slightly elongated hem and tapered sleeves to accentuate the upper body.
+Regal Aesthetic: Centered with a high-density gold JCF logo that serves as the focal point of the garment.
+
+Materials & Care
+Fabric: 100% Peruvian Pima cotton with a hint of elastane for shape retention.
+Care: Machine wash cold, inside out; hang dry to prevent gold foil or embroidery degradation.`,
+    category: 'tops',
+    style: 't-shirt',
+    featured: false,
+  },
+  {
+    id: crypto.randomUUID(),
+    name: "JCF Icon Heavyweight Street Joggers",
+    price: 125.0,
+    colors: ['Royal Black', 'Imperial Burgundy', 'Slate Grey'],
+    gender: 'men',
+    image: 'assets/jcf_mens_icon_joggers.png',
+    description: `The Icon Heavyweight Joggers complete the set, offering a luxurious drape and unmatched utility. These are not standard sweats; they are tactical trousers redefined for the luxury market.
+Design & Fit
+Tapered Construction: Precision-engineered panels through the thigh and calf provide a clean, bunch-free look when paired with high-end sneakers.
+Waistband Engineering: Features a reinforced elastic waistband with custom-dipped gold aglets on the drawstrings.
+
+Key Features
+Storage: Integrated cargo-style side pockets with vertical gold-zip entries and custom lion-head pulls.
+Branding: Large-scale JCF gold embroidery on the lower thigh, balanced by a subtle 'JF' monogram on the rear pocket.
+
+Materials & Care
+Fabric: Heavyweight tech-fleece with a smooth velvet-touch exterior.
+Care: Machine wash cold on delicate; hang dry.`,
+    color_options: [
+      {
+        color_name: "Royal Black",
+        color_hex: "#000000",
+        image_url: "assets/jcf_mens_icon_joggers.png",
+        sku: "JCF-ICON-JOG-BLK",
+        stock_status: "in_stock"
+      },
+      {
+        color_name: "Imperial Burgundy",
+        color_hex: "#4A0E0E",
+        image_url: "assets/jcf_mens_icon_joggers-burgundy.jpg",
+        sku: "JCF-ICON-JOG-BUR",
+        stock_status: "in_stock"
+      },
+      {
+        color_name: "Slate Grey",
+        color_hex: "#4F5B66",
+        image_url: "assets/jcf_mens_icon_joggers-slate-grey.jpg",
+        sku: "JCF-ICON-JOG-SLT",
+        stock_status: "in_stock"
+      }
+    ],
+    category: 'bottoms',
+    style: 'joggers',
+    featured: true,
+  },
   // ========================
   // WOMEN'S PRODUCTS
   // ========================
-  {
-    id: crypto.randomUUID(),
-    name: "JCF Legging Crop Set",
-    price: 120.0,
-    colors: ['Black', 'Gray', 'White', 'Navy', 'Pink'],
-    gender: 'women',
-    image: 'assets/leggings_set.png',
-    description: 'Leggings and crop top set built for performance and style.',
-    category: 'sets',
-    style: 'legging set',
-    featured: true,
-  },
+ 
   {
   id: crypto.randomUUID(),
   name: "JCF Luxury Technical Quilted Jacket",
@@ -416,7 +595,74 @@ Care: Machine wash cold; tumble dry low. Do not iron the embossed logo.`,
     style: 'leggings',
     featured: true,
   },
+  {
+  id: crypto.randomUUID(),
+  name: "JCF Icon Performance Sports Bra",
+  price: 55.0,
+  colors: ['Black/Burgundy/Gold'],
+  gender: 'women',
+  image: 'assets/jcf_icon_sports_bra.png',
+  description: `The JCF Icon Performance Sports Bra is a pinnacle of high-impact support and luxury design, specifically engineered to coordinate with the Icon collection's signature aesthetic. This piece combines ergonomic compression with regal detailing for the modern athlete who demands both form and function.
+
+Design & Fit
+Structured Silhouette: Features a multi-panel compression build with a supportive racerback design to ensure maximum stability during high-intensity movement.
+Luxury Aesthetics: Finished with deep burgundy contour piping and metallic gold trim that follows the natural musculature of the body for a slimming, powerful look.
+
+Key Features
+Statement Branding: Features the iconic JCF crown logo centered on the chest in high-density gold embroidery, with a minimalist 'JF' monogram on the rear racerback panel.
+Tactical Support: An ultra-wide, reinforced under-bust elastic band provides a secure fit, while flat-locked seams prevent chafing during long training sessions.
+Premium Hardware: Subtle gold-toned adjusters and reinforced stitching at high-stress points ensure the garment maintains its shape and tension over time.
+
+Materials & Care
+Fabric: Pro-grade Nylon-Spandex blend with four-way stretch and advanced moisture-wicking technology.
+Care: Machine wash cold on a gentle cycle in a mesh laundry bag; lay flat to dry to preserve the elasticity and metallic gold embroidery.`,
+  category: 'tops',
+  style: 'sports bra',
+  featured: true,
+},
+{
+  id: crypto.randomUUID(),
+  name: "JCF Icon Performance Shorts",
+  price: 48.0,
+  colors: ['Black/Burgundy/Gold'],
+  gender: 'women',
+  image: 'assets/jcf_icon_shorts.png',
+  description: `The JCF Icon Performance Shorts are the definitive summer training essential, meticulously crafted to mirror the luxury detailing and high-performance standards of the Icon collection. Designed for maximum range of motion, these shorts bridge the gap between elite sportswear and high-fashion streetwear.
+
+Design & Fit
+Structured Silhouette: Features an ergonomic, high-waisted compression fit with a specialized mid-thigh length to prevent ride-up during intense activity.
+Luxury Aesthetics: Showcases the signature deep burgundy V-taper piping and metallic gold contour lines that define the Icon series silhouette.
+
+Key Features
+Statement Branding: Anchored by the central gold JCF crown logo on the waistband, with the high-density Lion/Owl split-face icon embroidered on the left thigh for a bold profile.
+Tactical Storage: Includes a low-profile side pocket integrated into the right hip, secured with a custom metallic gold JCF lion-head zipper pull.
+Premium Hardware: Reinforced with flat-lock contrast stitching and a non-slip internal waistband to ensure the garment stays in place under tactical movement.
+
+Materials & Care
+Fabric: Lightweight, ultra-durable performance interlock fabric with a high-stretch spandex blend for second-skin comfort.
+Care: Machine wash cold; avoid fabric softeners to maintain the moisture-wicking properties of the technical fabric. Hang dry to preserve the gold embroidery and hardware.`,
+  category: 'bottoms',
+  style: 'shorts',
+  featured: false,
+},
 ];
+
+const WOMENS_STANDARD_COLORS = ['Black', 'Gray', 'White', 'Pink'];
+const MENS_STANDARD_COLORS = ['Black', 'Gray', 'White'];
+const UNISEX_STANDARD_COLORS = ['Black', 'Gray', 'White'];
+const COLOR_HEX_MAP = {
+  Black: '#000000',
+  White: '#FFFFFF',
+  Gray: '#808080',
+  Grey: '#808080',
+  Red: '#B30000',
+  Pink: '#FFC0CB',
+  Navy: '#001F3F',
+  Olive: '#556B2F',
+  Gold: '#D4AF37',
+  Burgundy: '#4A0E0E',
+  Cream: '#F5F5DC'
+};
 
 function inferGender(product) {
   const name = String(product?.name || '').toLowerCase();
@@ -424,6 +670,69 @@ function inferGender(product) {
   if (name.includes('hoodie')) return 'unisex';
   if (name.includes("women") || name.includes('legging') || name.includes('crop') || name.includes('yoga')) return 'women';
   return 'men';
+}
+
+function normalizeColorLabel(color) {
+  return String(color || '')
+    .split('/')
+    .map((part) => {
+      const value = part.trim().toLowerCase();
+      if (!value) return '';
+      return value.charAt(0).toUpperCase() + value.slice(1);
+    })
+    .filter(Boolean)
+    .join('/');
+}
+
+function normalizeColorOptions(colors, gender) {
+  const base = Array.isArray(colors)
+    ? colors.map((color) => normalizeColorLabel(color)).filter(Boolean)
+    : [];
+  const unique = [...new Set(base)];
+
+  if (gender === 'women') return WOMENS_STANDARD_COLORS;
+
+  const defaults = gender === 'unisex' ? UNISEX_STANDARD_COLORS : MENS_STANDARD_COLORS;
+  const merged = [...unique];
+  for (const color of defaults) {
+    if (!merged.includes(color)) merged.push(color);
+    if (merged.length >= 3) break;
+  }
+
+  return merged.length ? merged : defaults;
+}
+
+function toSkuFragment(value) {
+  return String(value || '')
+    .toUpperCase()
+    .replace(/[^A-Z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+function resolveColorHex(colorName) {
+  const key = String(colorName || '').split('/')[0].trim();
+  return COLOR_HEX_MAP[key] || '#777777';
+}
+
+function normalizeProductColorOptions(product, colors) {
+  const existing = Array.isArray(product?.color_options) ? product.color_options : [];
+  if (existing.length) {
+    return existing.map((option, index) => ({
+      color_name: String(option?.color_name || colors[index] || 'Black').trim(),
+      color_hex: String(option?.color_hex || resolveColorHex(option?.color_name || colors[index] || 'Black')),
+      image_url: String(option?.image_url || product?.image || ''),
+      sku: String(option?.sku || `${toSkuFragment(product?.name)}-${toSkuFragment(option?.color_name || colors[index] || index + 1)}`),
+      stock_status: String(option?.stock_status || 'in_stock')
+    }));
+  }
+
+  return colors.map((color) => ({
+    color_name: color,
+    color_hex: resolveColorHex(color),
+    image_url: String(product?.image || ''),
+    sku: `${toSkuFragment(product?.name)}-${toSkuFragment(color)}`,
+    stock_status: 'in_stock'
+  }));
 }
 
 function normalizeProducts(products) {
@@ -447,13 +756,15 @@ function normalizeProducts(products) {
             ? defaults.sizes
             : ['XS', 'S', 'M', 'L', 'XL'];
 
+      const gender = product.gender || defaults?.gender || inferGender(product);
       return {
         ...defaults,
         ...product,
-        colors,
+        colors: normalizeColorOptions(colors, gender),
+        color_options: normalizeProductColorOptions({ ...defaults, ...product }, normalizeColorOptions(colors, gender)),
         sizes,
         featured: product.featured === true || defaults?.featured === true,
-        gender: product.gender || defaults?.gender || inferGender(product),
+        gender,
       };
     });
 
@@ -471,6 +782,12 @@ const state = {
     size: line?.size || null,
     color: line?.color || null,
   })),
+  savedForLater: load('jcf_saved_for_later', []).map((line) => ({
+    ...line,
+    size: line?.size || null,
+    color: line?.color || null,
+    savedId: line?.savedId || crypto.randomUUID()
+  })),
   customer: load('jcf_customer', null),
   customerHistory: [],
   adminToken: load('jcf_admin_token', ''),
@@ -480,6 +797,7 @@ const state = {
   selectedSize: '',
   appliedPromoCode: load('jcf_promo_code', ''),
   activeCatalogView: 'men-products',
+  currentView: 'landing',
 };
 
 const PROMO_CODE = 'jcf-fall';
@@ -497,6 +815,7 @@ const menProductGrid = document.getElementById('men-product-grid');
 const womenProductGrid = document.getElementById('women-product-grid');
 const unisexProductGrid = document.getElementById('unisex-product-grid');
 const cartItems = document.getElementById('cart-items');
+const savedForLaterItems = document.getElementById('saved-for-later-items');
 const cartTotal = document.getElementById('cart-total');
 const cartCount = document.getElementById('cart-count');
 const menSearchInput = document.getElementById('search-men');
@@ -505,12 +824,25 @@ const unisexSearchInput = document.getElementById('search-unisex');
 const adminProducts = document.getElementById('admin-products');
 const detailName = document.getElementById('detail-name');
 const detailPrice = document.getElementById('detail-price');
+const detailRating = document.getElementById('detail-rating');
 const detailImage = document.getElementById('detail-image');
+const detailPrevImageButton = document.getElementById('detail-prev-image');
+const detailNextImageButton = document.getElementById('detail-next-image');
 const detailDescription = document.getElementById('detail-description');
 const detailAddButton = document.getElementById('detail-add-to-cart');
 const detailColor = document.getElementById('detail-color');
 const detailSize = document.getElementById('detail-size');
+const reviewSummary = document.getElementById('review-summary');
+const reviewList = document.getElementById('review-list');
+const reviewForm = document.getElementById('review-form');
+const reviewTitleInput = document.getElementById('review-title');
+const reviewRatingInput = document.getElementById('review-rating');
+const reviewBodyInput = document.getElementById('review-body');
 const cartNavButton = document.querySelector('.cart-nav-btn');
+const cartSidePanel = document.getElementById('cart-side-panel');
+const cartSideItems = document.getElementById('cart-side-items');
+const cartSideCount = document.getElementById('cart-side-count');
+const cartSideTotal = document.getElementById('cart-side-total');
 const detailBackButton = document.getElementById('detail-back');
 const featuredGrid = document.getElementById('featured-grid');
 const joinEmailButtons = [...document.querySelectorAll('.join-email-btn')];
@@ -562,6 +894,12 @@ if (detailColor) {
     state.selectedColor = detailColor.value;
     renderProductDetail();
   });
+}
+if (detailPrevImageButton) {
+  detailPrevImageButton.addEventListener('click', () => shiftDetailColor(-1));
+}
+if (detailNextImageButton) {
+  detailNextImageButton.addEventListener('click', () => shiftDetailColor(1));
 }
 
 function openModal(modal) {
@@ -627,6 +965,8 @@ function setView(id) {
   }
 
   views.forEach((view) => view.classList.toggle('active', view.id === id));
+  state.currentView = id;
+  renderCartSidePanel();
   if (id !== 'account-orders' && id !== 'account-details') closeAccountMenu();
   window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
 }
@@ -639,6 +979,7 @@ function load(key, fallback) {
 function save() {
   localStorage.setItem('jcf_products', JSON.stringify(state.products));
   localStorage.setItem('jcf_cart', JSON.stringify(state.cart));
+  localStorage.setItem('jcf_saved_for_later', JSON.stringify(state.savedForLater));
   localStorage.setItem('jcf_customer', JSON.stringify(state.customer));
   localStorage.setItem('jcf_promo_code', JSON.stringify(state.appliedPromoCode));
 }
@@ -718,6 +1059,135 @@ function renderOrderHistory() {
 
 function money(value) {
   return `$${value.toFixed(2)}`;
+}
+
+function toJsArg(value) {
+  return value == null ? 'null' : JSON.stringify(String(value));
+}
+
+function escapeHtml(value) {
+  return String(value || '')
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;');
+}
+
+function renderStars(rating = 0) {
+  const score = Math.max(0, Math.min(5, Number(rating) || 0));
+  const full = Math.round(score);
+  return `${'★'.repeat(full)}${'☆'.repeat(5 - full)}`;
+}
+
+function getProductReviews(productId) {
+  const product = state.products.find((entry) => entry.id === productId);
+  const list = Array.isArray(product?.reviews) ? product.reviews : [];
+  return list
+    .map((entry) => ({
+      id: entry?.id || crypto.randomUUID(),
+      title: String(entry?.title || '').trim(),
+      body: String(entry?.body || '').trim(),
+      author: String(entry?.author || 'Customer').trim() || 'Customer',
+      rating: Math.max(1, Math.min(5, Number(entry?.rating) || 1)),
+      verifiedPurchase: entry?.verifiedPurchase === true,
+      createdAt: entry?.createdAt || new Date().toISOString()
+    }))
+    .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+}
+
+function getReviewStats(productId) {
+  const reviews = getProductReviews(productId);
+  const count = reviews.length;
+  const total = reviews.reduce((sum, review) => sum + Number(review.rating || 0), 0);
+  const average = count ? total / count : 0;
+  const distribution = { 5: 0, 4: 0, 3: 0, 2: 0, 1: 0 };
+  reviews.forEach((review) => {
+    distribution[Math.round(review.rating)] += 1;
+  });
+  return { reviews, count, average, distribution };
+}
+
+function renderReviewSection(productId) {
+  if (!reviewSummary || !reviewList) return;
+  const { reviews, count, average, distribution } = getReviewStats(productId);
+  const avgText = count ? `${average.toFixed(1)} out of 5` : 'No ratings yet';
+  const stars = renderStars(average);
+
+  reviewSummary.innerHTML = `
+    <div class="review-overall">
+      <p class="review-overall-score">${stars} ${avgText}</p>
+      <p class="hint">${count} global rating${count === 1 ? '' : 's'}</p>
+    </div>
+    <div class="review-breakdown">
+      ${[5, 4, 3, 2, 1]
+        .map((rating) => {
+          const votes = distribution[rating] || 0;
+          const pct = count ? Math.round((votes / count) * 100) : 0;
+          return `
+            <div class="review-bar-row">
+              <span>${rating} star</span>
+              <div class="review-bar-track"><div class="review-bar-fill" style="width:${pct}%"></div></div>
+              <span>${pct}%</span>
+            </div>
+          `;
+        })
+        .join('')}
+    </div>
+  `;
+
+  if (!reviews.length) {
+    reviewList.innerHTML = '<p class="hint">No customer reviews yet. Be the first to review this item.</p>';
+    return;
+  }
+
+  reviewList.innerHTML = reviews
+    .map(
+      (review) => `
+        <article class="review-item">
+          <p class="review-item-rating">${renderStars(review.rating)} <strong>${escapeHtml(review.title || 'Review')}</strong></p>
+          <p class="review-meta">By ${escapeHtml(review.author)} on ${new Date(review.createdAt).toLocaleDateString()}${review.verifiedPurchase ? ' • Verified Purchase' : ''}</p>
+          <p>${escapeHtml(review.body || '')}</p>
+        </article>
+      `
+    )
+    .join('');
+}
+
+function shouldShowCartSidePanel() {
+  return ['featured-products', 'men-products', 'women-products', 'unisex-products', 'product-detail'].includes(state.currentView);
+}
+
+function renderCartSidePanel() {
+  if (!cartSidePanel || !cartSideItems || !cartSideCount || !cartSideTotal) return;
+
+  const itemCount = state.cart.reduce((sum, item) => sum + item.qty, 0);
+  const total = state.cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+  const isVisible = shouldShowCartSidePanel() && itemCount > 0;
+  cartSidePanel.classList.toggle('hidden', !isVisible);
+  document.body.classList.toggle('cart-panel-open', isVisible);
+  cartSideCount.textContent = String(itemCount);
+  cartSideTotal.textContent = money(total);
+
+  if (!state.cart.length) {
+    cartSideItems.innerHTML = '<p class="hint">Your cart is empty.</p>';
+    return;
+  }
+
+  cartSideItems.innerHTML = state.cart
+    .map(
+      (item) => `
+      <div class="cart-side-item">
+        <strong>${escapeHtml(item.name)}</strong>
+        <p class="hint">${item.qty} x ${money(item.price)}</p>
+        <div class="row cart-side-actions">
+          <button class="ghost" onclick="removeFromCart('${item.id}', ${toJsArg(item.color)}, ${toJsArg(item.size)})">Remove</button>
+          <button class="ghost" onclick="saveForLater('${item.id}', ${toJsArg(item.color)}, ${toJsArg(item.size)})">Save</button>
+        </div>
+      </div>
+    `
+    )
+    .join('');
 }
 
 function parseListInput(value, fallback = []) {
@@ -814,16 +1284,30 @@ function syncPromoUi() {
 }
 
 function getProductImageForColor(product, color) {
+  const wanted = normalizeColorLabel(color);
+
+  // Prefer explicit color options first.
+  if (Array.isArray(product?.color_options) && product.color_options.length) {
+    const option =
+      product.color_options.find(
+        (entry) => normalizeColorLabel(entry?.color_name) === wanted
+      ) ||
+      product.color_options.find(
+        (entry) => normalizeColorLabel(entry?.color_name).includes(wanted) || wanted.includes(normalizeColorLabel(entry?.color_name))
+      );
+    if (option?.image_url) return String(option.image_url);
+  }
+
   const direct = productImageManifest?.[product.name];
-  if (direct && direct[color]) return direct[color];
+  if (direct && direct[wanted]) return direct[wanted];
 
   // Fallback key matching when product names vary slightly.
   const normalized = product.name.toLowerCase().replace(/[^a-z0-9]/g, '');
   const matchedKey = Object.keys(productImageManifest).find(
     (key) => key.toLowerCase().replace(/[^a-z0-9]/g, '') === normalized
   );
-  if (matchedKey && productImageManifest[matchedKey]?.[color]) {
-    return productImageManifest[matchedKey][color];
+  if (matchedKey && productImageManifest[matchedKey]?.[wanted]) {
+    return productImageManifest[matchedKey][wanted];
   }
 
   return product.image;
@@ -860,6 +1344,27 @@ function bindMagnifiers(scope = document) {
         return;
       }
 
+      // Restrict magnification to actual rendered image pixels when object-fit: contain creates blank letterbox space.
+      const naturalW = Number(img.naturalWidth || 0);
+      const naturalH = Number(img.naturalHeight || 0);
+      if (!naturalW || !naturalH) {
+        hideLens();
+        return;
+      }
+      const boxRatio = rect.width / rect.height;
+      const imageRatio = naturalW / naturalH;
+      const renderedWidth = imageRatio > boxRatio ? rect.width : rect.height * imageRatio;
+      const renderedHeight = imageRatio > boxRatio ? rect.width / imageRatio : rect.height;
+      const offsetX = (rect.width - renderedWidth) / 2;
+      const offsetY = (rect.height - renderedHeight) / 2;
+      if (x < offsetX || x > offsetX + renderedWidth || y < offsetY || y > offsetY + renderedHeight) {
+        hideLens();
+        return;
+      }
+
+      x -= offsetX;
+      y -= offsetY;
+
       const src = img.currentSrc || img.src;
       if (!src) return;
 
@@ -868,18 +1373,18 @@ function bindMagnifiers(scope = document) {
       const lensHeight = lens.offsetHeight;
       const minX = lensWidth / 2;
       const minY = lensHeight / 2;
-      const maxX = rect.width - minX;
-      const maxY = rect.height - minY;
+      const maxX = renderedWidth - minX;
+      const maxY = renderedHeight - minY;
 
       x = Math.max(minX, Math.min(x, maxX));
       y = Math.max(minY, Math.min(y, maxY));
 
       lens.style.display = 'block';
       frame.classList.add('magnifier-active');
-      lens.style.left = `${x - minX}px`;
-      lens.style.top = `${y - minY}px`;
+      lens.style.left = `${offsetX + x - minX}px`;
+      lens.style.top = `${offsetY + y - minY}px`;
       lens.style.backgroundImage = `url("${src}")`;
-      lens.style.backgroundSize = `${rect.width * zoom}px ${rect.height * zoom}px`;
+      lens.style.backgroundSize = `${renderedWidth * zoom}px ${renderedHeight * zoom}px`;
       lens.style.backgroundPosition = `-${x * zoom - minX}px -${y * zoom - minY}px`;
     };
 
@@ -913,22 +1418,28 @@ function renderProductGrid(grid, products, sourceView) {
 
   grid.innerHTML = products
     .map(
-      (product) => `
+      (product) => {
+        const stats = getReviewStats(product.id);
+        const ratingText = stats.count
+          ? `${renderStars(stats.average)} ${stats.average.toFixed(1)} (${stats.count})`
+          : '☆☆☆☆☆ No reviews';
+        return `
       <article class="card">
         <div class="magnifier-frame">
-          <img class="magnify-image" data-zoom="2.3" src="${product.image}" alt="${product.name}" onclick="openProduct('${product.id}', '${sourceView}')" />
+          <img src="${product.image}" alt="${product.name}" onclick="openProduct('${product.id}', '${sourceView}')" />
         </div>
         <div class="card-content">
           <h3><button class="link-button" onclick="openProduct('${product.id}', '${sourceView}')">${product.name}</button></h3>
           <p><strong>${money(product.price)}</strong></p>
+          <p class="card-rating">${ratingText}</p>
           <button class="secondary" onclick="openProduct('${product.id}', '${sourceView}')">View Item</button>
         </div>
       </article>
-    `
+    `;
+      }
     )
     .join('');
 
-  bindMagnifiers(grid);
 }
 
 window.openCollection = (targetView) => {
@@ -942,22 +1453,28 @@ function renderFeaturedProducts() {
 
   featuredGrid.innerHTML = getFeaturedProducts()
     .map(
-      (product) => `
+      (product) => {
+        const stats = getReviewStats(product.id);
+        const ratingText = stats.count
+          ? `${renderStars(stats.average)} ${stats.average.toFixed(1)} (${stats.count})`
+          : '☆☆☆☆☆ No reviews';
+        return `
       <article class="card">
         <div class="magnifier-frame">
-          <img class="magnify-image" data-zoom="2.3" src="${product.image}" alt="${product.name}" onclick="openCollection('${product.gender}-products')" />
+          <img src="${product.image}" alt="${product.name}" onclick="openCollection('${product.gender}-products')" />
         </div>
         <div class="card-content">
           <h3>${product.name}</h3>
           <p><strong>${money(product.price)}</strong></p>
+          <p class="card-rating">${ratingText}</p>
           <button class="secondary" onclick="openCollection('${product.gender}-products')">Shop ${product.gender === 'men' ? "Men's" : "Women's"} Collection</button>
         </div>
       </article>
-    `
+    `;
+      }
     )
     .join('');
 
-  bindMagnifiers(featuredGrid);
 }
 
 function renderProducts() {
@@ -995,12 +1512,29 @@ function renderProductDetail() {
 
   detailName.textContent = product.name;
   detailPrice.textContent = money(product.price);
+  const ratingStats = getReviewStats(product.id);
+  if (detailRating) {
+    detailRating.textContent = ratingStats.count
+      ? `${renderStars(ratingStats.average)} ${ratingStats.average.toFixed(1)} (${ratingStats.count} rating${ratingStats.count === 1 ? '' : 's'})`
+      : '☆☆☆☆☆ No ratings yet';
+  }
   detailImage.src = getProductImageForColor(product, state.selectedColor);
   detailImage.alt = product.name;
   detailImage.style.filter = 'none';
-  detailDescription.textContent = `${product.name} is built for everyday comfort, movement, and clean street-ready style.`;
+  detailDescription.textContent = String(product.description || '').trim() || `${product.name} is built for everyday comfort, movement, and clean street-ready style.`;
   detailAddButton.setAttribute('onclick', `addToCart('${product.id}')`);
+  renderReviewSection(product.id);
   bindMagnifiers(document.getElementById('product-detail'));
+}
+
+function shiftDetailColor(direction = 1) {
+  const product = state.products.find((item) => item.id === state.selectedProductId);
+  if (!product) return;
+  const colors = Array.isArray(product.colors) && product.colors.length ? product.colors : ['Black'];
+  const currentIndex = Math.max(0, colors.indexOf(state.selectedColor));
+  const nextIndex = (currentIndex + direction + colors.length) % colors.length;
+  state.selectedColor = colors[nextIndex];
+  renderProductDetail();
 }
 
 window.openProduct = (productId, sourceView = 'men-products') => {
@@ -1054,6 +1588,126 @@ window.removeFromCart = (productId, color = null, size = null) => {
   renderCart();
 };
 
+window.saveForLater = (productId, color = null, size = null) => {
+  const idx = state.cart.findIndex(
+    (item) =>
+      item.id === productId &&
+      (item.color || null) === (color || null) &&
+      (item.size || null) === (size || null)
+  );
+  if (idx < 0) return;
+
+  const [line] = state.cart.splice(idx, 1);
+  if (!line) return;
+
+  const existing = state.savedForLater.find(
+    (item) =>
+      item.id === line.id &&
+      (item.color || null) === (line.color || null) &&
+      (item.size || null) === (line.size || null)
+  );
+
+  if (existing) {
+    existing.qty += line.qty;
+  } else {
+    state.savedForLater.unshift({
+      ...line,
+      savedId: crypto.randomUUID(),
+      savedAt: new Date().toISOString()
+    });
+  }
+
+  save();
+  renderCart();
+};
+
+window.moveToCartFromSaved = (savedId) => {
+  const idx = state.savedForLater.findIndex((item) => item.savedId === savedId);
+  if (idx < 0) return;
+
+  const [saved] = state.savedForLater.splice(idx, 1);
+  if (!saved) return;
+
+  const existing = state.cart.find(
+    (item) =>
+      item.id === saved.id &&
+      (item.color || null) === (saved.color || null) &&
+      (item.size || null) === (saved.size || null)
+  );
+
+  if (existing) {
+    existing.qty += Number(saved.qty || 1);
+  } else {
+    state.cart.push({
+      id: saved.id,
+      name: saved.name,
+      color: saved.color || null,
+      size: saved.size || null,
+      price: Number(saved.price) || 0,
+      qty: Number(saved.qty) || 1
+    });
+  }
+
+  save();
+  renderCart();
+};
+
+window.removeSavedForLater = (savedId) => {
+  state.savedForLater = state.savedForLater.filter((item) => item.savedId !== savedId);
+  save();
+  renderCart();
+};
+
+window.viewSavedItem = (productId) => {
+  const product = state.products.find((item) => item.id === productId);
+  if (!product) {
+    alert('This item is no longer available.');
+    return;
+  }
+  const sourceView = product.gender === 'women'
+    ? 'women-products'
+    : product.gender === 'unisex'
+      ? 'unisex-products'
+      : 'men-products';
+  openProduct(product.id, sourceView);
+};
+
+function renderSavedForLater() {
+  if (!savedForLaterItems) return;
+
+  if (!state.savedForLater.length) {
+    savedForLaterItems.innerHTML = '';
+    return;
+  }
+
+  savedForLaterItems.innerHTML = `
+    <div class="section-head compact-head">
+      <h3>Saved for later</h3>
+    </div>
+    <div class="saved-list">
+      ${state.savedForLater
+        .map(
+          (item) => `
+          <div class="cart-item saved-item">
+            <div>
+              <strong>${escapeHtml(item.name)}</strong>
+              ${item.color ? `<p>Color: ${escapeHtml(item.color)}</p>` : ''}
+              ${item.size ? `<p>Size: ${escapeHtml(item.size)}</p>` : ''}
+              <p>${money(Number(item.price) || 0)} x ${Number(item.qty) || 1}</p>
+            </div>
+            <div class="row cart-item-actions">
+              <button class="secondary" onclick="moveToCartFromSaved('${item.savedId}')">Move to Cart</button>
+              <button class="ghost" onclick="viewSavedItem('${item.id}')">View Item</button>
+              <button class="ghost" onclick="removeSavedForLater('${item.savedId}')">Remove</button>
+            </div>
+          </div>
+        `
+        )
+        .join('')}
+    </div>
+  `;
+}
+
 function renderCart() {
   if (!state.cart.length) {
     cartItems.innerHTML = '<p>Your cart is empty.</p>';
@@ -1068,7 +1722,10 @@ function renderCart() {
           ${item.size ? `<p>Size: ${item.size}</p>` : ''}
           <p>${money(item.price)} x ${item.qty}</p>
         </div>
-        <button class="ghost" onclick="removeFromCart('${item.id}', ${item.color ? `'${item.color}'` : 'null'}, ${item.size ? `'${item.size}'` : 'null'})">Remove</button>
+        <div class="row cart-item-actions">
+          <button class="ghost" onclick="saveForLater('${item.id}', ${toJsArg(item.color)}, ${toJsArg(item.size)})">Save for later</button>
+          <button class="ghost" onclick="removeFromCart('${item.id}', ${toJsArg(item.color)}, ${toJsArg(item.size)})">Remove</button>
+        </div>
       </div>
     `
       )
@@ -1083,6 +1740,8 @@ function renderCart() {
   if (cartNavButton) {
     cartNavButton.setAttribute('aria-label', itemCount > 0 ? `Open cart with ${itemCount} item${itemCount > 1 ? 's' : ''}` : 'Open cart');
   }
+  renderSavedForLater();
+  renderCartSidePanel();
 }
 
 function renderAdminProducts() {
@@ -1452,6 +2111,62 @@ if (brandLogo) {
 if (detailSize) {
   detailSize.addEventListener('change', () => {
     state.selectedSize = detailSize.value;
+  });
+}
+
+if (reviewForm) {
+  reviewForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const productId = state.selectedProductId;
+    if (!productId) return;
+
+    const rating = Number(reviewRatingInput?.value || 0);
+    if (!Number.isInteger(rating) || rating < 1 || rating > 5) {
+      alert('Please select a star rating.');
+      return;
+    }
+
+    const title = String(reviewTitleInput?.value || '').trim();
+    const body = String(reviewBodyInput?.value || '').trim();
+    if (!body) {
+      alert('Please write a short review.');
+      return;
+    }
+
+    const author =
+      String(state.customer?.name || '').trim() ||
+      String(state.customer?.email || '').split('@')[0] ||
+      'Customer';
+    const verifiedPurchase =
+      Boolean(state.customer?.email) &&
+      Array.isArray(state.customerHistory) &&
+      state.customerHistory.some((order) => Array.isArray(order?.items) && order.items.some((item) => item?.id === productId));
+
+    try {
+      const result = await apiRequest(`/products/${encodeURIComponent(productId)}/reviews`, {
+        method: 'POST',
+        body: JSON.stringify({
+          title,
+          body,
+          author,
+          rating,
+          verifiedPurchase
+        })
+      });
+
+      const product = state.products.find((entry) => entry.id === productId);
+      if (product) {
+        const current = Array.isArray(product.reviews) ? product.reviews : [];
+        product.reviews = [result.review, ...current];
+      }
+
+      save();
+      reviewForm.reset();
+      renderProductDetail();
+      renderProducts();
+    } catch (error) {
+      alert(error?.message || 'Unable to submit review right now.');
+    }
   });
 }
 

@@ -10,6 +10,7 @@ const legacyDataFile = path.join(dataDir, 'db.json');
 const productsFile = path.join(dataDir, 'products.json');
 const usersFile = path.join(dataDir, 'users.json');
 const systemFile = path.join(dataDir, 'system.json');
+const womensStandardColors = ['Black', 'Gray', 'White', 'Pink'];
 const adminHashIterations = Number(process.env.ADMIN_HASH_ITERATIONS || 210000);
 const adminHashKeylen = 64;
 const adminHashDigest = 'sha512';
@@ -314,6 +315,15 @@ async function ensureStore() {
   );
 
   try {
+    const productsRaw = await fs.readFile(productsFile, 'utf8');
+    const productsParsed = JSON.parse(productsRaw);
+    const normalizedProducts = Array.isArray(productsParsed)
+      ? productsParsed.map((product) => normalizeProductRecord(product))
+      : initialProducts.map((product) => normalizeProductRecord(product));
+    if (JSON.stringify(productsParsed) !== JSON.stringify(normalizedProducts)) {
+      await fs.writeFile(productsFile, JSON.stringify(normalizedProducts, null, 2), 'utf8');
+    }
+
     const raw = await fs.readFile(systemFile, 'utf8');
     const parsed = JSON.parse(raw);
     const normalizedAdmin = normalizeAdminRecord(parsed?.admin);
@@ -351,7 +361,9 @@ async function readStore() {
   const systemParsed = JSON.parse(systemRaw);
 
   return {
-    products: Array.isArray(productsParsed) ? productsParsed : initialProducts,
+    products: Array.isArray(productsParsed)
+      ? productsParsed.map((product) => normalizeProductRecord(product))
+      : initialProducts.map((product) => normalizeProductRecord(product)),
     emailSignups: Array.isArray(systemParsed?.emailSignups) ? systemParsed.emailSignups : [],
     supportMessages: Array.isArray(systemParsed?.supportMessages) ? systemParsed.supportMessages : [],
     customers: Array.isArray(usersParsed?.customers) ? usersParsed.customers : [],
@@ -371,8 +383,11 @@ async function readStore() {
 
 async function writeStore(next) {
   await ensureStore();
+  const normalizedProducts = Array.isArray(next.products)
+    ? next.products.map((product) => normalizeProductRecord(product))
+    : [];
   await Promise.all([
-    fs.writeFile(productsFile, JSON.stringify(next.products || [], null, 2), 'utf8'),
+    fs.writeFile(productsFile, JSON.stringify(normalizedProducts, null, 2), 'utf8'),
     fs.writeFile(
       usersFile,
       JSON.stringify(
@@ -410,9 +425,27 @@ async function writeStore(next) {
   ]);
 }
 
+function normalizeProductReviews(reviews = []) {
+  if (!Array.isArray(reviews)) return [];
+  return reviews
+    .map((review) => ({
+      id: String(review?.id || crypto.randomUUID()),
+      title: String(review?.title || '').trim().slice(0, 80),
+      body: String(review?.body || '').trim().slice(0, 500),
+      author: String(review?.author || 'Customer').trim().slice(0, 60) || 'Customer',
+      rating: Math.max(1, Math.min(5, Number(review?.rating) || 1)),
+      verifiedPurchase: review?.verifiedPurchase === true,
+      createdAt: review?.createdAt || new Date().toISOString()
+    }))
+    .filter((review) => review.body);
+}
+
 export async function getProducts() {
   const db = await readStore();
-  return db.products;
+  return db.products.map((product) => ({
+    ...product,
+    reviews: normalizeProductReviews(product?.reviews || [])
+  }));
 }
 
 function inferGender(product) {
@@ -421,6 +454,26 @@ function inferGender(product) {
   if (name.includes('hoodie')) return 'unisex';
   if (name.includes('women') || name.includes('legging') || name.includes('crop') || name.includes('yoga')) return 'women';
   return 'men';
+}
+
+function normalizeProductRecord(product = {}) {
+  const base = product && typeof product === 'object' ? product : {};
+  const gender = String(base.gender || inferGender(base)).toLowerCase();
+  const colors =
+    Array.isArray(base.colors) && base.colors.length
+      ? base.colors.map((color) => String(color || '').trim()).filter(Boolean)
+      : ['Black'];
+  const sizes =
+    Array.isArray(base.sizes) && base.sizes.length
+      ? base.sizes.map((size) => String(size || '').trim()).filter(Boolean)
+      : ['XS', 'S', 'M', 'L', 'XL'];
+
+  return {
+    ...base,
+    gender,
+    colors: gender === 'women' ? womensStandardColors : colors,
+    sizes
+  };
 }
 
 export async function addProduct(input = {}) {
@@ -441,21 +494,20 @@ export async function addProduct(input = {}) {
     throw new Error('Product image is required.');
   }
 
-  const colors = Array.isArray(input.colors) && input.colors.length ? input.colors : ['Black'];
-  const sizes = Array.isArray(input.sizes) && input.sizes.length ? input.sizes : ['XS', 'S', 'M', 'L', 'XL'];
-  const product = {
+  const product = normalizeProductRecord({
     id: crypto.randomUUID(),
     name,
     price,
     image,
-    colors,
-    sizes,
+    colors: Array.isArray(input.colors) && input.colors.length ? input.colors : ['Black'],
+    sizes: Array.isArray(input.sizes) && input.sizes.length ? input.sizes : ['XS', 'S', 'M', 'L', 'XL'],
     gender: input.gender || inferGender(input),
     description: String(input.description || 'New product added by admin.'),
     category: String(input.category || 'tops'),
     style: String(input.style || 'standard'),
-    featured: input.featured === true
-  };
+    featured: input.featured === true,
+    reviews: []
+  });
 
   db.products.unshift(product);
   await writeStore(db);
@@ -484,24 +536,22 @@ export async function updateProduct(id, input = {}) {
     throw new Error('Product image is required.');
   }
 
-  const colors = Array.isArray(input.colors) && input.colors.length ? input.colors : current.colors || ['Black'];
-  const sizes =
-    Array.isArray(input.sizes) && input.sizes.length
-      ? input.sizes
-      : current.sizes || ['XS', 'S', 'M', 'L', 'XL'];
-
-  const updated = {
+  const updated = normalizeProductRecord({
     ...current,
     ...input,
     id: current.id,
     name,
     price,
     image,
-    colors,
-    sizes,
+    colors: Array.isArray(input.colors) && input.colors.length ? input.colors : current.colors || ['Black'],
+    sizes:
+      Array.isArray(input.sizes) && input.sizes.length
+        ? input.sizes
+        : current.sizes || ['XS', 'S', 'M', 'L', 'XL'],
     gender: input.gender || current.gender || inferGender(input),
     featured: input.featured === true,
-  };
+    reviews: normalizeProductReviews(current.reviews || [])
+  });
 
   db.products[idx] = updated;
   await writeStore(db);
@@ -515,6 +565,44 @@ export async function deleteProduct(id) {
   if (db.products.length === prevCount) return false;
   await writeStore(db);
   return true;
+}
+
+export async function getProductReviews(id) {
+  const db = await readStore();
+  const product = db.products.find((entry) => String(entry.id) === String(id));
+  if (!product) return null;
+  return normalizeProductReviews(product.reviews || []);
+}
+
+export async function addProductReview(id, input = {}) {
+  const db = await readStore();
+  const idx = db.products.findIndex((entry) => String(entry.id) === String(id));
+  if (idx === -1) return null;
+
+  const rating = Math.max(1, Math.min(5, Number(input.rating) || 0));
+  const title = String(input.title || '').trim().slice(0, 80);
+  const body = String(input.body || '').trim().slice(0, 500);
+  const author = String(input.author || 'Customer').trim().slice(0, 60) || 'Customer';
+
+  if (!rating) throw new Error('Rating is required.');
+  if (!body) throw new Error('Review body is required.');
+
+  const review = {
+    id: crypto.randomUUID(),
+    title,
+    body,
+    author,
+    rating,
+    verifiedPurchase: input.verifiedPurchase === true,
+    createdAt: new Date().toISOString()
+  };
+
+  const current = db.products[idx];
+  const reviews = normalizeProductReviews(current.reviews || []);
+  reviews.unshift(review);
+  db.products[idx] = { ...current, reviews };
+  await writeStore(db);
+  return review;
 }
 
 export async function getPromo(code) {

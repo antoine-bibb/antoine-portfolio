@@ -1,104 +1,161 @@
 {
   "globalStyle": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k.",
   "prompts": [
-
     {
-      "file": "assets/jogger_set.png",
-      "product": "JCF Jogger Set",
+      "file": "assets/black-slim-fit-hoodie-jcf.png",
+      "product": "JCF OG Hoodie",
       "color": "Black",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition. JCF Jogger Set, athletic jogger and tee set in black premium fabric."
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF OG Hoodie, premium product silhouette in black with realistic fabric detail."
     },
-
     {
-      "file": "assets/slim-jogger.jpg",
-      "product": "JCF Slim Jogger",
+      "file": "assets/varsity-hoodie-jcf.png",
+      "product": "JCF Varsity Oversized Hoodie",
       "color": "Black",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting. JCF Slim Jogger pants, modern tapered athletic fit in black performance fabric."
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Varsity Oversized Hoodie, premium product silhouette in black with realistic fabric detail."
     },
-
     {
-      "file": "assets/crew-neck-long-sleeve.jpg",
-      "product": "JCF Crew Neck Long Sleeve",
+      "file": "assets/cropped-varsity-hoodie-jcf.png",
+      "product": "JCF Women's Signature Crop",
       "color": "Black",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting. JCF Crew Neck Long Sleeve shirt, minimalist athletic design in black cotton performance fabric."
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Signature Crop, premium product silhouette in black with realistic fabric detail."
     },
-
     {
-      "file": "assets/tech-hoodie.jpg",
-      "product": "JCF Tech Hoodie",
+      "file": "assets/tapered-cargo-joggers-jcf.png",
+      "product": "JCF Utility Cargo Jogger",
       "color": "Black",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting. JCF Tech Hoodie, athletic modern hoodie silhouette with structured hood and performance fabric in black."
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Utility Cargo Jogger, premium product silhouette in black with realistic fabric detail."
     },
-
     {
-      "file": "assets/crew-neck-tee.jpg",
-      "product": "JCF Crew Neck Tee",
+      "file": "assets/slim-jogger-style-3-jcf.png",
+      "product": "JCF High-Fashion Pintuck Jogger",
       "color": "Black",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting. JCF Crew Neck Tee, minimalist everyday athletic t-shirt in black cotton performance fabric."
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF High-Fashion Pintuck Jogger, premium product silhouette in black with realistic fabric detail."
     },
-
     {
-      "file": "assets/leggings_set.png",
-      "product": "JCF Legging Crop Set",
+      "file": "assets/gym-jogger-jcf.png",
+      "product": "JCF Lounge & Gym Jogger",
       "color": "Black",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting. JCF Legging Crop Set, high-waist leggings and crop top athletic set in black premium stretch fabric."
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Lounge & Gym Jogger, premium product silhouette in black with realistic fabric detail."
     },
-
     {
-      "file": "assets/relaxed-joggers.jpg",
-      "product": "JCF Relaxed Joggers",
+      "file": "assets/black-curved-hem-tee-jcf.png",
+      "product": "JCF Luxe Curved-Hem Tee",
       "color": "Black",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting. JCF Relaxed Joggers for women, relaxed athletic jogger silhouette in black comfort fleece."
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Luxe Curved-Hem Tee, premium product silhouette in black with realistic fabric detail."
     },
-
     {
-      "file": "assets/crop-top-short-set.jpg",
-      "product": "JCF Crop Top Short Set",
+      "file": "assets/signature-utility-duffel-jcf.png",
+      "product": "JCF Signature Utility Duffel",
       "color": "Black",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting. JCF Crop Top Short Set, athletic crop top with biker shorts in black premium stretch fabric."
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Signature Utility Duffel, premium product silhouette in black with realistic fabric detail."
     },
-
     {
-      "file": "assets/leggings-crop.jpg",
-      "product": "JCF Leggings Crop Set",
-      "color": "Black",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting. JCF Leggings Crop Set, high waist athletic leggings paired with crop top in black performance fabric."
+      "file": "assets/jcf_curved_hem_tee.png",
+      "product": "JCF Curved Hem Technical Tee",
+      "color": "Black/Gold",
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Curved Hem Technical Tee, premium product silhouette in black/gold with realistic fabric detail."
     },
-
     {
-      "file": "assets/crop-top-jogger-set.jpg",
-      "product": "JCF Crop Jogger Set",
-      "color": "Black",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting. JCF Crop Jogger Set, cropped hoodie with joggers athletic lounge set in black."
+      "file": "assets/jcf_mens_utility_shorts.png",
+      "product": "JCF Men's Hybrid Utility Shorts",
+      "color": "Black/Gold",
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Men's Hybrid Utility Shorts, premium product silhouette in black/gold with realistic fabric detail."
     },
-
     {
-      "file": "assets/long-sleeve-crop.jpg",
-      "product": "JCF Long Sleeve Crop",
-      "color": "Black",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting. JCF Long Sleeve Crop athletic top in black stretch performance fabric."
+      "file": "assets/jcf_trucker_cap.png",
+      "product": "JCF Luxury Trucker Cap",
+      "color": "Black/Gold",
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Luxury Trucker Cap, premium product silhouette in black/gold with realistic fabric detail."
     },
-
     {
-      "file": "assets/crop-top-hoodie.jpg",
-      "product": "JCF Crop Hoodie",
-      "color": "Black",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting. JCF Crop Hoodie athletic cropped hoodie silhouette in black fleece fabric."
+      "file": "assets/jcf_tech_beanie.png",
+      "product": "JCF Tech-Knit Beanie",
+      "color": "Gold/Black",
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Tech-Knit Beanie, premium product silhouette in gold/black with realistic fabric detail."
     },
-
     {
-      "file": "assets/back-hoodie.jpg",
-      "product": "JCF Back Hoodie",
-      "color": "Black",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting. JCF Back Hoodie oversized hoodie silhouette in black premium fleece."
+      "file": "assets/jcf_mens_icon_jacket.png",
+      "product": "JCF Icon Luxury Bomber Jacket",
+      "color": "Jet Black/Gold",
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Icon Luxury Bomber Jacket, premium product silhouette in jet black/gold with realistic fabric detail."
     },
-
     {
-      "file": "assets/jcf-evol-hoodie.png",
-      "product": "JCF Evol Hoodie",
+      "file": "assets/jcf_mens_icon_tee.png",
+      "product": "JCF Icon Essential Street Tee",
+      "color": "Jet Black/Gold",
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Icon Essential Street Tee, premium product silhouette in jet black/gold with realistic fabric detail."
+    },
+    {
+      "file": "assets/jcf_mens_icon_joggers.png",
+      "product": "JCF Icon Heavyweight Street Joggers",
+      "color": "Jet Black/Gold",
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Icon Heavyweight Street Joggers, premium product silhouette in jet black/gold with realistic fabric detail."
+    },
+    {
+      "file": "assets/jcf_tech_jacket.png",
+      "product": "JCF Luxury Technical Quilted Jacket",
       "color": "Black",
-      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting. JCF Evol Hoodie slim fit athletic hoodie in black performance fleece."
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Luxury Technical Quilted Jacket, premium product silhouette in black with realistic fabric detail."
+    },
+    {
+      "file": "assets/womens-royal-utility-legging-jcf.jpg",
+      "product": "JCF Women's Royal Utility Legging",
+      "color": "Black",
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Royal Utility Legging, premium product silhouette in black with realistic fabric detail."
+    },
+    {
+      "file": "assets/womens-royal-bomber-jcf.jpg",
+      "product": "JCF Women's Royal Quilted Bomber",
+      "color": "Black",
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Royal Quilted Bomber, premium product silhouette in black with realistic fabric detail."
+    },
+    {
+      "file": "assets/womens-royal-curve-tee-jcf.png",
+      "product": "JCF Women's Royal Curve Tee",
+      "color": "Black",
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Royal Curve Tee, premium product silhouette in black with realistic fabric detail."
+    },
+    {
+      "file": "assets/womens-royal-deep-v-tee-jcf.png",
+      "product": "JCF Women's Royal Deep-V Curve Tee",
+      "color": "Black",
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Royal Deep-V Curve Tee, premium product silhouette in black with realistic fabric detail."
+    },
+    {
+      "file": "assets/womens-royal-sports-bra-jcf.png",
+      "product": "JCF Women's Royal Secure-Support Bra",
+      "color": "Black",
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Royal Secure-Support Bra, premium product silhouette in black with realistic fabric detail."
+    },
+    {
+      "file": "assets/womens-royal-headwrap-jcf.png",
+      "product": "JCF Royal Performance Headwrap",
+      "color": "Black",
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Royal Performance Headwrap, premium product silhouette in black with realistic fabric detail."
+    },
+    {
+      "file": "assets/womens-icon-bomber-jcf.png",
+      "product": "JCF Women's Icon Cropped Bomber",
+      "color": "Black",
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Icon Cropped Bomber, premium product silhouette in black with realistic fabric detail."
+    },
+    {
+      "file": "assets/womens-icon-leggings-jcf.png",
+      "product": "JCF Women's Icon High-Waisted Leggings",
+      "color": "Black",
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Women's Icon High-Waisted Leggings, premium product silhouette in black with realistic fabric detail."
+    },
+    {
+      "file": "assets/jcf_icon_sports_bra.png",
+      "product": "JCF Icon Performance Sports Bra",
+      "color": "Black/Burgundy/Gold",
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Icon Performance Sports Bra, premium product silhouette in black/burgundy/gold with realistic fabric detail."
+    },
+    {
+      "file": "assets/jcf_icon_shorts.png",
+      "product": "JCF Icon Performance Shorts",
+      "color": "Black/Burgundy/Gold",
+      "prompt": "Studio ecommerce product photo, clean white seamless background, soft diffused lighting, high detail fabric texture, realistic shadows, centered composition, no model, no text overlay, no watermark, premium athleisure aesthetic, 4k. JCF Icon Performance Shorts, premium product silhouette in black/burgundy/gold with realistic fabric detail."
     }
-
   ]
 }
