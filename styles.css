@@ -1,11 +1,19 @@
 :root {
-  --bg: #f5f5f5;
-  --ink: #111;
-  --muted: #5f5f5f;
-  --white: #fff;
-  --line: #e6e6e6;
-  --accent: #111;
-  --jcf-red: #b30000; /* your brand red */
+  --bg: #f7f7f7;
+  --surface: #ffffff;
+  --surface-muted: #efefef;
+  --ink: #141414;
+  --ink-soft: #202020;
+  --muted: #626262;
+  --muted-soft: #8c8c8c;
+  --line: #dfdfdf;
+  --white: #ffffff;
+  --accent: #111111;
+  --brand-red: #a00000;
+  --brand-red-strong: #b30000;
+  --brand-red-tint: rgba(179, 0, 0, 0.08);
+  --rating-gold: #c69400;
+  --overlay-dark: rgba(0, 0, 0, 0.55);
   --cart-panel-width: 33.333vw;
 }
 
@@ -17,7 +25,7 @@ body {
   margin: 0;
   font-family: Inter, sans-serif;
   color: var(--ink);
-  background: #fff;
+  background: var(--bg);
 }
 /* background layer */
 
@@ -83,7 +91,7 @@ body::before {
   font-family: 'Montserrat', 'Segoe UI', sans-serif; /* sleek, modern font */
   font-weight: 800;           /* bold for a strong presence */
   font-size: 2rem;          /* big enough to stand out */
-  color: #a00000;             /* JCF brand red */
+  color: var(--brand-red);
   letter-spacing: 1px;        /* spacing between letters for style */
   text-transform: uppercase;  /* all caps for impact */
   margin-left: 0px;          /* push it closer to left edge */
@@ -221,8 +229,8 @@ button {
 }
 
 button:hover {
-  background: var(--jcf-red);
-  color: white;
+  background: var(--brand-red-strong);
+  color: var(--white);
   transform: translateY(-2px);
 }
 
@@ -233,7 +241,7 @@ button:hover {
 
 .secondary,
 .ghost {
-  background: #eaeaea;
+  background: var(--surface-muted);
   color: var(--ink);
 }
 
@@ -263,11 +271,105 @@ body.cart-panel-open main {
   min-height: 65vh;
   border-radius: 24px;
   padding: 4rem;
-  background: linear-gradient(135deg, #101010, #333);
+  background-color: var(--ink-soft);
+  background-image: linear-gradient(135deg, rgba(16, 16, 16, 0.62), rgba(20, 20, 20, 0.5)), url("/assets/landing-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: var(--white);
   display: grid;
   align-content: center;
   gap: 1rem;
+}
+.landing-hero {
+  /* Replace 'your-hero-image.jpg' with your actual image path */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), 
+              url('assets/landing-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 80vh; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  padding: 40px;
+}
+.welcome-container {
+  margin-bottom: 2rem;
+  animation: fadeInDown 1.2s ease-out;
+}
+
+.welcome-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.welcome-top {
+  font-size: 0.9rem;
+  letter-spacing: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-brand {
+  font-size: 3.5rem;
+  font-weight: 900;
+  font-style: italic;
+  /* Gold Gradient to match your logo */
+  background: linear-gradient(45deg, #d4af37, #fcf6ba, #b8860b);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.5));
+  letter-spacing: -2px;
+}
+
+.welcome-sub {
+  font-size: 1rem;
+  letter-spacing: 4px;
+  color: #ffffff;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  font-weight: 600;
+}
+
+/* Smooth entry animation */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsive adjustment */
+@media (max-width: 768px) {
+  .welcome-brand {
+    font-size: 2.2rem;
+  }
+  .welcome-top {
+    font-size: 0.7rem;
+    letter-spacing: 5px;
+  }
+}
+.hero-content {
+  max-width: 800px;
+  z-index: 2;
+}
+
+/* Ensures the Crimson text pops against the dark background */
+.landing-hero h1 span {
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .hero h1 {
@@ -321,7 +423,7 @@ body.cart-panel-open main {
 
 .hero-description {
   font-size: 1rem;
-  color: #ddd;
+  color: #d8d8d8;
   margin-bottom: 1.2rem;
 }
 
@@ -409,7 +511,7 @@ body.cart-panel-open main {
   letter-spacing: 0.08em;
   font-weight: 700;
   font-size: 0.78rem;
-  color: #a3a3a3;
+  color: var(--muted-soft);
 }
 
 .section-head {
@@ -493,8 +595,8 @@ input {
   display: none;
   pointer-events: none;
   border-radius: 50%;
-  border: 2px solid var(--jcf-red);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22), 0 0 0 8px rgba(179, 0, 0, 0.08);
+  border: 2px solid var(--brand-red-strong);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22), 0 0 0 8px var(--brand-red-tint);
   background-color: rgba(255, 255, 255, 0.2);
   background-repeat: no-repeat;
 }
@@ -537,13 +639,13 @@ input {
 
 .link-button:hover {
   background: transparent;
-  color: var(--jcf-red);
+  color: var(--brand-red-strong);
   transform: none;
 }
 
 .card-rating {
   margin: 0;
-  color: #a65f00;
+  color: var(--rating-gold);
   font-size: 0.9rem;
   font-weight: 600;
 }
@@ -625,7 +727,7 @@ input {
 
 .detail-rating {
   margin: 0;
-  color: #a65f00;
+  color: var(--rating-gold);
   font-weight: 700;
 }
 
@@ -647,7 +749,7 @@ input {
 
 .review-overall-score {
   margin: 0;
-  color: #a65f00;
+  color: var(--rating-gold);
   font-weight: 700;
 }
 
@@ -667,13 +769,13 @@ input {
 .review-bar-track {
   height: 10px;
   border-radius: 999px;
-  background: #ececec;
+  background: var(--surface-muted);
   overflow: hidden;
 }
 
 .review-bar-fill {
   height: 100%;
-  background: #f0ad00;
+  background: var(--rating-gold);
 }
 
 .review-form {
@@ -690,7 +792,7 @@ input {
   border: 1px solid var(--line);
   border-radius: 10px;
   padding: 0.65rem;
-  background: #fff;
+  background: var(--surface);
 }
 
 .review-item-rating,
@@ -699,11 +801,11 @@ input {
 }
 
 .review-item-rating {
-  color: #a65f00;
+  color: var(--rating-gold);
 }
 
 .review-meta {
-  color: #666;
+  color: var(--muted);
   font-size: 0.85rem;
 }
 
@@ -806,13 +908,13 @@ input {
 .step {
   padding: 0.4rem 0.65rem;
   border-radius: 999px;
-  background: #efefef;
+  background: var(--surface-muted);
   font-size: 0.9rem;
 }
 
 .step.active {
-  background: #111;
-  color: white;
+  background: var(--ink);
+  color: var(--white);
 }
 
 .checkout-panel {
@@ -831,7 +933,7 @@ input {
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  background: rgba(0, 0, 0, 0.55);
+  background: var(--overlay-dark);
   z-index: 1000;
 }
 
@@ -853,7 +955,7 @@ input {
   position: relative;
   overflow: hidden;
   border-radius: 16px;
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--line);
   padding: 1.1rem;
 }
@@ -882,8 +984,8 @@ input {
   width: 34px;
   height: 34px;
   border-radius: 999px;
-  background: #efefef;
-  color: #222;
+  background: var(--surface-muted);
+  color: var(--ink);
   font-size: 1.2rem;
   line-height: 1;
   padding: 0;
@@ -905,10 +1007,10 @@ input {
 .cart-side-panel {
   position: fixed;
   right: 0;
-  top: 78px;
+  top: var(--top-nav-height, 96px);
   width: var(--cart-panel-width);
-  max-height: calc(100vh - 78px);
-  height: calc(100vh - 78px);
+  max-height: calc(100vh - var(--top-nav-height, 96px));
+  height: calc(100vh - var(--top-nav-height, 96px));
   overflow: auto;
   background: var(--white);
   border-left: 1px solid var(--line);
@@ -933,11 +1035,26 @@ input {
   display: grid;
   gap: 0.45rem;
   min-height: 0;
-  overflow-y: auto;
+  overflow-y: scroll;
   align-content: start;
   padding-right: 0.2rem;
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+}
+
+.cart-side-items::-webkit-scrollbar {
+  width: 10px;
+}
+
+.cart-side-items::-webkit-scrollbar-thumb {
+  background: #b9b9b9;
+  border-radius: 999px;
+}
+
+.cart-side-items::-webkit-scrollbar-track {
+  background: var(--surface-muted);
 }
 
 .cart-side-actions {
@@ -996,9 +1113,9 @@ input {
 }
 
 .site-footer {
-  background: #0e0e0e;
+  background: #101010;
   opacity: 0.95;
-  color: #ccc;
+  color: #c7c7c7;
   padding-top: 60px;
   margin-top: 100px;
 }
@@ -1020,7 +1137,7 @@ input {
 .footer-brand p {
   font-size: 14px;
   line-height: 1.6;
-  color: #999;
+  color: #929292;
 }
 
 .footer-col h4 {
@@ -1039,7 +1156,7 @@ input {
 }
 
 .footer-col a {
-  color: #aaa;
+  color: #a0a0a0;
   text-decoration: none;
   font-size: 14px;
 }
@@ -1049,9 +1166,9 @@ input {
 }
 
 .footer-bottom {
-  border-top: 1px solid #222;
+  border-top: 1px solid #252525;
   text-align: center;
   padding: 20px;
   font-size: 13px;
-  color: #777;
+  color: #7d7d7d;
 }

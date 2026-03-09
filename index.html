@@ -40,6 +40,10 @@
             <button type="button" class="ghost account-link" data-view="account-details">Account Details</button>
           </div>
           <section class="account-section">
+            <h4>Saved for Later</h4>
+            <div id="account-saved-list" class="account-scroll"></div>
+          </section>
+          <section class="account-section">
             <h4>Contact Support</h4>
             <form id="support-form" class="account-form">
               <input id="support-subject" placeholder="Subject" />
@@ -52,18 +56,21 @@
       </div>
     </header>
 
-    <main>
-      <section id="landing" class="view active">
-        <div class="hero">
-          <p class="eyebrow">NEW SEASON, NEW ENERGY</p>
-          <h1><span style="color: crimson;"><span style="color: crimson;"> Casual Fits.</span> <br>for casual days.</h1>
-         <p>
-  Built for the grind. JCFits delivers premium streetwear and
-  performance apparel designed for movement, confidence, and everyday hustle.
-</p>
-          <button class="primary" data-view="featured-products">Shop The Drop</button>
-        </div>
-      </section>
+    <main> 
+     <section id="landing" class="view active">
+  <div class="hero landing-hero">
+   
+    <div class="hero-content">
+      <p class="eyebrow">NEW SEASON, NEW ENERGY</p>
+      <h1><span style="color: crimson;">Casual Fits.</span> <br>for casual days.</h1>
+      <p>
+        Built for the grind. JCFits delivers premium streetwear and
+        performance apparel designed for movement, confidence, and everyday hustle.
+      </p>
+      <button class="primary" data-view="featured-products">Shop The Drop</button>
+    </div>
+  </div>
+</section>
 
       <section id="featured-products" class="view">
         <div class="catalog-header">
@@ -75,7 +82,7 @@
             <p class="eyebrow">Curated Drop</p>
             <h2 class="catalog-title">Featured Collection</h2>
             <p class="hero-description">Performance essentials and elevated street-ready sets designed for comfort and versatility.</p>
-            <button type="button" class="primary join-email-btn">Join Email List for 20% Off</button>
+            <button type="button" class="primary join-email-btn">Join Email List</button>
           </div>
         </div>
         <div class="section-head">
@@ -94,7 +101,7 @@
             <p class="eyebrow">Menswear</p>
             <h2 class="catalog-title">Men's Collection</h2>
             <p class="hero-description">Performance basics and elevated street-ready fits designed for comfort and versatility.</p>
-            <button type="button" class="primary join-email-btn">Join Email List for 20% Off</button>
+            <button type="button" class="primary join-email-btn">Join Email List</button>
           </div>
         </div>
         <div class="section-head">
@@ -116,7 +123,7 @@
             <p class="eyebrow">Womenswear</p>
             <h2 class="catalog-title">Women's Collection</h2>
             <p class="hero-description">Performance basics and elevated street-ready fits designed for comfort and versatility.</p>
-            <button type="button" class="primary join-email-btn">Join Email List for 20% Off</button>
+            <button type="button" class="primary join-email-btn">Join Email List</button>
           </div>
         </div>
         <div class="section-head">
@@ -138,7 +145,7 @@
             <p class="eyebrow">Shared Styles</p>
             <h2 class="catalog-title">Unisex Collection</h2>
             <p class="hero-description">Performance basics and elevated street-ready fits designed for comfort and versatility.</p>
-            <button type="button" class="primary join-email-btn">Join Email List for 20% Off</button>
+            <button type="button" class="primary join-email-btn">Join Email List</button>
           </div>
         </div>
         <div class="section-head">
@@ -207,7 +214,7 @@
         <div class="cart-summary">
           <p>Subtotal: <strong id="cart-total">$0.00</strong></p>
           <div class="promo-row">
-            <input id="promo-code-input" placeholder="Promo code (jcf-fall)" />
+            <input id="promo-code-input" placeholder="Enter promo code" />
             <button type="button" id="apply-promo" class="secondary">Apply</button>
           </div>
           <p id="promo-feedback" class="hint"></p>
@@ -297,8 +304,8 @@
     <div id="promo-modal" class="modal" aria-hidden="true">
       <form id="promo-form" class="auth-form modal-shell" role="dialog" aria-modal="true" aria-labelledby="promo-title">
         <button type="button" class="modal-close" data-close-modal aria-label="Close">x</button>
-        <h3 id="promo-title">Get 20% Off</h3>
-        <p class="hint">Join our email list and use code <strong>jcf-fall</strong> at checkout.</p>
+        <h3 id="promo-title">Join Email List</h3>
+        <p class="hint">Join our email list for future updates and offers.</p>
         <input required id="promo-email" type="email" placeholder="Enter your email" />
         <div class="row">
           <button type="button" class="ghost" data-close-modal>Cancel</button>

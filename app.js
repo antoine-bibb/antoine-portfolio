@@ -809,6 +809,19 @@ const runtimeApiBase =
 const API_BASE =
   runtimeApiBase ||
   `${window.location.protocol}//${window.location.hostname}:4000/api`;
+const STORAGE_VERSION = '2026-03-08-cart-layout-fix';
+
+function runStorageMigrations() {
+  const current = localStorage.getItem('jcf_storage_version');
+  if (current === STORAGE_VERSION) return;
+
+  // Reset cart state across deployments to prevent stale/incompatible cart payloads.
+  localStorage.removeItem('jcf_cart');
+  localStorage.removeItem('jcf_saved_for_later');
+  localStorage.setItem('jcf_storage_version', STORAGE_VERSION);
+}
+
+runStorageMigrations();
 
 const views = [...document.querySelectorAll('.view')];
 const menProductGrid = document.getElementById('men-product-grid');
@@ -843,6 +856,7 @@ const cartSidePanel = document.getElementById('cart-side-panel');
 const cartSideItems = document.getElementById('cart-side-items');
 const cartSideCount = document.getElementById('cart-side-count');
 const cartSideTotal = document.getElementById('cart-side-total');
+const topNav = document.querySelector('.top-nav');
 const detailBackButton = document.getElementById('detail-back');
 const featuredGrid = document.getElementById('featured-grid');
 const joinEmailButtons = [...document.querySelectorAll('.join-email-btn')];
@@ -856,6 +870,7 @@ const orderHistory = document.getElementById('order-history');
 const loginToggleButton = document.getElementById('login-toggle');
 const logoutToggleButton = document.getElementById('logout-toggle');
 const accountMenu = document.getElementById('account-menu');
+const accountSavedList = document.getElementById('account-saved-list');
 const accountProfileForm = document.getElementById('account-profile-form');
 const accountNameInput = document.getElementById('account-name');
 const accountEmailInput = document.getElementById('account-email');
@@ -872,6 +887,15 @@ const customerAuthFeedback = document.getElementById('customer-auth-feedback');
 const customerSendCodeButton = document.getElementById('customer-send-code');
 const customerVerifyButton = document.getElementById('customer-verify-btn');
 let productImageManifest = {};
+
+function syncTopNavHeightVar() {
+  if (!topNav) return;
+  const height = Math.ceil(topNav.getBoundingClientRect().height);
+  document.documentElement.style.setProperty('--top-nav-height', `${height}px`);
+}
+
+syncTopNavHeightVar();
+window.addEventListener('resize', syncTopNavHeightVar);
 
 document.querySelectorAll('[data-view]').forEach((btn) => {
   btn.addEventListener('click', () => setView(btn.dataset.view));
@@ -973,7 +997,12 @@ function setView(id) {
 
 function load(key, fallback) {
   const raw = localStorage.getItem(key);
-  return raw ? JSON.parse(raw) : fallback;
+  if (!raw) return fallback;
+  try {
+    return JSON.parse(raw);
+  } catch {
+    return fallback;
+  }
 }
 
 function save() {
@@ -1015,10 +1044,12 @@ function renderCustomerButton() {
     if (accountPhoneMenuInput) accountPhoneMenuInput.value = state.customer?.phone || '';
     if (accountAddressInput) accountAddressInput.value = state.customer?.address || '';
     if (accountShippingAddressInput) accountShippingAddressInput.value = state.customer?.shippingAddress || '';
+    renderAccountSavedList();
     return;
   }
   loginToggleButton.textContent = 'Customer Login';
   if (logoutToggleButton) logoutToggleButton.classList.add('hidden');
+  renderAccountSavedList();
   closeAccountMenu();
 }
 
@@ -1062,7 +1093,11 @@ function money(value) {
 }
 
 function toJsArg(value) {
-  return value == null ? 'null' : JSON.stringify(String(value));
+  if (value == null) return 'null';
+  const escaped = String(value)
+    .replaceAll('\\', '\\\\')
+    .replaceAll("'", "\\'");
+  return `'${escaped}'`;
 }
 
 function escapeHtml(value) {
@@ -1181,8 +1216,8 @@ function renderCartSidePanel() {
         <strong>${escapeHtml(item.name)}</strong>
         <p class="hint">${item.qty} x ${money(item.price)}</p>
         <div class="row cart-side-actions">
-          <button class="ghost" onclick="removeFromCart('${item.id}', ${toJsArg(item.color)}, ${toJsArg(item.size)})">Remove</button>
-          <button class="ghost" onclick="saveForLater('${item.id}', ${toJsArg(item.color)}, ${toJsArg(item.size)})">Save</button>
+          <button class="ghost" type="button" data-action="remove-cart-item" data-product-id="${escapeHtml(item.id)}" data-color="${escapeHtml(item.color || '')}" data-size="${escapeHtml(item.size || '')}">Remove</button>
+          <button class="ghost" type="button" data-action="save-cart-item" data-product-id="${escapeHtml(item.id)}" data-color="${escapeHtml(item.color || '')}" data-size="${escapeHtml(item.size || '')}">Save</button>
         </div>
       </div>
     `
@@ -1277,7 +1312,7 @@ function setPromoFeedback(message, ok) {
 function syncPromoUi() {
   if (promoCodeInput) promoCodeInput.value = state.appliedPromoCode || '';
   if (state.appliedPromoCode === PROMO_CODE) {
-    setPromoFeedback('Promo applied: 20% off your order.', true);
+    setPromoFeedback('Promo applied.', true);
   } else {
     setPromoFeedback('', false);
   }
@@ -1696,9 +1731,9 @@ function renderSavedForLater() {
               <p>${money(Number(item.price) || 0)} x ${Number(item.qty) || 1}</p>
             </div>
             <div class="row cart-item-actions">
-              <button class="secondary" onclick="moveToCartFromSaved('${item.savedId}')">Move to Cart</button>
-              <button class="ghost" onclick="viewSavedItem('${item.id}')">View Item</button>
-              <button class="ghost" onclick="removeSavedForLater('${item.savedId}')">Remove</button>
+              <button class="secondary" type="button" data-action="move-saved-to-cart" data-saved-id="${escapeHtml(item.savedId)}">Move to Cart</button>
+              <button class="ghost" type="button" data-action="view-saved-item" data-product-id="${escapeHtml(item.id)}">View Item</button>
+              <button class="ghost" type="button" data-action="remove-saved-item" data-saved-id="${escapeHtml(item.savedId)}">Remove</button>
             </div>
           </div>
         `
@@ -1706,6 +1741,30 @@ function renderSavedForLater() {
         .join('')}
     </div>
   `;
+}
+
+function renderAccountSavedList() {
+  if (!accountSavedList) return;
+  if (!state.savedForLater.length) {
+    accountSavedList.innerHTML = '<p class="hint">No saved items yet.</p>';
+    return;
+  }
+
+  accountSavedList.innerHTML = state.savedForLater
+    .slice(0, 8)
+    .map(
+      (item) => `
+      <div class="account-order-item">
+        <strong>${escapeHtml(item.name)}</strong>
+        <p class="hint">${money(Number(item.price) || 0)} x ${Number(item.qty) || 1}</p>
+        <div class="row">
+          <button class="ghost" type="button" data-action="view-saved-item" data-product-id="${escapeHtml(item.id)}">View</button>
+          <button class="ghost" type="button" data-action="move-saved-to-cart" data-saved-id="${escapeHtml(item.savedId)}">Move</button>
+        </div>
+      </div>
+    `
+    )
+    .join('');
 }
 
 function renderCart() {
@@ -1723,8 +1782,8 @@ function renderCart() {
           <p>${money(item.price)} x ${item.qty}</p>
         </div>
         <div class="row cart-item-actions">
-          <button class="ghost" onclick="saveForLater('${item.id}', ${toJsArg(item.color)}, ${toJsArg(item.size)})">Save for later</button>
-          <button class="ghost" onclick="removeFromCart('${item.id}', ${toJsArg(item.color)}, ${toJsArg(item.size)})">Remove</button>
+          <button class="ghost" type="button" data-action="save-cart-item" data-product-id="${escapeHtml(item.id)}" data-color="${escapeHtml(item.color || '')}" data-size="${escapeHtml(item.size || '')}">Save for later</button>
+          <button class="ghost" type="button" data-action="remove-cart-item" data-product-id="${escapeHtml(item.id)}" data-color="${escapeHtml(item.color || '')}" data-size="${escapeHtml(item.size || '')}">Remove</button>
         </div>
       </div>
     `
@@ -1741,6 +1800,7 @@ function renderCart() {
     cartNavButton.setAttribute('aria-label', itemCount > 0 ? `Open cart with ${itemCount} item${itemCount > 1 ? 's' : ''}` : 'Open cart');
   }
   renderSavedForLater();
+  renderAccountSavedList();
   renderCartSidePanel();
 }
 
@@ -1976,6 +2036,39 @@ document.addEventListener('click', (event) => {
   if (!insideActions) closeAccountMenu();
 });
 
+document.addEventListener('click', (event) => {
+  const target = event.target;
+  if (!(target instanceof Element)) return;
+  const actionButton = target.closest('button[data-action]');
+  if (!(actionButton instanceof HTMLButtonElement)) return;
+
+  const action = actionButton.dataset.action || '';
+  const productId = actionButton.dataset.productId || '';
+  const color = actionButton.dataset.color || null;
+  const size = actionButton.dataset.size || null;
+  const savedId = actionButton.dataset.savedId || '';
+
+  if (action === 'remove-cart-item' && productId) {
+    window.removeFromCart(productId, color, size);
+    return;
+  }
+  if (action === 'save-cart-item' && productId) {
+    window.saveForLater(productId, color, size);
+    return;
+  }
+  if (action === 'move-saved-to-cart' && savedId) {
+    window.moveToCartFromSaved(savedId);
+    return;
+  }
+  if (action === 'remove-saved-item' && savedId) {
+    window.removeSavedForLater(savedId);
+    return;
+  }
+  if (action === 'view-saved-item' && productId) {
+    window.viewSavedItem(productId);
+  }
+});
+
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') closeAccountMenu();
 });
@@ -2060,7 +2153,7 @@ if (promoForm) {
 
     promoForm.reset();
     closeModal(promoModal);
-    alert('You are in. Use promo code jcf-fall in cart for 20% off.');
+    alert('You are in. Check your email for updates and offers.');
   });
 }
 
@@ -2073,19 +2166,19 @@ if (applyPromoButton) {
       state.appliedPromoCode = promo?.valid ? entered : '';
       save();
       if (promo?.valid) {
-        setPromoFeedback('Promo applied: 20% off your order.', true);
+        setPromoFeedback('Promo applied.', true);
       } else {
-        setPromoFeedback('Invalid code. Try jcf-fall.', false);
+        setPromoFeedback('Invalid promo code.', false);
       }
     } catch {
       if (entered === PROMO_CODE) {
         state.appliedPromoCode = PROMO_CODE;
         save();
-        setPromoFeedback('Promo applied: 20% off your order.', true);
+        setPromoFeedback('Promo applied.', true);
       } else {
         state.appliedPromoCode = '';
         save();
-        setPromoFeedback('Invalid code. Try jcf-fall.', false);
+        setPromoFeedback('Invalid promo code.', false);
       }
     }
 
