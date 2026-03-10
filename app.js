@@ -5,7 +5,7 @@ const initialProducts = [
   {
     id: crypto.randomUUID(),
     name: "JCF OG Hoodie",
-    price: 125.0,
+    price: 90.0,
     colors: ['Black','white','red','gray'],
     gender: 'men',
     image: 'assets/black-slim-fit-hoodie-jcf.png',
@@ -40,7 +40,7 @@ Care: Machine wash cold, tumble dry low to maintain the vibrancy of the Deep Red
   {
     id: crypto.randomUUID(),
     name: "JCF Varsity Oversized Hoodie",
-    price: 150.0,
+    price: 90.0,
     colors: ['Black', 'Cream', 'Red'],
     gender: 'men',
     image: 'assets/varsity-hoodie-jcf.png',
@@ -51,45 +51,8 @@ Care: Machine wash cold, tumble dry low to maintain the vibrancy of the Deep Red
   },
   {
     id: crypto.randomUUID(),
-    name: "JCF Women's Signature Crop",
-    price: 95.0,
-    colors: ['Black', 'Red', 'White'],
-    gender: 'women',
-    image: 'assets/cropped-varsity-hoodie-jcf.png',
-    description: "The JCF Women's Signature Crop combines a sleek, sexy aesthetic with the brand's core focus on utility. Tailored to hit perfectly above the waist, this hoodie offers a high-fashion edge to athletic performance gear.\n\nDesign & Fit\nCropped Cut: A flattering, form-fitting cropped silhouette designed to pair seamlessly with high-waisted leggings.\n\nLuxury Accents: Features a Deep Red inner hood lining and matching ribbed cuffs for a sophisticated pop of color.\n\nKey Features\nInvisible Security: Sleek, hidden side-seam zipper pockets provide secure storage without interrupting the streamlined fit.\n\nSignature Branding: 'JCF' script logo on the chest and a bold '26' varsity patch centered on the back.\n\nCuff Signature: The wearer’s left wristband carries the vertical 'jus' casual fits' manifesto and Lion/Owl split-face logo in Deep Red thread.\n\nMaterials & Care\nFabric: Premium mid-weight French terry for a soft, breathable feel.\n\nCare: Machine wash cold; lay flat to dry to maintain the cropped shape.",
-    category: 'hoodies',
-    style: 'hoodie',
-    featured: true,
-  },
-{
-    id: crypto.randomUUID(),
-    name: "JCF Utility Cargo Jogger",
-    price: 110.0,
-    colors: ['Black', 'Red', 'White'],
-    gender: 'men',
-    image: 'assets/tapered-cargo-joggers-jcf.png',
-    description: `The JCF Utility Cargo Jogger is the ultimate fusion of tactical function and luxury comfort. Engineered for the modern mover, these joggers ensure your essentials are always secure without compromising a high-end silhouette.
-
-Design & Fit
-Tailored Utility: A fitted, tapered cut inspired by high-end heritage brands, providing a sharp look that stays comfortable all day.
-Fabric: Premium high-gauge matte black French terry with reinforced deep red bar-tack stitching for maximum durability.
-
-Key Features
-Maximum Security: Featuring zippered hand pockets and dual thigh cargo pockets with hidden Deep Red zippers to prevent items from falling out.
-Signature Branding: White 'JCF' script logo on the left thigh and a tonal Deep Red Lion/Owl split-face logo on the cargo flap.
-Premium Hardware: Matte black metal hardware and white drawstrings with deep red metal aglets.
-
-Materials & Care
-Fabric: Luxury-grade cotton/polyester blend.
-Care: Machine wash cold inside out; tumble dry low.`,
-    category: 'pants',
-    style: 'joggers',
-    featured: true,
-  },
-  {
-    id: crypto.randomUUID(),
     name: "JCF High-Fashion Pintuck Jogger",
-    price: 135.0,
+    price: 75.0,
     colors: ['Black', 'White', 'Gray'],
     gender: 'men',
     image: 'assets/slim-jogger-style-3-jcf.png',
@@ -113,33 +76,8 @@ Care: Cool iron on reverse; machine wash cold on a gentle cycle.`,
   },
   {
     id: crypto.randomUUID(),
-    name: "JCF Lounge & Gym Jogger",
-    price: 90.0,
-    colors: ['Black', 'Gray', 'Red'],
-    gender: 'men',
-    image: 'assets/gym-jogger-jcf.png',
-    description: `Built for recovery days and high-intensity sessions alike, the JCF Lounge & Gym Jogger focuses on ultimate mobility and signature JCF security. These are the softest joggers in the collection, designed to be worn anywhere.
-
-Design & Fit
-Athletic Taper: A more relaxed fit through the seat and thigh for movement, tapering down to a secure ribbed ankle cuff.
-Color Blocking: Matte black body with athletic secondary-gray paneling for a modern, sporty aesthetic.
-
-Key Features
-Gym-Ready Security: Standard side pockets equipped with high-visibility Deep Red zippers to keep your tech safe during any activity.
-Bold Branding: White 'JCF' script logo on the left thigh and the iconic Lion/Owl split-face logo embroidered in Deep Red on the right calf.
-Comfort First: Ultra-soft performance fleece with a thick elastic waistband and premium braided drawstrings.
-
-Materials & Care
-Fabric: Ultra-soft brushed-back performance fleece.
-Care: Machine wash cold; avoid fabric softeners to maintain moisture-wicking properties.`,
-    category: 'pants',
-    style: 'joggers',
-    featured: true,
-  },
-  {
-    id: crypto.randomUUID(),
     name: "JCF Luxe Curved-Hem Tee",
-    price: 65.0,
+    price: 45.0,
     colors: ['Black', 'Gray', 'Olive'],
     gender: 'men',
     image: 'assets/black-curved-hem-tee-jcf.png',
@@ -164,7 +102,7 @@ Care: Machine wash cold with like colors; tumble dry low. Do not iron directly o
   {
     id: crypto.randomUUID(),
     name: "JCF Signature Utility Duffel",
-    price: 210.0,
+    price: 150.0,
     colors: ['Black', 'Red'],
     gender: 'unisex',
     image: 'assets/signature-utility-duffel-jcf.png',
@@ -189,7 +127,7 @@ Care: Spot clean with a damp cloth; do not machine wash. Use leather conditioner
 {
   id: crypto.randomUUID(),
   name: "JCF Curved Hem Technical Tee",
-  price: 65.0,
+  price: 45.0,
   colors: ['Black/Gold', 'Navy/Gold', 'White/Gold'],
   gender: 'men',
   image: 'assets/jcf_curved_hem_tee.png',
@@ -214,7 +152,7 @@ Care: Machine wash cold on a gentle cycle; hang dry to preserve the metallic emb
 {
   id: crypto.randomUUID(),
   name: "JCF Men's Hybrid Utility Shorts",
-  price: 75.0,
+  price: 55.0,
   colors: ['Black/Gold'],
   gender: 'men',
   image: 'assets/jcf_mens_utility_shorts.png',
@@ -239,7 +177,7 @@ Care: Machine wash cold on a gentle cycle; hang dry to preserve the compression 
 {
   id: crypto.randomUUID(),
   name: "JCF Luxury Trucker Cap",
-  price: 35.0,
+  price: 25.0,
   colors: ['Black/Gold', 'Triple Black'],
   gender: 'unisex',
   image: 'assets/jcf_trucker_cap.png',
@@ -263,7 +201,7 @@ Care: Hand wash only with a damp cloth; do not submerge in water to preserve the
 {
   id: crypto.randomUUID(),
   name: "JCF Tech-Knit Beanie",
-  price: 32.0,
+  price: 22.0,
   colors: ['Gold/Black', 'Black/Gold'],
   gender: 'unisex',
   image: 'assets/jcf_tech_beanie.png',
@@ -290,7 +228,7 @@ Care: Machine wash cold on a delicate cycle; lay flat to dry. Use a pilling comb
 {
     id: crypto.randomUUID(),
     name: "JCF Icon Luxury Bomber Jacket",
-    price: 210.0,
+    price: 150,
     colors: ['Jet Black/Gold'],
     gender: 'men',
     image: 'assets/jcf_mens_icon_jacket.png',
@@ -314,7 +252,7 @@ Care: Professional dry clean only to preserve the structural integrity of the go
   {
     id: crypto.randomUUID(),
     name: "JCF Icon Essential Street Tee",
-    price: 65.0,
+    price: 45.0,
     colors: ['Jet Black/Gold'],
     gender: 'men',
     image: 'assets/jcf_mens_icon_tee.png',
@@ -334,7 +272,7 @@ Care: Machine wash cold, inside out; hang dry to prevent gold foil or embroidery
   {
     id: crypto.randomUUID(),
     name: "JCF Icon Heavyweight Street Joggers",
-    price: 125.0,
+    price: 75.0,
     colors: ['Royal Black', 'Imperial Burgundy', 'Slate Grey'],
     gender: 'men',
     image: 'assets/jcf_mens_icon_joggers.png',
@@ -380,7 +318,18 @@ Care: Machine wash cold on delicate; hang dry.`,
   // ========================
   // WOMEN'S PRODUCTS
   // ========================
- 
+{
+    id: crypto.randomUUID(),
+    name: "JCF Women's Signature Crop",
+    price: 85.0,
+    colors: ['Black', 'Red', 'White'],
+    gender: 'women',
+    image: 'assets/cropped-varsity-hoodie-jcf.png',
+    description: "The JCF Women's Signature Crop combines a sleek, sexy aesthetic with the brand's core focus on utility. Tailored to hit perfectly above the waist, this hoodie offers a high-fashion edge to athletic performance gear.\n\nDesign & Fit\nCropped Cut: A flattering, form-fitting cropped silhouette designed to pair seamlessly with high-waisted leggings.\n\nLuxury Accents: Features a Deep Red inner hood lining and matching ribbed cuffs for a sophisticated pop of color.\n\nKey Features\nInvisible Security: Sleek, hidden side-seam zipper pockets provide secure storage without interrupting the streamlined fit.\n\nSignature Branding: 'JCF' script logo on the chest and a bold '26' varsity patch centered on the back.\n\nCuff Signature: The wearer’s left wristband carries the vertical 'jus' casual fits' manifesto and Lion/Owl split-face logo in Deep Red thread.\n\nMaterials & Care\nFabric: Premium mid-weight French terry for a soft, breathable feel.\n\nCare: Machine wash cold; lay flat to dry to maintain the cropped shape.",
+    category: 'hoodies',
+    style: 'hoodie',
+    featured: true,
+  },
   {
   id: crypto.randomUUID(),
   name: "JCF Luxury Technical Quilted Jacket",
@@ -396,7 +345,7 @@ Care: Machine wash cold on delicate; hang dry.`,
   {
     id: crypto.randomUUID(),
     name: "JCF Women's Royal Utility Legging",
-    price: 115.0,
+    price: 75.0,
     colors: ['Black', 'Gold', 'White'],
     gender: 'women',
     image: 'assets/womens-royal-utility-legging-jcf.jpg',
@@ -421,7 +370,7 @@ Care: Hand wash cold or use a delicate cycle; air dry only to maintain the vibra
   {
     id: crypto.randomUUID(),
     name: "JCF Women's Royal Quilted Bomber",
-    price: 165.0,
+    price: 150.0,
     colors: ['Black', 'Gold', 'White'],
     gender: 'women',
     image: 'assets/womens-royal-bomber-jcf.jpg',
@@ -446,7 +395,7 @@ Care: Professional dry clean only to protect the specialized gold hardware and q
   {
     id: crypto.randomUUID(),
     name: "JCF Women's Royal Curve Tee",
-    price: 70.0,
+    price: 40.0,
     colors: ['Black', 'Gold'],
     gender: 'women',
     image: 'assets/womens-royal-curve-tee-jcf.png',
@@ -471,7 +420,7 @@ Care: Machine wash cold; tumble dry low. Protect the gold hardware by washing in
   {
     id: crypto.randomUUID(),
     name: "JCF Women's Royal Deep-V Curve Tee",
-    price: 75.0,
+    price: 40.0,
     colors: ['Black', 'Gold'],
     gender: 'women',
     image: 'assets/womens-royal-deep-v-tee-jcf.png',
@@ -496,7 +445,7 @@ Care: Hand wash recommended to preserve the deep-V structure and gold hardware i
   {
     id: crypto.randomUUID(),
     name: "JCF Women's Royal Secure-Support Bra",
-    price: 60.0,
+    price: 35.0,
     colors: ['Black', 'Gold'],
     gender: 'women',
     image: 'assets/womens-royal-sports-bra-jcf.png',
@@ -521,7 +470,7 @@ Care: Machine wash cold in a mesh laundry bag; lay flat to dry to preserve the g
   {
     id: crypto.randomUUID(),
     name: "JCF Royal Performance Headwrap",
-    price: 35.0,
+    price: 25.0,
     colors: ['Black', 'Gold'],
     gender: 'women',
     image: 'assets/womens-royal-headwrap-jcf.png',
@@ -548,7 +497,7 @@ Care: Hand wash cold; air dry to protect the metallic foil and internal silk lin
   {
     id: crypto.randomUUID(),
     name: "JCF Women's Icon Cropped Bomber",
-    price: 130.0,
+    price: 125.0,
     colors: ['Black', 'Deep Maroon'],
     gender: 'women',
     image: 'assets/womens-icon-bomber-jcf.png',
@@ -573,7 +522,7 @@ Care: Machine wash cold; line dry. Protect the embossed branding and zippers.`,
   {
     id: crypto.randomUUID(),
     name: "JCF Women's Icon High-Waisted Leggings",
-    price: 90.0,
+    price: 75.0,
     colors: ['Black', 'Deep Maroon'],
     gender: 'women',
     image: 'assets/womens-icon-leggings-jcf.png',
@@ -598,7 +547,7 @@ Care: Machine wash cold; tumble dry low. Do not iron the embossed logo.`,
   {
   id: crypto.randomUUID(),
   name: "JCF Icon Performance Sports Bra",
-  price: 55.0,
+  price: 35.0,
   colors: ['Black/Burgundy/Gold'],
   gender: 'women',
   image: 'assets/jcf_icon_sports_bra.png',
